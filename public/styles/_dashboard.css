@@ -1,0 +1,19 @@
+.dashboard {
+  @apply mt-16;
+}
+
+.dashboard__blocks {
+  @apply grid grid-cols-4 gap-5;
+}
+
+.dashboard__block {
+  @apply flex flex-col items-center p-5 h-60 bg-gradient-to-b from-light-gray-gradient-top to-light-gray-gradient-bottom rounded-md;
+
+  .dashboard__block-icon {
+    @apply mt-8 h-20 w-20;
+  }
+
+  .dashboard__block-text {
+    @apply mt-5 font-bold text-center;
+  }
+}

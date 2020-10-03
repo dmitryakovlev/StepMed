@@ -1,0 +1,19 @@
+.header {
+  @apply relative min-w-full min-h-screen;
+}
+
+.header-container {
+  @apply max-w-screen-xl mx-auto px-5 min-h-screen;
+}
+
+.header__text-container {
+  @apply flex flex-col justify-center w-1/2 max-w-lg min-h-screen;
+}
+
+.header__carousel {
+  @apply absolute top-0 right-0 min-h-screen max-h-screen w-2/5;
+
+  .header__carousel-img {
+    min-height: calc(100vh - 100px);
+  }
+}

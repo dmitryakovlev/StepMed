@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+
+@import "./_fonts.css";
+@import "./_header.css";
+@import "./_dashboard.css";
+
+*,
+body {
+  @apply m-0 p-0 font-normal leading-tight box-border;
+  font-size: 16px;
+  font-family: "rawline", sans-serif;
+}
+
+a {
+  @apply no-underline;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply text-text-primary;
+}
+
+h1 {
+  @apply text-4xl font-bold;
+}
+
+h2 {
+  @apply text-4xl font-normal;
+}
+
+h3 {
+  @apply text-2xl font-bold;
+}
+
+h4 {
+  @apply text-2xl font-normal;
+}
+
+p {
+  @apply text-text-secondary text-xl font-normal;
+}
+
+button {
+  @apply bg-gradient-to-b from-light-blue-gradient-top to-light-blue-gradient-bottom text-white text-2xl font-bold rounded-md;
+  padding: 1.375rem;
+}
+
+.container {
+  @apply max-w-screen-xl mx-auto px-5;
+}
+
+@tailwind utilities;

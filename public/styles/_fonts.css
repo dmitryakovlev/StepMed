@@ -1,0 +1,17 @@
+/* Rawline 400 */
+@font-face {
+  font-family: "rawline";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/rawline-400.woff2") format("woff2");
+}
+
+/* Rawline 700 */
+@font-face {
+  font-family: "rawline";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/rawline-700.woff2") format("woff2");
+}

@@ -1,13 +1,12 @@
 import Header from "../components/Header";
+import Dashboard from "../components/Dashboard";
 import Nav from "../components/nav";
 
 export default function IndexPage() {
   return (
     <>
-      <Nav />
-      <div className="py-20">
-        <Header />
-      </div>
+      <Header />
+      <Dashboard />
     </>
   );
 }
