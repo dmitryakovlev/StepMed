@@ -18,6 +18,7 @@ module.exports = {
         "primary": "#489ecd",
         "text-primary": "#1b1b1b",
         "text-secondary": "#353535",
+        "light-gray": "#f3f3f3",
         "light-blue-gradient-top": "#65bee1",
         "light-blue-gradient-bottom": "#3589c0",
         "dark-blue-gradient-top": "#4380a5",
