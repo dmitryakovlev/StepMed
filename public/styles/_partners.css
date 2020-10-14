@@ -1,0 +1,6 @@
+.artners__blocks {
+  @apply grid grid-cols-4 gap-2;
+}
+
+.partners__block-logo {
+}

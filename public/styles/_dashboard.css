@@ -1,24 +1,24 @@
-.dashboard {
-  @apply mt-16;
-}
-
 .dashboard__blocks {
   @apply grid grid-cols-4 gap-5;
 }
 
 .dashboard__block {
-  @apply flex flex-col items-center p-5 h-60 bg-light-gray border-4 border-light-gray rounded-md transition duration-300 ease-in-out;
+  @apply flex flex-col items-center p-5 h-60 bg-light-gray border-light-gray rounded-md transition duration-300 ease-in-out select-none;
 
   &:hover {
-    @apply border-primary;
+    @apply bg-primary;
 
     .dashboard__block-text {
-      @apply text-primary;
+      @apply text-white;
+    }
+
+    .dashboard__block-icon {
+      @apply text-white;
     }
   }
 
   .dashboard__block-icon {
-    @apply mt-8 h-20 w-20;
+    @apply mt-8 h-20 w-20 fill-current text-text-primary duration-200 ease-in-out;
   }
 
   .dashboard__block-text {

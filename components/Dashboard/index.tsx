@@ -1,59 +1,72 @@
-import DashboardBlock from "./dashboard-block";
+import DashboardBlock from "./DashboardBlock";
+import RegistrationIcon from "../Icons/RegistrationIcon";
+import InsuranceIcon from "../Icons/InsuranceIcon";
+import PriceIcon from "../Icons/PriceIcon";
+import AnalysisIcon from "../Icons/AnalysisIcon";
+import CovidIcon from "../Icons/CovidIcon";
+import StaffIcon from "../Icons/StaffIcon";
+import QuestionsIcon from "../Icons/QuestionsIcon";
+import NewsIcon from "../Icons/NewsIcon";
 
-const dashboardData = [
+const dashboardData: Array<{
+  id: number;
+  link: string;
+  icon: JSX.Element;
+  text: string;
+}> = [
   {
     id: 0,
     link: "#",
-    icon: "/images/icons/registration.png",
+    icon: <RegistrationIcon />,
     text: "Приём онколога",
   },
   {
     id: 1,
     link: "#",
-    icon: "/images/icons/insurance.png",
+    icon: <InsuranceIcon />,
     text: "Химиотерапия по ОМС",
   },
   {
     id: 2,
     link: "#",
-    icon: "/images/icons/price.png",
+    icon: <PriceIcon />,
     text: "Услуги и цены",
   },
   {
     id: 3,
     link: "#",
-    icon: "/images/icons/analysis.png",
+    icon: <AnalysisIcon />,
     text: "Раняя диагностика и скрининг",
   },
   {
     id: 4,
     link: "#",
-    icon: "/images/icons/covid.png",
+    icon: <CovidIcon />,
     text: "COVID-19",
   },
   {
     id: 5,
     link: "#",
-    icon: "/images/icons/staff.png",
+    icon: <StaffIcon />,
     text: "Наши врачи",
   },
   {
     id: 6,
     link: "#",
-    icon: "/images/icons/questions.png",
+    icon: <QuestionsIcon />,
     text: "Заочная консультация",
   },
   {
     id: 7,
     link: "#",
-    icon: "/images/icons/news.png",
+    icon: <NewsIcon />,
     text: "Наши события",
   },
 ];
 
 const Dashboard = () => (
   <>
-    <div className="container dashboard">
+    <div className="container mt-16">
       <h1 className="mb-10">Что вас интересует?</h1>
       <div className="dashboard__blocks">
         {dashboardData.map((dashboard) => (

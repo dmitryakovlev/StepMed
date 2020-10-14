@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 
+:root {
+  --primary-color: #489ecd;
+}
+
 @import "./_fonts.css";
 @import "./_header.css";
 @import "./_dashboard.css";

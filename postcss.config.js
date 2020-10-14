@@ -14,7 +14,6 @@ module.exports = {
         },
       },
     ],
-    'postcss-nested',
-    'postcss-nested-import',
+    'postcss-nested'
   ],
 }
