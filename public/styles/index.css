@@ -6,9 +6,11 @@
 }
 
 @import "./_fonts.css";
+@import "./_nav.css";
 @import "./_header.css";
 @import "./_dashboard.css";
 @import "./_about.css";
+@import "./_footer.css";
 
 *,
 body {
@@ -24,33 +26,60 @@ a {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   @apply text-text-primary;
 }
 
-h1 {
-  @apply text-4xl font-bold;
+h1,
+h3,
+h5 {
+  @apply font-bold;
 }
 
+h2,
+h4,
+h6 {
+  @apply font-normal;
+}
+
+h1,
 h2 {
-  @apply text-4xl font-normal;
+  @apply text-4xl;
 }
 
-h3 {
-  @apply text-2xl font-bold;
-}
-
+h3,
 h4 {
-  @apply text-2xl font-normal;
+  @apply text-2xl;
+}
+
+h5,
+h6 {
+  @apply text-base;
 }
 
 p {
   @apply text-text-secondary text-xl font-normal;
 }
 
-button {
-  @apply bg-gradient-to-b from-light-blue-gradient-top to-light-blue-gradient-bottom text-white text-2xl font-bold rounded-md;
+b {
+  @apply font-bold;
+  font-size: inherit;
+}
+
+.bttn {
+  @apply bg-gradient-to-b from-light-blue-gradient-top to-light-blue-gradient-bottom text-white text-2xl font-bold rounded-md ease-linear duration-200 select-none;
   padding: 1.375rem;
+
+  &:hover {
+    @apply opacity-75;
+  }
+
+  &:focus {
+    @apply outline-none;
+    box-shadow: 0 0 0 4px rgba(72, 158, 205, 0.3);
+  }
 }
 
 .container {

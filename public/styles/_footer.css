@@ -1,0 +1,49 @@
+.footer {
+  @apply bg-gradient-to-b from-dark-gray-gradient-top to-dark-gray-gradient-bottom;
+
+  h4,
+  h5,
+  h6 {
+    @apply text-light-gray;
+  }
+}
+
+.footer__general {
+  @apply flex py-12 border-light-gray border-b-2 border-opacity-25;
+}
+
+.footer__contacts-container {
+  @apply flex flex-col flex-grow mr-8 text-light-gray;
+
+  .footer__contacts-contact {
+    @apply flex items-center mt-4;
+
+    .footer__contacts-contact-icon {
+      @apply mr-3 fill-current text-light-gray;
+    }
+
+    .footer__contacts-contact-text {
+      @apply text-light-gray;
+    }
+  }
+}
+
+.footer__links-container {
+  @apply flex flex-shrink-0 select-none;
+
+  .footer__links-block {
+    @apply flex flex-col mr-12;
+
+    &:last-child {
+      @apply mr-0;
+    }
+
+    .footer__links-header {
+      @apply mb-3;
+    }
+
+    .footer__links-link {
+      @apply mb-2 text-light-gray text-xs;
+    }
+  }
+}

@@ -35,6 +35,15 @@ module.exports = {
       fontSize: {
         "4xl": "2.5rem"
       },
+      transitionTimingFunction: {
+        'ease': 'ease'
+      },
+      opacity: {
+        '60': '60%'
+      },
+      backgroundOpacity: {
+        '90': '0.90',
+      },
     },
   },
   variants: {},

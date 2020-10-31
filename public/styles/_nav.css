@@ -1,0 +1,121 @@
+.nav {
+  @apply z-10 fixed flex flex-col py-8 px-8 h-full bg-opacity-90;
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  backdrop-filter: saturate(90%) blur(8px);
+
+  button {
+    @apply p-4 w-20;
+  }
+}
+
+.nav__logo {
+  @apply w-20 h-20;
+}
+
+.nav__btn {
+  @apply flex justify-center items-center mt-8 w-20 h-20 border-4 border-text-primary rounded-md cursor-pointer ease-linear duration-200 overflow-visible;
+  transition-property: opacity, filter;
+
+  &:hover {
+    @apply opacity-60;
+  }
+
+  &.active {
+    @apply border-white;
+
+    &:hover {
+      @apply opacity-60;
+    }
+
+    .nav__btn-inner,
+    .nav__btn-inner::before,
+    .nav__btn-inner::after {
+      @apply bg-white;
+    }
+
+    .nav__btn-inner {
+      transform: translate3d(0, 10px, 0) rotate(45deg);
+    }
+
+    .nav__btn-inner::before {
+      @apply opacity-0;
+      transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+    }
+
+    .nav__btn-inner::after {
+      transform: translate3d(0, -20px, 0) rotate(-90deg);
+    }
+  }
+
+  .nav__btn-inner {
+    top: 2px;
+
+    &::before {
+      @apply ease-ease duration-200;
+      top: 10px;
+      transition-property: transform, opacity;
+    }
+
+    &::after {
+      top: 20px;
+    }
+  }
+}
+
+.nav__btn-box {
+  @apply relative w-10 h-6;
+}
+
+.nav__btn-inner {
+  @apply block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.nav__btn-inner,
+.nav__btn-inner::before,
+.nav__btn-inner::after {
+  @apply absolute w-10 h-1 bg-text-primary rounded-md transition-transform ease-ease duration-200;
+}
+
+.nav__btn-inner::before,
+.nav__btn-inner::after {
+  @apply block;
+  content: "";
+}
+
+.nav__btn-inner::before {
+  top: -10px;
+}
+
+.nav__btn-inner::after {
+  bottom: -10px;
+}
+
+.nav__menu {
+  @apply justify-center items-center opacity-0 invisible bg-gradient-to-b from-dark-blue-gradient-top to-dark-blue-gradient-bottom ease-linear duration-200;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100vw;
+
+  &.active {
+    @apply opacity-100 visible flex ease-linear duration-200;
+  }
+
+  .nav__menu-links {
+    @apply flex flex-col items-center;
+  }
+
+  .nav__menu-link {
+    @apply mt-6 text-5xl text-white font-bold ease-linear duration-200;
+
+    &:hover {
+      @apply opacity-60;
+    }
+  }
+}
