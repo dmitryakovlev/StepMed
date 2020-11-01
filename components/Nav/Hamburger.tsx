@@ -8,7 +8,6 @@ const Hamburger: FC<{
   return (
     <div
       className={classNames("nav__btn", { active: open })}
-      open={open}
       onClick={() => setOpen(!open)}
     >
       <div className="nav__btn-box">

@@ -26,7 +26,6 @@ const Header = () => (
       </div>
       <div className="header__carousel">
         <Carousel />
-        <p>Телемедицина в удобное для вас время</p>
       </div>
     </div>
   </>

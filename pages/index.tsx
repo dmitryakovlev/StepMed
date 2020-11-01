@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 export default function IndexPage() {
   return (
     <>
-      {/* <Nav /> */}
+      <Nav />
       <Header />
       <Dashboard />
       <About />
