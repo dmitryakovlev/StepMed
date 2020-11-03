@@ -12,7 +12,10 @@ module.exports = {
         xl: "1200px"
       },
       height: {
-        "60": '15rem',
+        "60": "15rem",
+      },
+      width: {
+        "45%": "45%",
       },
       colors: {
         "primary": "#489ecd",
@@ -30,20 +33,25 @@ module.exports = {
       },
       textColor: theme => theme('colors'),
       gradientColorStops: theme => ({
-        ...theme('colors'),
+        ...theme("colors"),
       }),
       fontSize: {
         "4xl": "2.5rem"
       },
       transitionTimingFunction: {
-        'ease': 'ease'
+        "ease": "ease"
       },
       opacity: {
-        '60': '60%'
+        "60": "60%"
       },
       backgroundOpacity: {
-        '90': '0.90',
+        "15": "0.15",
+        "90": "0.90",
       },
+      spacing: {
+        "7": "1.75rem",
+        "18": "4.5rem",
+      }
     },
   },
   variants: {},

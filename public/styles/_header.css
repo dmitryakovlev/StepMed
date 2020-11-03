@@ -7,11 +7,11 @@
 }
 
 .header__text-container {
-  @apply flex flex-col justify-center w-1/2 max-w-lg min-h-screen;
+  @apply flex flex-col justify-center w-45% min-h-screen;
 }
 
 .header__carousel {
-  @apply absolute top-0 right-0 min-h-screen max-h-screen w-2/5 select-none;
+  @apply absolute top-0 right-0 w-45% min-h-screen max-h-screen select-none;
 
   .slider-list::after {
     content: "";

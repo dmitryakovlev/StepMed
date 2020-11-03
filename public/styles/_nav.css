@@ -1,10 +1,33 @@
 .nav {
-  @apply z-10 fixed flex flex-col py-8 px-8 h-full bg-opacity-90;
+  @apply z-20 fixed flex flex-col items-center py-8 px-8 h-full;
   -webkit-backdrop-filter: saturate(180%) blur(10px);
   backdrop-filter: saturate(90%) blur(8px);
 
-  button {
-    @apply p-4 w-20;
+  @media (max-width: 1500px) {
+    @apply flex-row w-full h-auto p-5 bg-white bg-opacity-90;
+    border-bottom: 2px solid #f3f3f3;
+    position: sticky;
+    top: 0;
+
+    .nav__logo {
+      @apply w-16 h-16;
+    }
+
+    .nav__btn {
+      @apply mt-0 ml-5 w-16 h-16;
+      border-width: 3px;
+
+      .nav__btn-box {
+        width: 2rem;
+      }
+
+      .nav__btn-inner,
+      .nav__btn-inner::before,
+      .nav__btn-inner::after {
+        width: 2rem;
+        height: 3px;
+      }
+    }
   }
 }
 
@@ -12,6 +35,8 @@
   @apply w-20 h-20;
 }
 
+/* Nav menu button */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 .nav__btn {
   @apply flex justify-center items-center mt-8 w-20 h-20 border-4 border-text-primary rounded-md cursor-pointer ease-linear duration-200 overflow-visible;
   transition-property: opacity, filter;
@@ -91,16 +116,46 @@
 .nav__btn-inner::after {
   bottom: -10px;
 }
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* Register button */
+/* ----------------------------------- */
+.bttn.reg--bttn {
+  @apply flex items-center px-12 text-xl;
+
+  .reg--bttn-icon {
+    @apply w-6 h-6;
+
+    @media (max-width: 1500px) and (min-width: 640px) {
+      @apply mr-3;
+    }
+  }
+
+  .reg--bttn-text {
+    @apply hidden text-lg font-bold;
+
+    @media (max-width: 1500px) and (min-width: 640px) {
+      @apply inline-block;
+    }
+  }
+
+  @media (max-width: 639px) {
+    @apply p-5;
+  }
+
+  @media (min-width: 1501px) {
+    @apply p-7;
+  }
+}
 
 .nav__menu {
-  @apply justify-center items-center opacity-0 invisible bg-gradient-to-b from-dark-blue-gradient-top to-dark-blue-gradient-bottom ease-linear duration-200;
+  @apply z-10 justify-center items-center opacity-0 invisible bg-gradient-to-b from-dark-blue-gradient-top to-dark-blue-gradient-bottom ease-linear duration-200;
 
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: -1;
   width: 100vw;
 
   &.active {

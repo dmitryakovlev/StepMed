@@ -74,8 +74,7 @@ b {
 }
 
 .bttn {
-  @apply bg-gradient-to-b from-light-blue-gradient-top to-light-blue-gradient-bottom text-white text-2xl font-bold rounded-md ease-linear duration-200 select-none;
-  padding: 1.375rem;
+  @apply p-5 bg-gradient-to-b from-light-blue-gradient-top to-light-blue-gradient-bottom text-white text-2xl font-bold rounded-md ease-linear duration-200 select-none;
 
   &:hover {
     @apply opacity-75;
