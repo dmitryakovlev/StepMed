@@ -4,7 +4,7 @@ import FooterLinks from "./FooterLinks";
 const Footer = () => (
   <div className="mt-32 footer">
     <div className="footer__general">
-      <div className="container flex">
+      <div className="container flex flex-col lg:flex-row">
         <FooterContacts />
         <FooterLinks />
       </div>

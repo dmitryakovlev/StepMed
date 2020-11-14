@@ -1,8 +1,8 @@
 .about__numbers {
-  @apply flex items-center mb-10;
+  @apply hidden sm:flex items-center mb-10;
 
   .about__number {
-    @apply flex items-center justify-center w-16 h-16 text-primary text-2xl font-bold border-primary border-4 rounded-full duration-200 ease-in-out cursor-pointer select-none;
+    @apply flex items-center justify-center w-12 md:w-16 h-12 md:h-16 text-primary text-lg md:text-2xl font-bold border-primary border-2 md:border-4 rounded-full duration-200 ease-in-out cursor-pointer select-none;
 
     &:hover {
       @apply bg-primary text-white;
@@ -24,4 +24,14 @@
     background-size: 13px 4px;
     background-repeat: repeat-x;
   }
+}
+
+.about__img {
+  width: 175%;
+  max-width: 175%;
+  @apply sm:w-full sm:max-w-full;
+}
+
+.bttn.about--bttn {
+  @apply pt-3 pb-4 px-8;
 }

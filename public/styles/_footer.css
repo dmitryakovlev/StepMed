@@ -29,7 +29,7 @@
 }
 
 .footer__links-container {
-  @apply flex flex-shrink-0 select-none;
+  @apply flex flex-shrink-0 mt-8 lg:mt-0 select-none;
 
   .footer__links-block {
     @apply flex flex-col mr-12;

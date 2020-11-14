@@ -46,7 +46,7 @@ const AboutStep: FC<{
 }> = ({ title, description }) => (
   <div>
     <h3>{title}</h3>
-    <p className="mt-5">{description}</p>
+    <p className="mt-4 sm:mt-5">{description}</p>
   </div>
 );
 
@@ -67,8 +67,8 @@ const About = () => {
 
   return (
     <>
-      <div className="container mt-32">
-        <h1 className="mb-10">Почему именно мы?</h1>
+      <div className="container mt-16 md:mt-32">
+        <h1 className="mb-8 sm:mb-10">Почему именно мы?</h1>
 
         <div className="about__numbers">
           <Stepper
@@ -123,10 +123,35 @@ const About = () => {
             6
           </Stepper>
         </div>
+        <div className="flex mb-4 sm:hidden">
+          <button
+            className="bttn about--bttn"
+            onClick={() =>
+              setState((count) => {
+                return { activeTab: count.activeTab - 1 };
+              })
+            }
+          >
+            &#60;
+          </button>
+          <span className="flex-grow"></span>
+          <button
+            className="bttn about--bttn"
+            onClick={() =>
+              setState((count) => {
+                return { activeTab: count.activeTab + 1 };
+              })
+            }
+          >
+            &#62;
+          </button>
+        </div>
 
         <AboutStep {...aboutData[state.activeTab]} />
       </div>
-      <img src="./images/illustration.svg" className="w-full mt-32" />
+      <div className="flex justify-center mt-16 overflow-hidden md:mt-32">
+        <img src="./images/illustration.svg" className="about__img" />
+      </div>
     </>
   );
 };
