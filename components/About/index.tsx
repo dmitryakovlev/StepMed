@@ -149,9 +149,7 @@ const About = () => {
 
         <AboutStep {...aboutData[state.activeTab]} />
       </div>
-      <div className="flex justify-center mt-16 overflow-hidden md:mt-32">
-        <img src="./images/illustration.svg" className="about__img" />
-      </div>
+      <img src="./images/illustration.svg" className="hidden mt-32 sm:block" />
     </>
   );
 };

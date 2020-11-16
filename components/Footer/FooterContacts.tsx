@@ -1,6 +1,35 @@
+import { FC } from "react";
 import AddressIcon from "../Icons/AddressIcon";
 import EmailIcon from "../Icons/EmailIcon";
+import InstagramIcon from "../Icons/InstagramIcon";
+import NapopravkuIcon from "../Icons/NapopravkuIcon";
 import PhoneIcon from "../Icons/PhoneIcon";
+import ProdoktorovIcon from "../Icons/ProdoktorovIcon";
+import TwogisIcon from "../Icons/TwogisIcon";
+import WhatsappIcon from "../Icons/WhatsappIcon";
+import YandexIcon from "../Icons/YandexIcon";
+
+const footerContactsSocialData: Array<{
+  id: number;
+  link: string;
+  icon: JSX.Element;
+}> = [
+  { id: 0, link: "#", icon: <WhatsappIcon /> },
+  { id: 1, link: "#", icon: <InstagramIcon /> },
+  { id: 2, link: "#", icon: <NapopravkuIcon /> },
+  { id: 3, link: "#", icon: <ProdoktorovIcon /> },
+  { id: 4, link: "#", icon: <TwogisIcon /> },
+  { id: 5, link: "#", icon: <YandexIcon /> },
+];
+
+const FooterContactsSocial: FC<{ link: string; icon: JSX.Element }> = ({
+  link,
+  icon,
+}) => (
+  <a className="footer__contacts-social" href={link}>
+    {icon}
+  </a>
+);
 
 const FooterContacts = () => (
   <div className="footer__contacts-container">
@@ -35,10 +64,13 @@ const FooterContacts = () => (
     </div>
 
     <div className="footer__contacts-socials">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      {footerContactsSocialData.map((contact) => (
+        <FooterContactsSocial
+          link={contact.link}
+          icon={contact.icon}
+          key={contact.id}
+        />
+      ))}
     </div>
   </div>
 );

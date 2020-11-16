@@ -10,6 +10,7 @@
 @import "./_header.css";
 @import "./_dashboard.css";
 @import "./_about.css";
+@import "./_partners.css";
 @import "./_footer.css";
 
 *,
@@ -78,6 +79,10 @@ b {
 
   &:hover {
     @apply opacity-75;
+  }
+
+  &.about--bttn {
+    @apply pt-3 pb-4 px-8;
   }
 }
 

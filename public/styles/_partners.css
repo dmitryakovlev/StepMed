@@ -1,6 +1,7 @@
-.artners__blocks {
-  @apply grid grid-cols-4 gap-2;
+.partners__block {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 mt-8;
 }
 
-.partners__block-logo {
+.partners__logo {
+  @apply w-full max-h-32;
 }

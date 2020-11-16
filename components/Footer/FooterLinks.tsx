@@ -105,33 +105,39 @@ const FooterLinksdBlock: FC<{
   link: string;
   text: string;
 }> = ({ link, text }) => (
-  <a className="footer__links-link" href={link}>
-    {text}
-  </a>
+  <li className="mb-1">
+    <a className="footer__links-link" href={link}>
+      {text}
+    </a>
+  </li>
 );
 
 const FooterLinks = () => (
   <div className="footer__links-container">
     <div className="footer__links-block">
       <h5 className="footer__links-header">О клинике</h5>
-      {footerAboutClinicData.map((footer) => (
-        <FooterLinksdBlock
-          link={footer.link}
-          text={footer.text}
-          key={footer.id}
-        />
-      ))}
+      <ul>
+        {footerAboutClinicData.map((footer) => (
+          <FooterLinksdBlock
+            link={footer.link}
+            text={footer.text}
+            key={footer.id}
+          />
+        ))}
+      </ul>
     </div>
 
     <div className="footer__links-block">
       <h5 className="footer__links-header">Пациентам</h5>
-      {footerForPatientsData.map((footer) => (
-        <FooterLinksdBlock
-          link={footer.link}
-          text={footer.text}
-          key={footer.id}
-        />
-      ))}
+      <ul>
+        {footerForPatientsData.map((footer) => (
+          <FooterLinksdBlock
+            link={footer.link}
+            text={footer.text}
+            key={footer.id}
+          />
+        ))}
+      </ul>
     </div>
   </div>
 );

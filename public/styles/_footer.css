@@ -3,7 +3,8 @@
 
   h4,
   h5,
-  h6 {
+  h6,
+  p {
     @apply text-light-gray;
   }
 }
@@ -13,7 +14,7 @@
 }
 
 .footer__contacts-container {
-  @apply flex flex-col flex-grow mr-8 text-light-gray;
+  @apply flex flex-col flex-shrink-0 lg:mr-16 text-light-gray;
 
   .footer__contacts-contact {
     @apply flex items-center mt-4;
@@ -28,22 +29,34 @@
   }
 }
 
+.footer__contacts-socials {
+  @apply flex mt-6;
+
+  .footer__contacts-social {
+    @apply mr-4;
+
+    svg {
+      @apply w-8 h-8;
+    }
+  }
+}
+
 .footer__links-container {
-  @apply flex flex-shrink-0 mt-8 lg:mt-0 select-none;
+  @apply flex mt-12 lg:mt-0 select-none;
 
   .footer__links-block {
-    @apply flex flex-col mr-12;
+    @apply flex flex-col mr-8;
 
     &:last-child {
       @apply mr-0;
     }
 
     .footer__links-header {
-      @apply mb-3;
+      @apply mb-2;
     }
 
     .footer__links-link {
-      @apply mb-2 text-light-gray text-xs;
+      @apply text-light-gray opacity-75 text-xs;
     }
   }
 }
