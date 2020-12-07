@@ -1,9 +1,9 @@
-import LogoColor from "../logos/LogoColor";
-import Hamburger from "./Hamburger";
-import Menu from "./Menu";
+import LogoColor from "@components/logos/LogoColor";
+import Hamburger from "@components/nav/Hamburger";
+import Menu from "@components/nav/Menu";
 import { useState, useRef } from "react";
-import LogoWhite from "../logos/LogoWhite";
-import PenIcon from "../icons/PenIcon";
+import LogoWhite from "@components/logos/LogoWhite";
+import PenIcon from "@components/icons/PenIcon";
 
 const Nav = () => {
   const [open, setOpen] = useState(false);

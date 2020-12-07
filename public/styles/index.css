@@ -7,11 +7,8 @@
 
 @import "./_fonts.css";
 @import "./_nav.css";
-@import "./_header.css";
-@import "./_dashboard.css";
-@import "./_about.css";
-@import "./_partners.css";
-@import "./_footer.css";
+@import "./home/home.css";
+@import "./staff/staff.css";
 
 *,
 body {

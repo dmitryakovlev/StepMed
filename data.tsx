@@ -279,52 +279,46 @@ export const homeFooterLinksPatients: HomeFooterLinks[] = [
 ];
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-// export interface Wombat {
-//   id: number;
-//   name: string;
-//   fullName: string;
-//   title: string;
-//   workPlaces: string[];
-//   description: string;
-//   photoUrl: string;
-//   basedIn: {
-//     code: string;
-//     fullName: string;
-//   };
-//   social: {
-//     twitter?: string;
-//     github: string;
-//     linkedIn?: string;
-//     website?: string;
-//   };
-// }
+// // // STAFF PAGE // // //
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-// export interface WorkPlace {
-//   id: number;
-//   name: string;
-//   websiteUrl: string;
-//   logo: JSX.Element | JSX.IntrinsicElements;
-// }
+export interface Staff {
+  id: number;
+  photoUrl: string;
+  fullName: string;
+  workPosition: string;
+  description: string;
+  education: string[];
+  professionalCommunity?: string[];
+  advancedTraining?: string[];
+  publications?: string[];
+  social: {
+    facebook?: string;
+    vk?: string;
+    linkedIn?: string;
+    whatsapp?: string;
+  };
+}
 
-// export const wombats: Wombat[] = [
-//   {
-//     id: 0,
-//     name: "yuri",
-//     fullName: "Yuri Yakovlev",
-//     title: "React, NodeJS, CI/CD, Soft Skills",
-//     workPlaces: ["OAK'S LAB", "Kiwi.com", "CN Group", "Bunte.de", "Lundegaard"],
-//     description:
-//       "Yuri is a JavaScript anarchist. He doesn’t move tickets in Jira and makes mistakes in Pull Requests...on purpose just to test colleagues. Addicted to Open Source.",
-//     photoUrl: "/about/yuri.jpg",
-//     basedIn: {
-//       code: "CZ",
-//       fullName: "Czech Republic",
-//     },
-//     social: {
-//       twitter: "yakovlevyuri",
-//       github: "yakovlevyuri",
-//       linkedIn: "yakovlevyuri",
-//       website: "https://mynameisyuri.com",
-//     },
-//   },
-// ];
+export const staffDoctors: Staff[] = [
+  {
+    id: 0,
+    photoUrl: "/images/staff/yulia.png",
+    fullName: "Юлия Александровна Гронская",
+    workPosition: "онколог-химиотерапевт",
+    description:
+      "Не следует, однако, забывать, что консультация с широким активом требует определения и уточнения анализа существующих паттернов поведения. В частности, сложившаяся структура организации прекрасно подходит для реализации вывода текущих активов! Современные технологии достигли такого уровня, что семантический разбор внешних противодействий способствует повышению качества новых принципов формирования материально-технической и кадровой базы!",
+    education: ["ПСПБГМУ им. ак. Павлова И.П.", "ПСПБГМУ им. ак. Павлова И.П."],
+    professionalCommunity: ["yuri.jpg"],
+    advancedTraining: [],
+    publications: [],
+    social: {
+      facebook: "yulia",
+      vk: "yulia",
+      linkedIn: "yulia",
+      whatsapp: "https://yulia.com",
+    },
+  },
+];
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
