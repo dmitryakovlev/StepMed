@@ -1,10 +1,10 @@
 import { staffDoctors } from "@data";
 import StaffProfile from "./StaffBlock";
 
-export default function StaffPage() {
+export default function Staff() {
   return (
-    <div className="container">
-      <h1 className="mt-8 mb-8 sm:mb-10">Врачи</h1>
+    <div className="container my-8">
+      <h1 className="mb-8 sm:mb-10">Врачи</h1>
       {staffDoctors.map((staff) => (
         <StaffProfile {...staff} key={staff.id} />
       ))}

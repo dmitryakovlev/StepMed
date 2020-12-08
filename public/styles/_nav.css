@@ -1,5 +1,7 @@
 .nav {
   @apply z-20 fixed flex flex-col items-center py-8 px-8 h-full;
+  top: 0;
+  left: 0;
   -webkit-backdrop-filter: saturate(180%) blur(10px);
   backdrop-filter: saturate(90%) blur(8px);
 
@@ -149,7 +151,7 @@
 }
 
 .nav__menu {
-  @apply z-10 justify-center items-center opacity-0 invisible bg-gradient-to-b from-dark-blue-gradient-top to-dark-blue-gradient-bottom ease-linear duration-200;
+  @apply z-10 flex justify-center items-center opacity-0 invisible bg-gradient-to-b from-dark-blue-gradient-top to-dark-blue-gradient-bottom ease-linear duration-200;
 
   position: fixed;
   top: 0;
@@ -159,7 +161,7 @@
   width: 100vw;
 
   &.active {
-    @apply opacity-100 visible flex ease-linear duration-200;
+    @apply opacity-100 visible ease-linear duration-200;
   }
 
   .nav__menu-links {

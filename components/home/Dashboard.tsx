@@ -1,12 +1,15 @@
 import { FC } from "react";
+import Link from "next/link";
 import { homeDashboard, HomeDashboard } from "@data";
 
 const DashboardBlock: FC<HomeDashboard> = (dashboard) => (
   <>
-    <a className="dashboard__block" href={dashboard.link}>
-      <span className="dashboard__block-icon">{dashboard.icon}</span>
-      <p className="dashboard__block-text">{dashboard.text}</p>
-    </a>
+    <Link href={dashboard.link}>
+      <a className="dashboard__block">
+        <span className="dashboard__block-icon">{dashboard.icon}</span>
+        <p className="dashboard__block-text">{dashboard.text}</p>
+      </a>
+    </Link>
   </>
 );
 

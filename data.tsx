@@ -97,7 +97,7 @@ export const homeDashboard: HomeDashboard[] = [
   },
   {
     id: 5,
-    link: "#",
+    link: "/staff",
     icon: <StaffIcon />,
     text: "Наши врачи",
   },

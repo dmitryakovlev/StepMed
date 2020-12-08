@@ -3,9 +3,11 @@
 
 :root {
   --primary-color: #489ecd;
+  --reach-dialog: 1;
 }
 
 @import "./_fonts.css";
+@import "./_modal.css";
 @import "./_nav.css";
 @import "./home/home.css";
 @import "./staff/staff.css";
