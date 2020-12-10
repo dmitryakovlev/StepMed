@@ -1,11 +1,12 @@
-import Nav from "@components/nav/index";
-import Staff from "@components/staff/index";
+import Layout from "@components/shared/Layout";
+import Staff from "@components/staff";
 
 export default function StaffPage() {
   return (
     <>
-      <Nav />
-      <Staff />
+      <Layout title="Наши врачи">
+        <Staff />
+      </Layout>
     </>
   );
 }

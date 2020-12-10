@@ -1,11 +1,12 @@
-import HomePage from "@components/home";
-import Nav from "@components/nav/index";
+import Layout from "@components/shared/Layout";
+import Home from "@components/home";
 
-export default function IndexPage() {
+export default function HomePage() {
   return (
     <>
-      <Nav />
-      <HomePage />
+      <Layout title="Главная">
+        <Home />
+      </Layout>
     </>
   );
 }
