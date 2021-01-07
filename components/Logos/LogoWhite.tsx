@@ -16,13 +16,7 @@ function LogoWhite() {
           <stop stopColor="#D0D0D0" offset="100%"></stop>
         </linearGradient>
       </defs>
-      <g
-        id="Logo"
-        stroke="none"
-        stroke-width="1"
-        fill="none"
-        fillRule="evenodd"
-      >
+      <g id="Logo" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="Logos" transform="translate(-50.000000, -180.000000)">
           <g id="Logo_white" transform="translate(50.000000, 180.000000)">
             <rect

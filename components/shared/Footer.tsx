@@ -1,22 +1,23 @@
-import { FC } from "react";
-import {
-  HomeFooterContacts,
-  homeFooterContacts,
-  HomeFooterLinks,
-  homeFooterLinksClinic,
-  homeFooterLinksPatients,
-} from "@data";
-import AddressIcon from "@components/icons/AddressIcon";
-import EmailIcon from "@components/icons/EmailIcon";
-import PhoneIcon from "@components/icons/PhoneIcon";
+import { FC } from 'react';
+import Link from 'next/link';
+// import {
+//   FooterContacts,
+//   footerContacts,
+//   NavBarMenuAdditional,
+//   navBarMenuClinic,
+//   navBarMenuPatients,
+// } from "@data";
+import AddressIcon from '@components/icons/AddressIcon';
+import EmailIcon from '@components/icons/EmailIcon';
+import PhoneIcon from '@components/icons/PhoneIcon';
 
-const FooterContactsSocial: FC<HomeFooterContacts> = (contact) => (
-  <a className="footer__contacts-social" href={contact.link}>
-    {contact.icon}
-  </a>
+const FooterContactsSocial: FC<FooterContacts> = (contact) => (
+  <Link href={contact.link}>
+    <a className="footer__contacts-social">{contact.icon}</a>
+  </Link>
 );
 
-const FooterContacts = () => (
+const FooterContactsBlock = () => (
   <div className="footer__contacts-container">
     <h4>StepMed Clinic</h4>
 
@@ -49,17 +50,17 @@ const FooterContacts = () => (
     </div>
 
     <div className="footer__contacts-socials">
-      {homeFooterContacts.map((contact) => (
+      {footerContacts.map((contact) => (
         <FooterContactsSocial {...contact} key={contact.id} />
       ))}
     </div>
   </div>
 );
 
-const FooterLinksdBlock: FC<HomeFooterLinks> = (footer) => (
+const FooterLinksdBlock: FC<NavBarMenuAdditional> = (footer) => (
   <li className="mb-1">
     <a className="footer__links-link" href={footer.link}>
-      {footer.text}
+      {footer.title}
     </a>
   </li>
 );
@@ -69,7 +70,7 @@ const FooterLinks = () => (
     <div className="footer__links-block">
       <h5 className="footer__links-header">О клинике</h5>
       <ul>
-        {homeFooterLinksClinic.map((footer) => (
+        {navBarMenuClinic.map((footer) => (
           <FooterLinksdBlock {...footer} key={footer.id} />
         ))}
       </ul>
@@ -78,7 +79,7 @@ const FooterLinks = () => (
     <div className="footer__links-block">
       <h5 className="footer__links-header">Пациентам</h5>
       <ul>
-        {homeFooterLinksPatients.map((footer) => (
+        {navBarMenuPatients.map((footer) => (
           <FooterLinksdBlock {...footer} key={footer.id} />
         ))}
       </ul>
@@ -90,9 +91,9 @@ const Footer = () => (
   <div className="mt-32 footer">
     <div className="footer__general">
       <div className="container flex flex-col lg:flex-row">
-        <FooterContacts />
+        {/* <FooterContactsBlock />
         <span className="md:flex-grow"></span>
-        <FooterLinks />
+        <FooterLinks /> */}
       </div>
     </div>
     <div className="container">

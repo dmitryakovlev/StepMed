@@ -16,6 +16,25 @@ import ProdoktorovIcon from "@components/icons/ProdoktorovIcon";
 import TwogisIcon from "@components/icons/TwogisIcon";
 import YandexIcon from "@components/icons/YandexIcon";
 
+// // // FOOTER // // //
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+export interface FooterContacts {
+  id: number;
+  link: string;
+  icon: JSX.Element;
+}
+
+export const footerContacts: FooterContacts[] = [
+  { id: 0, link: "#", icon: <WhatsappIcon /> },
+  { id: 1, link: "#", icon: <InstagramIcon /> },
+  { id: 2, link: "#", icon: <NapopravkuIcon /> },
+  { id: 3, link: "#", icon: <ProdoktorovIcon /> },
+  { id: 4, link: "#", icon: <TwogisIcon /> },
+  { id: 5, link: "#", icon: <YandexIcon /> },
+];
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 // // // LANDING PAGE // // //
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
@@ -161,122 +180,6 @@ export const homeAbout: HomeAbout[] = [
       "Мы понимаем важность клинических исследований, поскольку это передовые технологии в медицине. Наша команда участвует и непрерывно отслеживает все открытые клинические исследования. Даже если они не доступны для проведения в нашей клинике – мы окажем содействие по включению вас в протоколы других исследовательских центров.",
   },
 ];
-
-// Footer contacts at landing page
-// ------------------------------------------------------------------------------------------------------------------------------------------------
-export interface HomeFooterContacts {
-  id: number;
-  link: string;
-  icon: JSX.Element;
-}
-
-export const homeFooterContacts: HomeFooterContacts[] = [
-  { id: 0, link: "#", icon: <WhatsappIcon /> },
-  { id: 1, link: "#", icon: <InstagramIcon /> },
-  { id: 2, link: "#", icon: <NapopravkuIcon /> },
-  { id: 3, link: "#", icon: <ProdoktorovIcon /> },
-  { id: 4, link: "#", icon: <TwogisIcon /> },
-  { id: 5, link: "#", icon: <YandexIcon /> },
-];
-
-// Footer links at landing page
-// ------------------------------------------------------------------------------------------------------------------------------------------------
-export interface HomeFooterLinks {
-  id: number;
-  link: string;
-  text: string;
-}
-
-export const homeFooterLinksClinic: HomeFooterLinks[] = [
-  {
-    id: 0,
-    link: "#",
-    text: "О нас",
-  },
-  {
-    id: 1,
-    link: "#",
-    text: "Документы и лицензии",
-  },
-  {
-    id: 2,
-    link: "#",
-    text: "Надзорные органы",
-  },
-  {
-    id: 3,
-    link: "#",
-    text: "Наши партнеры",
-  },
-  {
-    id: 4,
-    link: "#",
-    text: "Вакансии",
-  },
-  {
-    id: 5,
-    link: "#",
-    text: "Законодательная карта",
-  },
-  {
-    id: 6,
-    link: "#",
-    text: "Правила внутреннего распорядка",
-  },
-];
-
-export const homeFooterLinksPatients: HomeFooterLinks[] = [
-  {
-    id: 0,
-    link: "#",
-    text: "Прием онколога",
-  },
-  {
-    id: 1,
-    link: "#",
-    text: "Услуги и цены",
-  },
-  {
-    id: 2,
-    link: "#",
-    text: "Лечение по ОМС",
-  },
-  {
-    id: 3,
-    link: "#",
-    text: "Ранняя диагностика и скрининг",
-  },
-  {
-    id: 4,
-    link: "#",
-    text: "COVID-19",
-  },
-  {
-    id: 5,
-    link: "#",
-    text: "Заочная консультация",
-  },
-  {
-    id: 6,
-    link: "#",
-    text: "Иммунотерапия и таргетная терапия",
-  },
-  {
-    id: 7,
-    link: "#",
-    text: "Правила госпитализации",
-  },
-  {
-    id: 8,
-    link: "#",
-    text: "Подготовка к диагностическим исследованиям",
-  },
-  {
-    id: 9,
-    link: "#",
-    text: "Анкета качества",
-  },
-];
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 // // // STAFF PAGE // // //
@@ -320,5 +223,3 @@ export const staffDoctors: Staff[] = [
     },
   },
 ];
-
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
