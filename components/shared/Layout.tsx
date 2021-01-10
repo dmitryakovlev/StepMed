@@ -1,7 +1,7 @@
-import { FC } from "react";
-import Head from "next/head";
-import NavBar from "@components/shared/NavBar";
-import Footer from "@components/shared/Footer";
+import { FC } from 'react';
+import Head from 'next/head';
+import NavBar from '@components/shared/NavBar';
+import Footer from '@components/shared/Footer';
 
 const Layout: FC<{
   title: string;

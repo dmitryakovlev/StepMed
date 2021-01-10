@@ -1,11 +1,11 @@
-import { useState, FC } from "react";
-import classNames from "classnames";
-import { homeAbout, HomeAbout } from "@data";
+import { useState, FC } from 'react';
+import classNames from 'classnames';
+import { homeAbout, IHomeAbout } from '@data/homePage';
 
-const AboutStep: FC<HomeAbout> = (about) => (
+const AboutStep: FC<IHomeAbout> = ({ title, description }) => (
   <div>
-    <h3>{about.title}</h3>
-    <p className="mt-4 sm:mt-5">{about.description}</p>
+    <h3>{title}</h3>
+    <p className="mt-4 sm:mt-5">{description}</p>
   </div>
 );
 
@@ -14,7 +14,7 @@ const Stepper: FC<{
   onClick: () => void;
 }> = ({ isActive, onClick, children }) => (
   <span
-    className={classNames("about__number", { active: isActive })}
+    className={classNames('about__number', { active: isActive })}
     onClick={onClick}
   >
     {children}

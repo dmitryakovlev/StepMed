@@ -1,19 +1,12 @@
 import { useState, FC } from 'react';
 import Link from 'next/link';
 import classNames from 'classnames';
-// import {
-//   NavBarMenu,
-//   navBarMenu,
-//   NavBarMenuAdditional,
-//   navBarMenuClinic,
-//   navBarMenuPatients,
-// } from "@data";
 
-import navBar from '@data/navBar';
+import { INavBarMenu, navBarMenu, aboutSubMenu } from '@data/navBar';
 
-import LogoWhite from '@components/logos/LogoWhite';
-import PenIcon from '@components/icons/PenIcon';
-import LogoColor from '@components/logos/LogoColor';
+import LogoWhite from '@components/logo/LogoWhite';
+import PenIcon from '@icons/Pen';
+import LogoColor from '@components/logo/LogoColor';
 
 const Hamburger: FC<{
   open: boolean;
@@ -31,37 +24,43 @@ const Hamburger: FC<{
   );
 };
 
-// const MenuItem: FC<NavBarMenu> = (menu) => (
-//   <Link href={menu.link}>
-//     <a className={menu.class}>{menu.title}</a>
-//   </Link>
-// );
+const MenuItem: FC<INavBarMenu> = ({ url, title }) => (
+  <Link href={url}>
+    <a className="nav__menu-general-link">{title}</a>
+  </Link>
+);
 
-// const MenuItemAdditional: FC<NavBarMenuAdditional> = (menu) => (
-//   <Link href={menu.link}>
-//     <a className="nav__menu-additional-link">{menu.title}</a>
-//   </Link>
-// );
+// {subMenu &&
+//   subMenu.map(({ url, title }) => (
+//     <Link href={url}>
+//       <a className="nav__menu-additional-link">{title}</a>
+//     </Link>
+//   ))}
 
 const Menu: FC<{
   open: any;
   setOpen: any;
 }> = ({ open }) => {
+  const navSubMenuItems = navBarMenu.filter((element) => element.subMenu);
+
+  // console.log({ navSubMenuItems });
+
   return (
     <div className={classNames('nav__menu', { active: open })}>
       <div className="nav__menu-container">
-        {/* <div className="nav__menu-links nav__menu-links-show">
-          {navBarMenu.map((menu) => (
-            <MenuItem {...menu} key={menu.id} />
+        <div className="nav__menu-links">
+          {navBarMenu.map((menuItem) => (
+            <MenuItem {...menuItem} key={menuItem.id} />
           ))}
         </div>
 
         <div className="nav__menu-links nav__menu-additional-links-hide">
-          {navBarMenuClinic.map((menu) => (
-            <MenuItemAdditional {...menu} key={menu.id} />
+          {aboutSubMenu.map((menuItem) => (
+            <MenuItem {...menuItem} key={menuItem.id} />
           ))}
         </div>
 
+        {/*
         <div className="nav__menu-links nav__menu-additional-links-hide">
           {navBarMenuPatients.map((menu) => (
             <MenuItemAdditional {...menu} key={menu.id} />

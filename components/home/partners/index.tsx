@@ -1,6 +1,5 @@
-import { FC } from "react";
-import ITworks from "./ITworks";
-import TwoFiveSeven from "./TwoFiveSeven";
+import ITworks from './ITworks';
+import TwoFiveSeven from './TwoFiveSeven';
 
 const Partners = () => (
   <>

@@ -1,13 +1,13 @@
-import { FC } from "react";
-import Link from "next/link";
-import { homeDashboard, HomeDashboard } from "@data";
+import { FC } from 'react';
+import Link from 'next/link';
+import { homeDashboard, IHomeDashboard } from '@data/homePage';
 
-const DashboardBlock: FC<HomeDashboard> = (dashboard) => (
+const DashboardBlock: FC<IHomeDashboard> = ({ url, icon, text }) => (
   <>
-    <Link href={dashboard.link}>
+    <Link href={url}>
       <a className="dashboard__block">
-        <span className="dashboard__block-icon">{dashboard.icon}</span>
-        <p className="dashboard__block-text">{dashboard.text}</p>
+        <span className="dashboard__block-icon">{icon}</span>
+        <p className="dashboard__block-text">{text}</p>
       </a>
     </Link>
   </>

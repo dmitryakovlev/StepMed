@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 function ITworks() {
   return (
@@ -8,7 +8,7 @@ function ITworks() {
       viewBox="0 0 1200 380"
       className="partners__logo"
     >
-      <title>{"twoFiveSeven"}</title>
+      <title>{'twoFiveSeven'}</title>
       <g fill="none" fillRule="evenodd">
         <g fillRule="nonzero">
           <path

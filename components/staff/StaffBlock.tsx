@@ -1,9 +1,9 @@
-import { FC, useState } from "react";
-import { Dialog } from "@reach/dialog";
-import { Staff } from "@data";
+import { FC, useState } from 'react';
+import { Dialog } from '@reach/dialog';
+import { IStaff } from '@data/staff';
 
 const DialogContent: FC<{
-  staff: Staff;
+  staff: IStaff;
   close: () => void;
 }> = ({
   staff: {
@@ -102,7 +102,7 @@ const DialogContent: FC<{
   </div>
 );
 
-const StaffProfile: FC<Staff> = (staff) => {
+const StaffProfile: FC<IStaff> = (staff) => {
   const [showDialog, setShowDialog] = useState(false);
   const open = () => setShowDialog(true);
   const close = () => setShowDialog(false);
@@ -111,7 +111,7 @@ const StaffProfile: FC<Staff> = (staff) => {
     <div className="staff__container">
       <img
         alt={staff.fullName}
-        src={staff.photoUrl || ""}
+        src={staff.photoUrl || ''}
         className="staff__img"
       />
       <h2 className="staff__name">{staff.fullName}</h2>

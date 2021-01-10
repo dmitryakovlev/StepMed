@@ -1,19 +1,15 @@
 import { FC } from 'react';
 import Link from 'next/link';
-// import {
-//   FooterContacts,
-//   footerContacts,
-//   NavBarMenuAdditional,
-//   navBarMenuClinic,
-//   navBarMenuPatients,
-// } from "@data";
-import AddressIcon from '@components/icons/AddressIcon';
-import EmailIcon from '@components/icons/EmailIcon';
-import PhoneIcon from '@components/icons/PhoneIcon';
 
-const FooterContactsSocial: FC<FooterContacts> = (contact) => (
-  <Link href={contact.link}>
-    <a className="footer__contacts-social">{contact.icon}</a>
+import AddressIcon from '@icons/Address';
+import EmailIcon from '@icons/Email';
+import PhoneIcon from '@icons/Phone';
+
+import { IFooterContacts, footerContacts } from '@data/footer';
+
+const FooterContactsSocial: FC<IFooterContacts> = ({ url, icon }) => (
+  <Link href={url}>
+    <a className="footer__contacts-social">{icon}</a>
   </Link>
 );
 
@@ -57,32 +53,32 @@ const FooterContactsBlock = () => (
   </div>
 );
 
-const FooterLinksdBlock: FC<NavBarMenuAdditional> = (footer) => (
-  <li className="mb-1">
-    <a className="footer__links-link" href={footer.link}>
-      {footer.title}
-    </a>
-  </li>
-);
+// const FooterLinksdBlock: FC<NavBarMenuAdditional> = (footer) => (
+//   <li className="mb-1">
+//     <a className="footer__links-link" href={footer.link}>
+//       {footer.title}
+//     </a>
+//   </li>
+// );
 
 const FooterLinks = () => (
   <div className="footer__links-container">
     <div className="footer__links-block">
       <h5 className="footer__links-header">О клинике</h5>
-      <ul>
+      {/* <ul>
         {navBarMenuClinic.map((footer) => (
           <FooterLinksdBlock {...footer} key={footer.id} />
         ))}
-      </ul>
+      </ul> */}
     </div>
 
     <div className="footer__links-block">
       <h5 className="footer__links-header">Пациентам</h5>
-      <ul>
+      {/* <ul>
         {navBarMenuPatients.map((footer) => (
           <FooterLinksdBlock {...footer} key={footer.id} />
         ))}
-      </ul>
+      </ul> */}
     </div>
   </div>
 );
@@ -91,9 +87,9 @@ const Footer = () => (
   <div className="mt-32 footer">
     <div className="footer__general">
       <div className="container flex flex-col lg:flex-row">
-        {/* <FooterContactsBlock />
+        <FooterContactsBlock />
         <span className="md:flex-grow"></span>
-        <FooterLinks /> */}
+        <FooterLinks />
       </div>
     </div>
     <div className="container">

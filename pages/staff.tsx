@@ -1,5 +1,5 @@
-import Layout from "@components/shared/Layout";
-import Staff from "@components/staff";
+import Layout from '@components/shared/Layout';
+import Staff from '@components/staff';
 
 export default function StaffPage() {
   return (

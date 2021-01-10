@@ -16,8 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["components/*"],
-      "@data": ["data.tsx"],
-      "@datanew": ["data/*],
+      "@icons/*": ["components/allicons/*"],
+      "@data/*": ["data/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

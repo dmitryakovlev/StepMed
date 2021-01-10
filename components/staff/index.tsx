@@ -1,5 +1,5 @@
-import { staffDoctors } from "@data";
-import StaffProfile from "./StaffBlock";
+import { staffDoctors } from '@data/staff';
+import StaffProfile from './StaffBlock';
 
 export default function Staff() {
   return (
