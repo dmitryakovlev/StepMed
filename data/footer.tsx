@@ -12,10 +12,10 @@ export interface IFooterContacts {
 }
 
 export const footerContacts: IFooterContacts[] = [
-  { id: 0, url: '#', icon: <WhatsappIcon /> },
-  { id: 1, url: '#', icon: <InstagramIcon /> },
-  { id: 2, url: '#', icon: <NapopravkuIcon /> },
-  { id: 3, url: '#', icon: <ProdoktorovIcon /> },
-  { id: 4, url: '#', icon: <TwogisIcon /> },
-  { id: 5, url: '#', icon: <YandexIcon /> },
+  { id: 0, url: '/', icon: <WhatsappIcon /> },
+  { id: 1, url: '/', icon: <InstagramIcon /> },
+  { id: 2, url: '/', icon: <NapopravkuIcon /> },
+  { id: 3, url: '/', icon: <ProdoktorovIcon /> },
+  { id: 4, url: '/', icon: <TwogisIcon /> },
+  { id: 5, url: '/', icon: <YandexIcon /> },
 ];
