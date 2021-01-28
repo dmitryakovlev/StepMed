@@ -5,7 +5,7 @@ import {
   supervisoryAuthority,
 } from '@data/supervisoryAuthority';
 
-const TableHead: FC<ISupervisoryAuthority> = ({
+const Block: FC<ISupervisoryAuthority> = ({
   img,
   name,
   address,
@@ -41,10 +41,10 @@ const TableHead: FC<ISupervisoryAuthority> = ({
   </div>
 );
 
-const Table = () => (
+const BlockList = () => (
   <div className="flex flex-col">
     {supervisoryAuthority.map((parameters) => (
-      <TableHead {...parameters} key={parameters.id} />
+      <Block {...parameters} key={parameters.id} />
     ))}
   </div>
 );
@@ -52,7 +52,7 @@ const Table = () => (
 const LegislativeMap = () => (
   <div className="container mt-16 md:mt-32">
     <h1 className="mb-10">Надзорные органы</h1>
-    <Table />
+    <BlockList />
   </div>
 );
 
