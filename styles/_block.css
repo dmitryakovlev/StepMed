@@ -1,0 +1,39 @@
+.custom-block {
+  @apply flex items-center mt-5 py-12 px-16 w-full border-2 border-gray-100 rounded-md;
+  &:first-child {
+    @apply mt-0;
+  }
+
+  .custom-block-img {
+    @apply w-38 h-38;
+  }
+
+  .custom-block-container {
+    @apply flex-1 ml-16;
+  }
+
+  .custom-block-name {
+    @apply mb-6 text-xl;
+  }
+
+  .custom-block-item {
+    @apply flex flex-col;
+
+    .custom-block-item-heading {
+      @apply mb-2 text-sm text-gray-400 select-none;
+    }
+
+    .custom-block-item-text {
+      @apply text-base text-text-primary;
+    }
+
+    .custom-block-item-link {
+      @apply text-base text-primary hover:underline;
+    }
+  }
+
+  .custom-clock-grid {
+    @apply grid gap-6;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

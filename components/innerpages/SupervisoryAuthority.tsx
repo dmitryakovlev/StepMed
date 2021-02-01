@@ -12,34 +12,44 @@ const Block: FC<ISupervisoryAuthority> = ({
   url,
   phone,
   email,
-}) => (
-  <div className="">
-    <img src={img} />
-    <div>
-      <h1>{name}</h1>
-      <div>
-        <span>Адрес</span>
-        <span>{address}</span>
+}) => {
+  let ifHasEmail;
+
+  if (email) {
+    ifHasEmail = (
+      <div className="custom-block-item">
+        <span className="custom-block-item-heading">Электронная почта</span>
+        <span className="custom-block-item-text">{email}</span>
       </div>
-      <div>
-        <div>
-          <span>Сайт</span>
-          <a href={url} target="_blank">
-            {url}
-          </a>
+    );
+  }
+
+  return (
+    <div className="custom-block">
+      <img className="custom-block-img" src={img} />
+      <div className="custom-block-container">
+        <h1 className="custom-block-name">{name}</h1>
+        <div className="mb-5 custom-block-item">
+          <span className="custom-block-item-heading">Адрес</span>
+          <span className="custom-block-item-text">{address}</span>
         </div>
-        <div>
-          <span>Телефон</span>
-          <span>{phone}</span>
-        </div>
-        <div>
-          <span>Электронная почта</span>
-          <span>{email}</span>
+        <div className="custom-clock-grid">
+          <div className="custom-block-item">
+            <span className="custom-block-item-heading">Сайт</span>
+            <a href={url} className="custom-block-item-link" target="_blank">
+              {url}
+            </a>
+          </div>
+          <div className="custom-block-item">
+            <span className="custom-block-item-heading">Телефон</span>
+            <span className="custom-block-item-text">{phone}</span>
+          </div>
+          {ifHasEmail}
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 const BlockList = () => (
   <div className="flex flex-col">

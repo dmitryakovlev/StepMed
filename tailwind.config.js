@@ -13,9 +13,11 @@ module.exports = {
         xl: '1200px',
       },
       height: {
+        38: '9.375rem',
         60: '15rem',
       },
       width: {
+        38: '9.375rem',
         '45%': '45%',
       },
       colors: {
