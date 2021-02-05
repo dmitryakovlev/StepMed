@@ -1,0 +1,159 @@
+import { FC } from 'react';
+
+import {
+  IRulesOfHospitalizationHead,
+  IRulesOfHospitalization,
+  rulesOfHospitalizationHead,
+  rulesOfHospitalizationFirst,
+  rulesOfHospitalizationSecond,
+  rulesOfHospitalizationThird,
+} from '@data/rulesOfHospitalization';
+
+const TableHead: FC<IRulesOfHospitalizationHead> = ({ heading }) => (
+  <div className="custom-table-head-item">{heading}</div>
+);
+
+const TableContent: FC<IRulesOfHospitalization> = ({ order, name, date }) => (
+  <div className="custom-table-cell">
+    <div className="custom-table-cell-item">
+      <span className="custom-table-cell-heading">№</span>
+      <span className="custom-table-cell-text">{order}</span>
+    </div>
+    <div className="custom-table-cell-item">
+      <span className="custom-table-cell-heading">
+        Наименование исследования
+      </span>
+      <span className="custom-table-cell-text">{name}</span>
+    </div>
+    <div className="custom-table-cell-item">
+      <span className="custom-table-cell-heading">Срок годности</span>
+      <span className="custom-table-cell-text custom-table-cell-bold">
+        {date}
+      </span>
+    </div>
+  </div>
+);
+
+const Table: FC = ({ children }) => (
+  <div className="custom-table rulesofhospitalization--custom-table">
+    <div className="custom-table-head">
+      {rulesOfHospitalizationHead.map((parameters) => (
+        <TableHead {...parameters} key={parameters.id} />
+      ))}
+    </div>
+    <div>{children}</div>
+  </div>
+);
+
+const RulesOfHospitalization = () => (
+  <div className="container mt-16 md:mt-32">
+    <h1 className="mb-10">Правила госпитализации</h1>
+    <p>
+      Степмед клиник проводит химиотерапию в условиях дневного стационара, что
+      подразумевает краткосрочную госпитализацию, при которой вы находитесь в
+      клинике только в дневное время. Большинство схем химиотерапии может быть
+      проведено без круглосуточного пребывания в клинике, что никак не
+      сказывается на безопасности лечения, но в большинстве случаев положительно
+      влияет на эмоциональное состояние пациентов.
+      <br />
+      <br />
+      Как правило, дата госпитализации назначается заранее. Рекомендуем
+      прибывать за 15-20 минут до назначенного времени, а в случае опоздания –
+      обязательно предупреждать нас по телефону клиники.
+    </p>
+    <p className="custom-text-important">
+      Процесс госпитализации состоит из 2 важных этапов: клинический и
+      документальный.
+    </p>
+    <h3 className="mt-12">Клинический этап</h3>
+    <p className="mt-4">
+      Клинический этап, включает в себя осмотр лечащим врачом-онкологом, оценка
+      жалоб, контроль лабораторных показателей и результатов назначенных
+      исследований. Лабораторные анализы сдаются с определенной периодичностью
+      для контроля безопасности лечения, поскольку многое могут сказать о
+      функционировании органов и систем. Для каждой госпитализации понадобятся
+      результаты следующий исследований:
+    </p>
+    <Table>
+      {rulesOfHospitalizationFirst.map((parameters) => (
+        <TableContent {...parameters} key={parameters.id} />
+      ))}
+    </Table>
+    <p className="mt-8">
+      Для схем, включающих в себя некоторые препараты (трастузумаб, пертузумаб,
+      доксорубицин, эпирубицин, трастузумаб эмтанзин) понадобится выполнение
+      дополнительных биохимических исследований:
+    </p>
+    <Table>
+      {rulesOfHospitalizationSecond.map((parameters) => (
+        <TableContent {...parameters} key={parameters.id} />
+      ))}
+    </Table>
+    <p className="mt-8">
+      Для схем, включающих в себя иммунотерапию (ниволумаб, пембролизумаб,
+      ипилимумаб, атезолизумаб, пролголимаб) понадобится выполнение
+      дополнительных биохимических исследований:
+    </p>
+    <Table>
+      {rulesOfHospitalizationThird.map((parameters) => (
+        <TableContent {...parameters} key={parameters.id} />
+      ))}
+    </Table>
+    <p className="mt-8">
+      Указанные анализы позволят оценить безопасность запланированного лечения,
+      а также, при необходимости, скорректировать дозировки препаратов либо
+      назначить дополнительную сопроводительную терапию.
+    </p>
+    <h3 className="mt-12">Документальный этап</h3>
+    <p className="mt-4">
+      Второй этап госпитализации состоит из документальной части, которая
+      включает в себя:
+    </p>
+    <div className="custom-list">
+      <div className="custom-list-container">
+        <span className="custom-list-symbol"></span>
+        <p className="custom-list-item">
+          Идентификация пациента (проверка паспорта).
+        </p>
+      </div>
+      <div className="custom-list-container">
+        <span className="custom-list-symbol"></span>
+        <p className="custom-list-item">
+          Подписание согласия на обработку персональных данных.
+        </p>
+      </div>
+      <div className="custom-list-container">
+        <span className="custom-list-symbol"></span>
+        <p className="custom-list-item">
+          Проверка документов ОМС (полис ОМС и СНИЛС), запрос информации в
+          страховой компании либо фонде обязательного медицинского страхования.
+        </p>
+      </div>
+      <div className="custom-list-container">
+        <span className="custom-list-symbol"></span>
+        <p className="custom-list-item">
+          Проверка направления (соответствие форме 057/у-04, наличие всех
+          необходимых отметок и подписей).
+        </p>
+      </div>
+      <div className="custom-list-container">
+        <span className="custom-list-symbol"></span>
+        <p className="custom-list-item">
+          Оформление истории болезни (медицинской карты пациента, получающего
+          медицинскую помощь в условиях стационара):
+          <br /> - ознакомление с правилами пребывания в СтепМед Клиник;
+          <br /> - подписание информированных добровольных согласий на
+          медицинское вмешательство и проведение запланированного лечения.
+        </p>
+      </div>
+      <div className="custom-list-container">
+        <span className="custom-list-symbol"></span>
+        <p className="custom-list-item">
+          Оформление листка нетрудоспособности (если требуется).
+        </p>
+      </div>
+    </div>
+  </div>
+);
+
+export default RulesOfHospitalization;

@@ -22,6 +22,10 @@ module.exports = {
       },
       colors: {
         primary: '#489ecd',
+        secondary: '#ffaf50',
+        footer: '#3a3a3a',
+        'primary-10': '#f2f8fb',
+        'secondary-10': '#fff7ed',
         'text-primary': '#1b1b1b',
         'text-secondary': '#353535',
         'light-gray': '#f3f3f3',
@@ -31,8 +35,6 @@ module.exports = {
         'dark-blue-gradient-bottom': '#204a6b',
         'light-gray-gradient-top': '#f7f7f7',
         'light-gray-gradient-bottom': '#ededed',
-        'dark-gray-gradient-top': '#3a3a3a',
-        'dark-gray-gradient-bottom': '#272727',
       },
       textColor: (theme) => theme('colors'),
       gradientColorStops: (theme) => ({

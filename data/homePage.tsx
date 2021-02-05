@@ -1,11 +1,11 @@
-import RegistrationIcon from '@icons/Registration';
-import InsuranceIcon from '@icons/Insurance';
-import PriceIcon from '@icons/Price';
-import AnalysisIcon from '@icons/Analysis';
-import CovidIcon from '@icons/Covid';
-import StaffIcon from '@icons/Staff';
-import QuestionsIcon from '@icons/Questions';
-import NewsIcon from '@icons/News';
+import RegistrationIcon from '@components/icons/Registration';
+import InsuranceIcon from '@components/icons/Insurance';
+import PriceIcon from '@components/icons/Price';
+import AnalysisIcon from '@components/icons/Analysis';
+import CovidIcon from '@components/icons/Covid';
+import StaffIcon from '@components/icons/Staff';
+import QuestionsIcon from '@components/icons/Questions';
+import NewsIcon from '@components/icons/News';
 
 // Carousel at home page
 export interface IHomeCarousel {
@@ -53,52 +53,52 @@ export interface IHomeDashboard {
 export const homeDashboard: IHomeDashboard[] = [
   {
     id: 0,
-    url: '/',
+    url: '/innerpages/oncologistsAppointment',
     icon: <RegistrationIcon />,
     text: 'Приём онколога',
   },
   {
     id: 1,
-    url: '/',
+    url: '/innerpages/chemotherapyOMS',
     icon: <InsuranceIcon />,
     text: 'Химиотерапия по ОМС',
   },
   {
     id: 2,
-    url: '/',
+    url: '/innerpages/servicesAndPrices',
     icon: <PriceIcon />,
     text: 'Услуги и цены',
   },
-  {
-    id: 3,
-    url: '/',
-    icon: <AnalysisIcon />,
-    text: 'Раняя диагностика и скрининг',
-  },
+  // {
+  //   id: 3,
+  //   url: '/',
+  //   icon: <AnalysisIcon />,
+  //   text: 'Раняя диагностика и скрининг',
+  // },
   {
     id: 4,
     url: '/',
     icon: <CovidIcon />,
     text: 'COVID-19',
   },
-  {
-    id: 5,
-    url: '/staff',
-    icon: <StaffIcon />,
-    text: 'Наши врачи',
-  },
-  {
-    id: 6,
-    url: '/',
-    icon: <QuestionsIcon />,
-    text: 'Заочная консультация',
-  },
-  {
-    id: 7,
-    url: '/',
-    icon: <NewsIcon />,
-    text: 'Наши события',
-  },
+  // {
+  //   id: 5,
+  //   url: '/staff',
+  //   icon: <StaffIcon />,
+  //   text: 'Наши врачи',
+  // },
+  // {
+  //   id: 6,
+  //   url: '/',
+  //   icon: <QuestionsIcon />,
+  //   text: 'Заочная консультация',
+  // },
+  // {
+  //   id: 7,
+  //   url: '/',
+  //   icon: <NewsIcon />,
+  //   text: 'Наши события',
+  // },
 ];
 
 // About at home page

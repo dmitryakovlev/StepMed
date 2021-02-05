@@ -13,7 +13,7 @@ export const supervisoryAuthority: ISupervisoryAuthority[] = [
     id: 0,
     img: './images/sa/img_01.png',
     name: 'Министерство здравоохранения Российской Федерации',
-    address: 'г. Москва, Рахмановский пер, д. 3, 127994, ГСП-4',
+    address: 'г. Москва, Рахмановский пер, д. 3, ГСП-4, 127994',
     url: 'http://www.rosminzdrav.ru',
     phone: '+7 (495) 627-24-00',
     email: 'info@rosminzdrav.ru',

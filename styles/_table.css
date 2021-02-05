@@ -1,19 +1,19 @@
 .custom-table {
-  @apply bg-white mt-8 rounded-lg overflow-hidden;
+  @apply bg-white mt-6 rounded-lg overflow-hidden;
 
   .custom-table-head {
-    @apply hidden lg:grid gap-5 items-start lg:items-center p-5 bg-primary;
+    @apply hidden lg:grid gap-6 lg:items-center p-6 bg-primary;
 
     .custom-table-head-item {
-      @apply text-white text-sm font-bold;
+      @apply text-white text-base font-bold;
     }
   }
 
   .custom-table-cell {
-    @apply grid gap-5 items-center p-5;
+    @apply grid gap-6 items-center p-6;
 
     &:nth-child(2n) {
-      @apply bg-gray-50;
+      @apply bg-gray-100;
     }
 
     .custom-table-cell-item {
@@ -21,13 +21,18 @@
     }
 
     .custom-table-cell-heading {
-      @apply block lg:hidden mb-2 text-primary text-sm font-bold;
+      @apply block lg:hidden mb-2 text-primary text-base font-bold;
     }
 
     .custom-table-cell-text {
       @apply text-text-primary text-base;
+
       &.custom-table-cell-link {
         @apply underline hover:text-primary;
+      }
+
+      &.custom-table-cell-bold {
+        @apply font-bold;
       }
     }
   }
@@ -40,6 +45,28 @@
 
     @media (min-width: 1024px) {
       grid-template-columns: 30px minmax(170px, 2fr) 190px minmax(220px, 1fr);
+    }
+  }
+}
+
+.rulesofhospitalization--custom-table {
+  .custom-table-head,
+  .custom-table-cell {
+    grid-template-columns: 1fr;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: 30px minmax(200px, 4fr) minmax(150px, 1fr);
+    }
+  }
+}
+
+.servicesandprices--custom-table {
+  .custom-table-head,
+  .custom-table-cell {
+    grid-template-columns: 1fr;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: 130px minmax(400px, 4fr) minmax(200px, 1fr);
     }
   }
 }

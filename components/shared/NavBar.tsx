@@ -84,16 +84,16 @@ const Nav = () => {
     logo = <LogoColor />;
   }
 
-  if (!open) {
-    callButton = (
-      <>
-        <button className="bttn reg--bttn">
-          <PenIcon className="reg--bttn-icon" />
-          <span className="reg--bttn-text">Записаться на приём</span>
-        </button>
-      </>
-    );
-  }
+  // if (!open) {
+  //   callButton = (
+  //     <>
+  //       <button className="bttn reg--bttn">
+  //         <PenIcon className="reg--bttn-icon" />
+  //         <span className="reg--bttn-text">Записаться на приём</span>
+  //       </button>
+  //     </>
+  //   );
+  // }
 
   if (open) {
     navClass = 'nav';

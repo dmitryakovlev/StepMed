@@ -1,5 +1,5 @@
 .footer {
-  @apply bg-gradient-to-b from-dark-gray-gradient-top to-dark-gray-gradient-bottom;
+  @apply mt-8 md:mt-16 bg-footer;
 
   h4,
   h5,

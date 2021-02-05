@@ -65,11 +65,11 @@ const FooterLinks = () => (
   <div className="footer__links-container">
     <div className="footer__links-block">
       <h5 className="footer__links-header">О клинике</h5>
-      {/* <ul>
-        {navBarMenuClinic.map((footer) => (
+      <ul>
+        {/* {navBarMenuClinic.map((footer) => (
           <FooterLinksdBlock {...footer} key={footer.id} />
-        ))}
-      </ul> */}
+        ))} */}
+      </ul>
     </div>
 
     <div className="footer__links-block">
@@ -84,7 +84,7 @@ const FooterLinks = () => (
 );
 
 const Footer = () => (
-  <div className="mt-32 footer">
+  <div className="footer">
     <div className="footer__general">
       <div className="container flex flex-col lg:flex-row">
         <FooterContactsBlock />

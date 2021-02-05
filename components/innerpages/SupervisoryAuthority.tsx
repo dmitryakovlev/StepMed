@@ -59,11 +59,11 @@ const BlockList = () => (
   </div>
 );
 
-const LegislativeMap = () => (
+const SupervisoryAuthority = () => (
   <div className="container mt-16 md:mt-32">
     <h1 className="mb-10">Надзорные органы</h1>
     <BlockList />
   </div>
 );
 
-export default LegislativeMap;
+export default SupervisoryAuthority;
