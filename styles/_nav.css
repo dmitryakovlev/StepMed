@@ -30,12 +30,11 @@
   }
 
   &.nav-close {
-    -webkit-backdrop-filter: saturate(90%) blur(8px);
-    backdrop-filter: saturate(90%) blur(8px);
-
     @media (max-width: 1500px) {
       @apply bg-white bg-opacity-90;
       border-bottom: 2px solid #f3f3f3;
+      -webkit-backdrop-filter: saturate(90%) blur(8px);
+      backdrop-filter: saturate(90%) blur(8px);
     }
   }
 }

@@ -11,16 +11,16 @@ export interface ISupervisoryAuthority {
 export const supervisoryAuthority: ISupervisoryAuthority[] = [
   {
     id: 0,
-    img: './images/sa/img_01.png',
+    img: '/images/sa/img_01.png',
     name: 'Министерство здравоохранения Российской Федерации',
     address: 'г. Москва, Рахмановский пер, д. 3, ГСП-4, 127994',
     url: 'http://www.rosminzdrav.ru',
-    phone: '+7 (495) 627-24-00',
+    phone: '+7 (495) 628-44-53',
     email: 'info@rosminzdrav.ru',
   },
   {
     id: 1,
-    img: './images/sa/img_02.png',
+    img: '/images/sa/img_02.png',
     name: 'Федеральная служба по надзору в сфере здравоохранения',
     address: 'г. Москва, Славянская площадь, д.4, стр.1, 109074',
     url: 'http://roszdravnadzor.ru',
@@ -29,7 +29,7 @@ export const supervisoryAuthority: ISupervisoryAuthority[] = [
   },
   {
     id: 2,
-    img: './images/sa/img_02.png',
+    img: '/images/sa/img_02.png',
     name:
       'Территориальный орган РОСЗДРАВНАДЗОРА по г. Санкт-Петербургу и Ленинградской области',
     address:
@@ -40,9 +40,9 @@ export const supervisoryAuthority: ISupervisoryAuthority[] = [
   },
   {
     id: 3,
-    img: './images/sa/img_03.png',
+    img: '/images/sa/img_03.png',
     name:
-      'Федеральной службы по надзору в сфере защиты прав потребителей и благополучия человека',
+      'Управление Федеральной службы по надзору в сфере защиты прав потребителей и благополучия человека',
     address: 'г. Москва, Вадковский переулок, дом 18, строение 5 и 7, 127994',
     url: 'http://www.rospotrebnadzor.ru/',
     phone: '+7 (499) 973-26-90',
@@ -50,7 +50,7 @@ export const supervisoryAuthority: ISupervisoryAuthority[] = [
   },
   {
     id: 4,
-    img: './images/sa/img_03.png',
+    img: '/images/sa/img_03.png',
     name:
       'Управление Федеральной службы по надзору в сфере защиты прав потребителей и благополучия человека по городу Санкт-Петербургу',
     address: 'г. Санкт-Петербург, ул. Стремянная, д. 19, 191025',
@@ -60,7 +60,7 @@ export const supervisoryAuthority: ISupervisoryAuthority[] = [
   },
   {
     id: 5,
-    img: '',
+    img: '/images/sa/img_05.png',
     name:
       'Территориальный фонд обязательного медицинского страхования Санкт-Петербурга',
     address: 'г. Санкт-Петербург, ул. Коли Томчака, д. 9 лит. А, 196006',
@@ -69,7 +69,7 @@ export const supervisoryAuthority: ISupervisoryAuthority[] = [
   },
   {
     id: 6,
-    img: './images/sa/img_04.png',
+    img: '/images/sa/img_04.png',
     name: 'Прокуратура города Санкт-Петербурга',
     address: 'г. Санкт-Петербург, улица Почтамтская, дом 2/9, 190000',
     url: 'http://procspb.ru/',

@@ -107,11 +107,11 @@ const About = () => {
         </div>
 
         <AboutStep {...homeAbout[state.activeTab]} />
+        <img
+          src="./images/homeillustration.svg"
+          className="hidden w-full mt-32 sm:block"
+        />
       </div>
-      <img
-        src="./images/illustration.svg"
-        className="hidden w-full mt-32 sm:block"
-      />
     </>
   );
 };

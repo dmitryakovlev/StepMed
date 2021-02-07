@@ -28,15 +28,13 @@ const TableContent: FC<ILegislativeMap> = ({ order, name, date, url }) => (
       <span className="custom-table-cell-text">{date}</span>
     </div>
     <div className="custom-table-cell-item">
-      <span className="custom-table-cell-heading">
-        Ссылка в СПС «Консультант Плюс»
-      </span>
+      <span className="custom-table-cell-heading">Ссылка на документ</span>
       <a
         href={url}
         target="_blank"
         className="custom-table-cell-text custom-table-cell-link"
       >
-        Нажмите, чтобы перейти
+        Нажмите, чтобы открыть
       </a>
     </div>
   </div>
@@ -59,13 +57,13 @@ const Table = () => (
 
 const LegislativeMap = () => (
   <div className="container mt-16 md:mt-32">
-    <h1 className="mb-10">Законодательная карта</h1>
-    <p>
+    <h1>Законодательная карта</h1>
+    <p className="custom-text">
       При осуществлении медицинской деятельности ООО «Степмед Клиник»
       руководствуется принципами профессионализма, гуманизма и законности,
-      принимая для этих целей эффективные кадровые и управленческие решения.{' '}
-      <br />
-      <br />
+      принимая для этих целей эффективные кадровые и управленческие решения.
+    </p>
+    <p className="custom-text">
       Основаниями для работы ООО «Степмед Клиник» служат законодательные акты и
       нормативные документы федерального, регионального и локального значения.
     </p>

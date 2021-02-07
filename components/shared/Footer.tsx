@@ -4,6 +4,7 @@ import Link from 'next/link';
 import AddressIcon from '@icons/Address';
 import EmailIcon from '@icons/Email';
 import PhoneIcon from '@icons/Phone';
+import ClockIcon from '@icons/Clock';
 
 import { IFooterContacts, footerContacts } from '@data/footer';
 
@@ -25,6 +26,13 @@ const FooterContactsBlock = () => (
         Санкт-Петербург, <br />
         Большеохтинский проспект, 16 к.1
       </span>
+    </div>
+
+    <div className="footer__contacts-contact">
+      <span className="footer__contacts-contact-icon">
+        <ClockIcon />
+      </span>
+      <span className="footer__contacts-contact-text">Ежедневно с 9 до 19</span>
     </div>
 
     <div className="footer__contacts-contact">
@@ -64,7 +72,6 @@ const FooterContactsBlock = () => (
 const FooterLinks = () => (
   <div className="footer__links-container">
     <div className="footer__links-block">
-      <h5 className="footer__links-header">О клинике</h5>
       <ul>
         {/* {navBarMenuClinic.map((footer) => (
           <FooterLinksdBlock {...footer} key={footer.id} />
@@ -73,7 +80,6 @@ const FooterLinks = () => (
     </div>
 
     <div className="footer__links-block">
-      <h5 className="footer__links-header">Пациентам</h5>
       {/* <ul>
         {navBarMenuPatients.map((footer) => (
           <FooterLinksdBlock {...footer} key={footer.id} />
