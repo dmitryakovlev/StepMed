@@ -81,7 +81,13 @@ const Nav = () => {
   if (open) {
     logo = <LogoWhite />;
   } else {
-    logo = <LogoColor />;
+    logo = (
+      <Link href="/">
+        <a className="custom-link">
+          <LogoColor />
+        </a>
+      </Link>
+    );
   }
 
   // if (!open) {

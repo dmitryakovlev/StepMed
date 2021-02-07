@@ -77,7 +77,7 @@ export const homeDashboard: IHomeDashboard[] = [
   // },
   {
     id: 4,
-    url: '/',
+    url: '/innerpages/covid',
     icon: <CovidIcon />,
     text: 'COVID-19',
   },

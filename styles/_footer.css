@@ -5,26 +5,26 @@
   h5,
   h6,
   p {
-    @apply text-light-gray;
+    @apply text-gray-100;
   }
 }
 
 .footer__general {
-  @apply flex py-12 border-light-gray border-b-2 border-opacity-25;
+  @apply flex py-12 border-gray-100 border-b-2 border-opacity-25;
 }
 
 .footer__contacts-container {
-  @apply flex flex-col flex-shrink-0 lg:mr-16 text-light-gray;
+  @apply flex flex-col flex-shrink-0 lg:mr-16 text-gray-100;
 
   .footer__contacts-contact {
     @apply flex items-center mt-4;
 
     .footer__contacts-contact-icon {
-      @apply mr-3 fill-current text-light-gray;
+      @apply mr-3 fill-current text-gray-100;
     }
 
     .footer__contacts-contact-text {
-      @apply text-light-gray;
+      @apply text-gray-100;
     }
   }
 }
@@ -56,7 +56,7 @@
     }
 
     .footer__links-link {
-      @apply text-light-gray opacity-75 text-xs;
+      @apply text-gray-100 opacity-75 text-xs;
     }
   }
 }

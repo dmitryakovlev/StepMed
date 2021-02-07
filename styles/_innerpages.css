@@ -1,0 +1,23 @@
+.covid-grid {
+  @apply grid gap-6 mt-6 grid-cols-1 md:grid-cols-2;
+}
+
+.covid-container {
+  @apply flex items-center;
+}
+
+.covid-icon {
+  @apply w-20 h-20 mr-6 fill-current text-text-primary;
+}
+
+.covid-block {
+  @apply flex flex-col;
+
+  .custom-title {
+    @apply mt-0;
+  }
+
+  .custom-text {
+    @apply mt-2;
+  }
+}

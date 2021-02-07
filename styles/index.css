@@ -10,6 +10,7 @@
 @import './_footer.css';
 @import './home/home.css';
 @import './staff/staff.css';
+@import './_innerpages.css';
 
 *,
 body {
@@ -73,7 +74,7 @@ b {
 }
 
 .bttn {
-  @apply p-5 text-lg font-bold text-white duration-200 ease-linear rounded-md select-none bg-gradient-to-b from-light-blue-gradient-top to-light-blue-gradient-bottom sm:text-xl md:text-2xl;
+  @apply p-5 text-lg font-bold text-white duration-200 ease-linear rounded-md select-none bg-gradient-to-b from-blue-gradient-top to-blue-gradient-bottom sm:text-xl md:text-2xl;
 
   &:hover {
     @apply opacity-75;
@@ -135,6 +136,17 @@ b {
 
 .custom-text-info {
   @apply mt-2 text-text-secondary text-xs;
+}
+
+.custom-img {
+  @apply w-full mt-6;
+}
+
+.custom-link {
+  @apply duration-200 ease-linear;
+  &:hover {
+    @apply opacity-60;
+  }
 }
 
 @import 'tailwindcss/utilities';

@@ -3,7 +3,7 @@
 }
 
 .dashboard__block {
-  @apply flex flex-col items-center justify-center sm:justify-start p-3 sm:p-5 md:p-4 lg:p-5 h-48 sm:h-52 md:h-48 lg:h-56 xl:h-60 bg-light-gray rounded-md transition duration-300 ease-in-out select-none;
+  @apply flex flex-col items-center justify-center sm:justify-start p-3 sm:p-5 md:p-4 lg:p-5 h-48 sm:h-52 md:h-48 lg:h-56 xl:h-60 bg-gray-100 rounded-md transition duration-300 ease-in-out select-none;
 
   &:hover {
     @apply bg-primary;
