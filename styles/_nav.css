@@ -184,6 +184,10 @@
       transform: translate3d(0, 0, 0);
     }
 
+    &.nav__menu-links-hide {
+      display: none;
+    }
+
     &.nav__menu-additional-links-hide {
       @apply invisible transform translate-x-full opacity-0;
     }
@@ -198,6 +202,10 @@
 
     &:hover {
       @apply opacity-60;
+    }
+
+    &.red {
+      @apply text-red-500;
     }
   }
 

@@ -53,19 +53,19 @@ export interface IHomeDashboard {
 export const homeDashboard: IHomeDashboard[] = [
   {
     id: 0,
-    url: '/innerpages/oncologistsAppointment',
+    url: '/oncologists-appointment',
     icon: <RegistrationIcon />,
     text: 'Приём онколога',
   },
   {
     id: 1,
-    url: '/innerpages/chemotherapyOMS',
+    url: '/chemotherapy-oms',
     icon: <InsuranceIcon />,
     text: 'Химиотерапия по ОМС',
   },
   {
     id: 2,
-    url: '/innerpages/servicesAndPrices',
+    url: '/services-and-prices',
     icon: <PriceIcon />,
     text: 'Услуги и цены',
   },
@@ -77,7 +77,7 @@ export const homeDashboard: IHomeDashboard[] = [
   // },
   {
     id: 4,
-    url: '/innerpages/covid',
+    url: '/covid',
     icon: <CovidIcon />,
     text: 'COVID-19',
   },

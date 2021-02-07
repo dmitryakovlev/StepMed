@@ -82,9 +82,11 @@ const About = () => {
             6
           </Stepper>
         </div>
+
         <div className="flex mb-4 sm:hidden">
           <button
             className="bttn about--bttn"
+            disabled={state.activeTab == 0}
             onClick={() =>
               setState((count) => {
                 return { activeTab: count.activeTab - 1 };
@@ -93,9 +95,12 @@ const About = () => {
           >
             &#60;
           </button>
-          <span className="flex-grow"></span>
+
+          <span className="flex-grow">{state.activeTab + 1}</span>
+
           <button
             className="bttn about--bttn"
+            disabled={state.activeTab == 5}
             onClick={() =>
               setState((count) => {
                 return { activeTab: count.activeTab + 1 };

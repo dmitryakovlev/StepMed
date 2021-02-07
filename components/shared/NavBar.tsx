@@ -1,11 +1,17 @@
 import { useState, FC } from 'react';
 import Link from 'next/link';
 import classNames from 'classnames';
+import { useRouter } from 'next/router';
 
-import { INavBarMenu, navBarMenu, aboutSubMenu } from '@data/navBar';
+import {
+  INavBarMenu,
+  navBarMenu,
+  aboutSubMenu,
+  forPatientsSubMenu,
+} from '@data/navBar';
 
 import LogoWhite from '@components/logo/LogoWhite';
-import PenIcon from '@icons/Pen';
+// import PenIcon from '@icons/Pen';
 import LogoColor from '@components/logo/LogoColor';
 
 const Hamburger: FC<{
@@ -24,98 +30,107 @@ const Hamburger: FC<{
   );
 };
 
-const MenuItem: FC<INavBarMenu> = ({ url, title }) => (
-  <Link href={url}>
-    <a className="nav__menu-general-link">{title}</a>
-  </Link>
-);
+const MenuItem: FC<INavBarMenu> = ({ url, title }) => {
+  const router = useRouter();
 
-// {subMenu &&
-//   subMenu.map(({ url, title }) => (
-//     <Link href={url}>
-//       <a className="nav__menu-additional-link">{title}</a>
-//     </Link>
-//   ))}
-
-const Menu: FC<{
-  open: any;
-  setOpen: any;
-}> = ({ open }) => {
-  const navSubMenuItems = navBarMenu.filter((element) => element.subMenu);
-
-  // console.log({ navSubMenuItems });
-
-  return (
-    <div className={classNames('nav__menu', { active: open })}>
-      <div className="nav__menu-container">
-        <div className="nav__menu-links">
-          {navBarMenu.map((menuItem) => (
-            <MenuItem {...menuItem} key={menuItem.id} />
-          ))}
-        </div>
-
-        <div className="nav__menu-links nav__menu-additional-links-hide">
-          {aboutSubMenu.map((menuItem) => (
-            <MenuItem {...menuItem} key={menuItem.id} />
-          ))}
-        </div>
-
-        {/*
-        <div className="nav__menu-links nav__menu-additional-links-hide">
-          {navBarMenuPatients.map((menu) => (
-            <MenuItemAdditional {...menu} key={menu.id} />
-          ))}
-        </div> */}
-      </div>
-    </div>
-  );
-};
-
-const Nav = () => {
-  const [open, setOpen] = useState(false);
-
-  let logo;
-  let callButton;
-  let navClass;
-
-  if (open) {
-    logo = <LogoWhite />;
-  } else {
-    logo = (
-      <Link href="/">
-        <a className="custom-link">
-          <LogoColor />
+  if (url) {
+    return (
+      <Link href={url}>
+        <a
+          className={classNames('nav__menu-general-link', {
+            red: router.pathname === url,
+          })}
+        >
+          {title}
         </a>
       </Link>
     );
   }
 
-  // if (!open) {
-  //   callButton = (
-  //     <>
-  //       <button className="bttn reg--bttn">
-  //         <PenIcon className="reg--bttn-icon" />
-  //         <span className="reg--bttn-text">Записаться на приём</span>
-  //       </button>
-  //     </>
-  //   );
-  // }
+  return (
+    <span
+      className={classNames('nav__menu-general-link', {
+        red: router.pathname === url,
+      })}
+    >
+      {title}
+    </span>
+  );
+};
 
-  if (open) {
-    navClass = 'nav';
-  } else {
-    navClass = 'nav nav-close';
-  }
+const Menu: FC = () => {
+  const [menuId, setMenuId] = useState<number>(0);
+
+  return (
+    <div className={classNames('nav__menu', { active: open })}>
+      <div className="nav__menu-container">
+        <div
+          className={classNames('nav__menu-links', {
+            'nav__menu-links-hide': menuId === 1 || menuId === 3,
+          })}
+        >
+          {navBarMenu.map((menuItem) => (
+            <div
+              onClick={() => setMenuId(menuItem.id)}
+              key={`menu-${menuItem.id}`}
+            >
+              <MenuItem {...menuItem} />
+            </div>
+          ))}
+        </div>
+
+        {menuId === 1 && (
+          <div className="nav__menu-links">
+            <div onClick={() => setMenuId(0)}>Back</div>
+            {aboutSubMenu.map((menuItem) => (
+              <MenuItem {...menuItem} key={`aboutSubMenu-${menuItem.id}`} />
+            ))}
+          </div>
+        )}
+
+        {menuId === 3 && (
+          <div className="nav__menu-links">
+            <div onClick={() => setMenuId(0)}>Back</div>
+            {forPatientsSubMenu.map((menuItem) => (
+              <MenuItem
+                {...menuItem}
+                key={`forPatientsSubMenu-${menuItem.id}`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+const Logo = ({ isOpened = false }) => (
+  <Link href="/">
+    <a className="custom-link">{isOpened ? <LogoWhite /> : <LogoColor />}</a>
+  </Link>
+);
+
+// const CallButton = () => (
+//   <>
+//     <button className="bttn reg--bttn">
+//       <PenIcon className="reg--bttn-icon" />
+//       <span className="reg--bttn-text">Записаться на приём</span>
+//     </button>
+//   </>
+// );
+
+const Nav = () => {
+  const [isOpened, setOpened] = useState(false);
 
   return (
     <>
-      <div className={navClass}>
-        {logo}
-        <Hamburger open={open} setOpen={setOpen} />
+      <div className={classNames('nav', { 'nav-close': !isOpened })}>
+        <Logo isOpened={isOpened} />
+        <Hamburger open={isOpened} setOpen={setOpened} />
         <span className="flex-grow"></span>
-        {callButton}
+        {/* <CallButton /> */}
       </div>
-      <Menu open={open} setOpen={setOpen} />
+      {isOpened && <Menu />}
     </>
   );
 };
