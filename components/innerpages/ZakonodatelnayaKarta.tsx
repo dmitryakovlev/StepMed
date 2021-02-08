@@ -1,17 +1,22 @@
 import { FC } from 'react';
 
 import {
-  ILegislativeMapHead,
-  ILegislativeMap,
-  legislativeMapHead,
-  legislativeMap,
-} from '@data/legislativeMap';
+  IZakonodatelnayaKartaHead,
+  IZakonodatelnayaKarta,
+  zakonodatelnayaKartaHead,
+  zakonodatelnayaKarta,
+} from '@data/zakonodatelnayaKarta';
 
-const TableHead: FC<ILegislativeMapHead> = ({ heading }) => (
+const TableHead: FC<IZakonodatelnayaKartaHead> = ({ heading }) => (
   <div className="custom-table-head-item">{heading}</div>
 );
 
-const TableContent: FC<ILegislativeMap> = ({ order, name, date, url }) => (
+const TableContent: FC<IZakonodatelnayaKarta> = ({
+  order,
+  name,
+  date,
+  url,
+}) => (
   <div className="custom-table-cell">
     <div className="custom-table-cell-item">
       <span className="custom-table-cell-heading">№</span>
@@ -41,21 +46,21 @@ const TableContent: FC<ILegislativeMap> = ({ order, name, date, url }) => (
 );
 
 const Table = () => (
-  <div className="custom-table legislativemap--custom-table">
+  <div className="custom-table zakonodatelnayakarta--custom-table">
     <div className="custom-table-head">
-      {legislativeMapHead.map((parameters) => (
+      {zakonodatelnayaKartaHead.map((parameters) => (
         <TableHead {...parameters} key={parameters.id} />
       ))}
     </div>
     <div>
-      {legislativeMap.map((parameters) => (
+      {zakonodatelnayaKarta.map((parameters) => (
         <TableContent {...parameters} key={parameters.id} />
       ))}
     </div>
   </div>
 );
 
-const LegislativeMap = () => (
+const ZakonodatelnayaKarta = () => (
   <div className="container mt-16 md:mt-32">
     <h1>Законодательная карта</h1>
     <p className="custom-text">
@@ -71,4 +76,4 @@ const LegislativeMap = () => (
   </div>
 );
 
-export default LegislativeMap;
+export default ZakonodatelnayaKarta;

@@ -1,11 +1,11 @@
 import Layout from '@components/shared/Layout';
-import ChemotherapyOMS from '@components/innerpages/ChemotherapyOMS';
+import HimioterapiyaPoOMS from '@components/innerpages/HimioterapiyaPoOMS';
 
-export default function ChemotherapyOMSPage() {
+export default function HimioterapiyaPoOMSPage() {
   return (
     <>
       <Layout title="Химиотерапия по ОМС">
-        <ChemotherapyOMS />
+        <HimioterapiyaPoOMS />
       </Layout>
     </>
   );

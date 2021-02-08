@@ -1,11 +1,8 @@
 import { FC } from 'react';
 
-import {
-  ISupervisoryAuthority,
-  supervisoryAuthority,
-} from '@data/supervisoryAuthority';
+import { INadzornieOrgani, nadzornieOrgani } from '@data/nadzornieOrgani';
 
-const Block: FC<ISupervisoryAuthority> = ({
+const Block: FC<INadzornieOrgani> = ({
   img,
   name,
   address,
@@ -53,17 +50,17 @@ const Block: FC<ISupervisoryAuthority> = ({
 
 const BlockList = () => (
   <div className="flex flex-col">
-    {supervisoryAuthority.map((parameters) => (
+    {nadzornieOrgani.map((parameters) => (
       <Block {...parameters} key={parameters.id} />
     ))}
   </div>
 );
 
-const SupervisoryAuthority = () => (
+const NadzornieOrgani = () => (
   <div className="container mt-16 md:mt-32">
     <h1 className="mb-10">Надзорные органы</h1>
     <BlockList />
   </div>
 );
 
-export default SupervisoryAuthority;
+export default NadzornieOrgani;

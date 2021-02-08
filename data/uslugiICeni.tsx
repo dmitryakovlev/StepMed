@@ -1,9 +1,9 @@
-export interface IServicesAndPricesHead {
+export interface IUslugiICeniHead {
   id: number;
   heading: string;
 }
 
-export const rulesOfHospitalizationHead: IServicesAndPricesHead[] = [
+export const uslugiICeniHead: IUslugiICeniHead[] = [
   {
     id: 0,
     heading: 'Код услуги',
@@ -18,14 +18,14 @@ export const rulesOfHospitalizationHead: IServicesAndPricesHead[] = [
   },
 ];
 
-export interface IServicesAndPrices {
+export interface IUslugiICeni {
   id: number;
   code: string;
   service: string;
   price: string;
 }
 
-export const servicesAndPricesFirst: IServicesAndPrices[] = [
+export const uslugiICeniFirst: IUslugiICeni[] = [
   {
     id: 0,
     code: 'A05.01.002',
@@ -90,7 +90,7 @@ export const servicesAndPricesFirst: IServicesAndPrices[] = [
   },
 ];
 
-export const servicesAndPricesSecond: IServicesAndPrices[] = [
+export const uslugiICeniSecond: IUslugiICeni[] = [
   {
     id: 0,
     code: 'A06.23.004',
@@ -136,7 +136,7 @@ export const servicesAndPricesSecond: IServicesAndPrices[] = [
   },
 ];
 
-export const servicesAndPricesThird: IServicesAndPrices[] = [
+export const uslugiICeniThird: IUslugiICeni[] = [
   {
     id: 0,
     code: 'A07.30.042',
@@ -146,7 +146,7 @@ export const servicesAndPricesThird: IServicesAndPrices[] = [
   },
 ];
 
-export const servicesAndPricesFourth: IServicesAndPrices[] = [
+export const uslugiICeniFourth: IUslugiICeni[] = [
   {
     id: 0,
     code: 'А06.03.005',
@@ -192,7 +192,7 @@ export const servicesAndPricesFourth: IServicesAndPrices[] = [
   },
 ];
 
-export const servicesAndPricesFifth: IServicesAndPrices[] = [
+export const uslugiICeniFifth: IUslugiICeni[] = [
   {
     id: 0,
     code: 'A04.09.001',
@@ -229,7 +229,7 @@ export const servicesAndPricesFifth: IServicesAndPrices[] = [
   },
 ];
 
-export const servicesAndPricesNinth: IServicesAndPrices[] = [
+export const uslugiICeniNinth: IUslugiICeni[] = [
   {
     id: 0,
     code: 'A08.30.006',
@@ -258,7 +258,7 @@ export const servicesAndPricesNinth: IServicesAndPrices[] = [
   },
 ];
 
-export const servicesAndPricesTenth: IServicesAndPrices[] = [
+export const uslugiICeniTenth: IUslugiICeni[] = [
   {
     id: 0,
     code: 'A08.30.060',

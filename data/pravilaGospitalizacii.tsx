@@ -1,9 +1,9 @@
-export interface IRulesOfHospitalizationHead {
+export interface IPravilaGospitalizaciiHead {
   id: number;
   heading: string;
 }
 
-export const rulesOfHospitalizationHead: IRulesOfHospitalizationHead[] = [
+export const pravilaGospitalizaciiHead: IPravilaGospitalizaciiHead[] = [
   {
     id: 0,
     heading: '№',
@@ -18,14 +18,14 @@ export const rulesOfHospitalizationHead: IRulesOfHospitalizationHead[] = [
   },
 ];
 
-export interface IRulesOfHospitalization {
+export interface IPravilaGospitalizacii {
   id: number;
   order: number;
   name: string;
   date: string;
 }
 
-export const rulesOfHospitalizationFirst: IRulesOfHospitalization[] = [
+export const pravilaGospitalizaciiFirst: IPravilaGospitalizacii[] = [
   {
     id: 0,
     order: 1,
@@ -101,7 +101,7 @@ export const rulesOfHospitalizationFirst: IRulesOfHospitalization[] = [
   },
 ];
 
-export const rulesOfHospitalizationSecond: IRulesOfHospitalization[] = [
+export const pravilaGospitalizaciiSecond: IPravilaGospitalizacii[] = [
   {
     id: 0,
     order: 1,
@@ -116,7 +116,7 @@ export const rulesOfHospitalizationSecond: IRulesOfHospitalization[] = [
   },
 ];
 
-export const rulesOfHospitalizationThird: IRulesOfHospitalization[] = [
+export const pravilaGospitalizaciiThird: IPravilaGospitalizacii[] = [
   {
     id: 0,
     order: 1,

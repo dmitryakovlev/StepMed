@@ -1,23 +1,23 @@
 import { FC } from 'react';
 
 import {
-  IServicesAndPricesHead,
-  IServicesAndPrices,
-  rulesOfHospitalizationHead,
-  servicesAndPricesFirst,
-  servicesAndPricesSecond,
-  servicesAndPricesThird,
-  servicesAndPricesFourth,
-  servicesAndPricesFifth,
-  servicesAndPricesNinth,
-  servicesAndPricesTenth,
-} from '@data/servicesAndPrices';
+  IUslugiICeniHead,
+  IUslugiICeni,
+  uslugiICeniHead,
+  uslugiICeniFirst,
+  uslugiICeniSecond,
+  uslugiICeniThird,
+  uslugiICeniFourth,
+  uslugiICeniFifth,
+  uslugiICeniNinth,
+  uslugiICeniTenth,
+} from '@data/uslugiICeni';
 
-const TableHead: FC<IServicesAndPricesHead> = ({ heading }) => (
+const TableHead: FC<IUslugiICeniHead> = ({ heading }) => (
   <div className="custom-table-head-item">{heading}</div>
 );
 
-const TableContent: FC<IServicesAndPrices> = ({ code, service, price }) => (
+const TableContent: FC<IUslugiICeni> = ({ code, service, price }) => (
   <div className="custom-table-cell">
     <div className="custom-table-cell-item">
       <span className="custom-table-cell-heading">Код услуги</span>
@@ -39,9 +39,9 @@ const TableContent: FC<IServicesAndPrices> = ({ code, service, price }) => (
 );
 
 const Table: FC = ({ children }) => (
-  <div className="custom-table servicesandprices--custom-table">
+  <div className="custom-table uslugiiceni--custom-table">
     <div className="custom-table-head">
-      {rulesOfHospitalizationHead.map((parameters) => (
+      {uslugiICeniHead.map((parameters) => (
         <TableHead {...parameters} key={parameters.id} />
       ))}
     </div>
@@ -49,14 +49,14 @@ const Table: FC = ({ children }) => (
   </div>
 );
 
-const ServicesAndPrices = () => (
+const UslugiICeni = () => (
   <div className="container mt-16 md:mt-32">
     <h1 className="mb-10">Услуги и цены</h1>
     <h3 className="custom-title">
       01. Магнитно-резонансная томография (без стоимости контрастного вещества)*
     </h3>
     <Table>
-      {servicesAndPricesFirst.map((parameters) => (
+      {uslugiICeniFirst.map((parameters) => (
         <TableContent {...parameters} key={parameters.id} />
       ))}
     </Table>
@@ -65,7 +65,7 @@ const ServicesAndPrices = () => (
     </p>
     <h3 className="custom-title">02. Компьютерная томография*</h3>
     <Table>
-      {servicesAndPricesSecond.map((parameters) => (
+      {uslugiICeniSecond.map((parameters) => (
         <TableContent {...parameters} key={parameters.id} />
       ))}
     </Table>
@@ -76,7 +76,7 @@ const ServicesAndPrices = () => (
       03. Радиоизотопная позитронно-эмиссионная томография*
     </h3>
     <Table>
-      {servicesAndPricesThird.map((parameters) => (
+      {uslugiICeniThird.map((parameters) => (
         <TableContent {...parameters} key={parameters.id} />
       ))}
     </Table>
@@ -85,7 +85,7 @@ const ServicesAndPrices = () => (
     </p>
     <h3 className="custom-title">04. Рентгенодиагностика*</h3>
     <Table>
-      {servicesAndPricesFourth.map((parameters) => (
+      {uslugiICeniFourth.map((parameters) => (
         <TableContent {...parameters} key={parameters.id} />
       ))}
     </Table>
@@ -94,7 +94,7 @@ const ServicesAndPrices = () => (
     </p>
     <h3 className="custom-title">05. Ультразвуковая диагностика*</h3>
     <Table>
-      {servicesAndPricesFifth.map((parameters) => (
+      {uslugiICeniFifth.map((parameters) => (
         <TableContent {...parameters} key={parameters.id} />
       ))}
     </Table>
@@ -103,7 +103,7 @@ const ServicesAndPrices = () => (
     </p>
     <h3 className="custom-title">09. Патологическая анатомия*</h3>
     <Table>
-      {servicesAndPricesNinth.map((parameters) => (
+      {uslugiICeniNinth.map((parameters) => (
         <TableContent {...parameters} key={parameters.id} />
       ))}
     </Table>
@@ -112,7 +112,7 @@ const ServicesAndPrices = () => (
     </p>
     <h3 className="custom-title">10. Иммуногистохимия*</h3>
     <Table>
-      {servicesAndPricesTenth.map((parameters) => (
+      {uslugiICeniTenth.map((parameters) => (
         <TableContent {...parameters} key={parameters.id} />
       ))}
     </Table>
@@ -122,4 +122,4 @@ const ServicesAndPrices = () => (
   </div>
 );
 
-export default ServicesAndPrices;
+export default UslugiICeni;

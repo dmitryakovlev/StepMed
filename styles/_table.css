@@ -38,7 +38,7 @@
   }
 }
 
-.legislativemap--custom-table {
+.zakonodatelnayakarta--custom-table {
   .custom-table-head,
   .custom-table-cell {
     grid-template-columns: 1fr;
@@ -49,7 +49,7 @@
   }
 }
 
-.rulesofhospitalization--custom-table {
+.pravilagospitalizacii--custom-table {
   .custom-table-head,
   .custom-table-cell {
     grid-template-columns: 1fr;
@@ -60,7 +60,7 @@
   }
 }
 
-.servicesandprices--custom-table {
+.uslugiiceni--custom-table {
   .custom-table-head,
   .custom-table-cell {
     grid-template-columns: 1fr;

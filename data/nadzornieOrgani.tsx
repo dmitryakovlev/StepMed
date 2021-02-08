@@ -1,4 +1,4 @@
-export interface ISupervisoryAuthority {
+export interface INadzornieOrgani {
   id: number;
   img: string;
   name: string;
@@ -8,7 +8,7 @@ export interface ISupervisoryAuthority {
   email?: string;
 }
 
-export const supervisoryAuthority: ISupervisoryAuthority[] = [
+export const nadzornieOrgani: INadzornieOrgani[] = [
   {
     id: 0,
     img: '/images/sa/img_01.png',

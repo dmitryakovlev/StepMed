@@ -1,19 +1,19 @@
 import { FC } from 'react';
 
 import {
-  IRulesOfHospitalizationHead,
-  IRulesOfHospitalization,
-  rulesOfHospitalizationHead,
-  rulesOfHospitalizationFirst,
-  rulesOfHospitalizationSecond,
-  rulesOfHospitalizationThird,
-} from '@data/rulesOfHospitalization';
+  IPravilaGospitalizaciiHead,
+  IPravilaGospitalizacii,
+  pravilaGospitalizaciiHead,
+  pravilaGospitalizaciiFirst,
+  pravilaGospitalizaciiSecond,
+  pravilaGospitalizaciiThird,
+} from '@data/pravilaGospitalizacii';
 
-const TableHead: FC<IRulesOfHospitalizationHead> = ({ heading }) => (
+const TableHead: FC<IPravilaGospitalizaciiHead> = ({ heading }) => (
   <div className="custom-table-head-item">{heading}</div>
 );
 
-const TableContent: FC<IRulesOfHospitalization> = ({ order, name, date }) => (
+const TableContent: FC<IPravilaGospitalizacii> = ({ order, name, date }) => (
   <div className="custom-table-cell">
     <div className="custom-table-cell-item">
       <span className="custom-table-cell-heading">№</span>
@@ -35,9 +35,9 @@ const TableContent: FC<IRulesOfHospitalization> = ({ order, name, date }) => (
 );
 
 const Table: FC = ({ children }) => (
-  <div className="custom-table rulesofhospitalization--custom-table">
+  <div className="custom-table pravilagospitalizacii--custom-table">
     <div className="custom-table-head">
-      {rulesOfHospitalizationHead.map((parameters) => (
+      {pravilaGospitalizaciiHead.map((parameters) => (
         <TableHead {...parameters} key={parameters.id} />
       ))}
     </div>
@@ -45,18 +45,18 @@ const Table: FC = ({ children }) => (
   </div>
 );
 
-const RulesOfHospitalization = () => (
+const PravilaGospitalizacii = () => (
   <div className="container mt-16 md:mt-32">
-    <h1 className="mb-10">Правила госпитализации</h1>
-    <p>
+    <h1>Правила госпитализации</h1>
+    <p className="custom-text">
       Степмед клиник проводит химиотерапию в условиях дневного стационара, что
       подразумевает краткосрочную госпитализацию, при которой вы находитесь в
       клинике только в дневное время. Большинство схем химиотерапии может быть
       проведено без круглосуточного пребывания в клинике, что никак не
       сказывается на безопасности лечения, но в большинстве случаев положительно
       влияет на эмоциональное состояние пациентов.
-      <br />
-      <br />
+    </p>
+    <p className="custom-text">
       Как правило, дата госпитализации назначается заранее. Рекомендуем
       прибывать за 15-20 минут до назначенного времени, а в случае опоздания –
       обязательно предупреждать нас по телефону клиники.
@@ -65,8 +65,8 @@ const RulesOfHospitalization = () => (
       Процесс госпитализации состоит из 2 важных этапов: клинический и
       документальный.
     </p>
-    <h3 className="mt-12">Клинический этап</h3>
-    <p className="mt-4">
+    <h3 className="custom-title">Клинический этап</h3>
+    <p className="custom-text">
       Клинический этап, включает в себя осмотр лечащим врачом-онкологом, оценка
       жалоб, контроль лабораторных показателей и результатов назначенных
       исследований. Лабораторные анализы сдаются с определенной периодичностью
@@ -75,41 +75,41 @@ const RulesOfHospitalization = () => (
       результаты следующий исследований:
     </p>
     <Table>
-      {rulesOfHospitalizationFirst.map((parameters) => (
+      {pravilaGospitalizaciiFirst.map((parameters) => (
         <TableContent {...parameters} key={parameters.id} />
       ))}
     </Table>
-    <p className="mt-8">
+    <p className="custom-text">
       Для схем, включающих в себя некоторые препараты (трастузумаб, пертузумаб,
       доксорубицин, эпирубицин, трастузумаб эмтанзин) понадобится выполнение
       дополнительных биохимических исследований:
     </p>
     <Table>
-      {rulesOfHospitalizationSecond.map((parameters) => (
+      {pravilaGospitalizaciiSecond.map((parameters) => (
         <TableContent {...parameters} key={parameters.id} />
       ))}
     </Table>
-    <p className="mt-8">
+    <p className="custom-text">
       Для схем, включающих в себя иммунотерапию (ниволумаб, пембролизумаб,
       ипилимумаб, атезолизумаб, пролголимаб) понадобится выполнение
       дополнительных биохимических исследований:
     </p>
     <Table>
-      {rulesOfHospitalizationThird.map((parameters) => (
+      {pravilaGospitalizaciiThird.map((parameters) => (
         <TableContent {...parameters} key={parameters.id} />
       ))}
     </Table>
-    <p className="mt-8">
+    <p className="custom-text">
       Указанные анализы позволят оценить безопасность запланированного лечения,
       а также, при необходимости, скорректировать дозировки препаратов либо
       назначить дополнительную сопроводительную терапию.
     </p>
-    <h3 className="mt-12">Документальный этап</h3>
-    <p className="mt-4">
-      Второй этап госпитализации состоит из документальной части, которая
-      включает в себя:
-    </p>
+    <h3 className="custom-title">Документальный этап</h3>
     <div className="custom-list">
+      <p className="custom-list-heading">
+        Второй этап госпитализации состоит из документальной части, которая
+        включает в себя:
+      </p>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
         <p className="custom-list-item">
@@ -156,4 +156,4 @@ const RulesOfHospitalization = () => (
   </div>
 );
 
-export default RulesOfHospitalization;
+export default PravilaGospitalizacii;

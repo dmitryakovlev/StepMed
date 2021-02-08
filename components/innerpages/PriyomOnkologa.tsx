@@ -1,4 +1,4 @@
-const OncologistsAppointment = () => (
+const PriyomOnkologa = () => (
   <div className="container mt-8 md:mt-16">
     <h1>Прием онколога</h1>
     <p className="custom-text">
@@ -68,11 +68,11 @@ const OncologistsAppointment = () => (
     </p>
     <p className="custom-text">
       Прочитать памятку о необходимых документах для приема онколога{' '}
-      <a href="/pdfs/MemoReception.pdf" className="custom-text-link" download>
+      <a href="/pdfs/Pamyatka-priyom.pdf" className="custom-text-link" download>
         можно здесь
       </a>
     </p>
   </div>
 );
 
-export default OncologistsAppointment;
+export default PriyomOnkologa;
