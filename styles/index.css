@@ -14,7 +14,7 @@
 
 *,
 body {
-  @apply box-border p-0 m-0 font-normal;
+  @apply box-border p-0 m-0 font-normal leading-normal;
   font-size: 16px;
   font-family: 'rawline', sans-serif;
 }

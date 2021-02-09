@@ -52,6 +52,10 @@ module.exports = {
         7: '1.75rem',
         18: '4.5rem',
       },
+      rotate: {
+        '-135': '-135deg',
+        135: '135deg',
+      },
     },
   },
   variants: {},

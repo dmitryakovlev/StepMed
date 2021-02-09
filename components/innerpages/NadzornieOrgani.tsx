@@ -58,7 +58,7 @@ const BlockList = () => (
 
 const NadzornieOrgani = () => (
   <div className="container mt-16 md:mt-32">
-    <h1 className="mb-10">Надзорные органы</h1>
+    <h1 className="mb-10">Контрольно-надзорные органы</h1>
     <BlockList />
   </div>
 );

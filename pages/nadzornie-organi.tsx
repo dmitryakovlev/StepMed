@@ -4,7 +4,7 @@ import NadzornieOrgani from '@components/innerpages/NadzornieOrgani';
 export default function NadzornieOrganiPage() {
   return (
     <>
-      <Layout title="Надзорные органы">
+      <Layout title="Контрольно-надзорные органы">
         <NadzornieOrgani />
       </Layout>
     </>

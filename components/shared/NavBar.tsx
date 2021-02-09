@@ -37,8 +37,8 @@ const MenuItem: FC<INavBarMenu> = ({ url, title }) => {
     return (
       <Link href={url}>
         <a
-          className={classNames('nav__menu-general-link', {
-            red: router.pathname === url,
+          className={classNames('nav__menu-link', {
+            active: router.pathname === url,
           })}
         >
           {title}
@@ -49,8 +49,8 @@ const MenuItem: FC<INavBarMenu> = ({ url, title }) => {
 
   return (
     <span
-      className={classNames('nav__menu-general-link', {
-        red: router.pathname === url,
+      className={classNames('nav__menu-link nav__menu-link-more', {
+        active: router.pathname === url,
       })}
     >
       {title}
@@ -62,44 +62,43 @@ const Menu: FC = () => {
   const [menuId, setMenuId] = useState<number>(0);
 
   return (
-    <div className={classNames('nav__menu', { active: open })}>
-      <div className="nav__menu-container">
-        <div
-          className={classNames('nav__menu-links', {
-            'nav__menu-links-hide': menuId === 1 || menuId === 3,
-          })}
-        >
-          {navBarMenu.map((menuItem) => (
-            <div
-              onClick={() => setMenuId(menuItem.id)}
-              key={`menu-${menuItem.id}`}
-            >
-              <MenuItem {...menuItem} />
-            </div>
+    <div className="nav__menu">
+      <div
+        className={classNames('nav__menu-container', {
+          hide: menuId === 1 || menuId === 3,
+        })}
+      >
+        {navBarMenu.map((menuItem) => (
+          <div
+            onClick={() => setMenuId(menuItem.id)}
+            key={`menu-${menuItem.id}`}
+          >
+            <MenuItem {...menuItem} />
+          </div>
+        ))}
+      </div>
+
+      {menuId === 1 && (
+        <div className="nav__menu-container submenu">
+          <div className="nav__menu-back" onClick={() => setMenuId(0)}>
+            Back
+          </div>
+          {aboutSubMenu.map((menuItem) => (
+            <MenuItem {...menuItem} key={`aboutSubMenu-${menuItem.id}`} />
           ))}
         </div>
+      )}
 
-        {menuId === 1 && (
-          <div className="nav__menu-links">
-            <div onClick={() => setMenuId(0)}>Back</div>
-            {aboutSubMenu.map((menuItem) => (
-              <MenuItem {...menuItem} key={`aboutSubMenu-${menuItem.id}`} />
-            ))}
+      {menuId === 3 && (
+        <div className="nav__menu-container submenu">
+          <div className="nav__menu-back" onClick={() => setMenuId(0)}>
+            Back
           </div>
-        )}
-
-        {menuId === 3 && (
-          <div className="nav__menu-links">
-            <div onClick={() => setMenuId(0)}>Back</div>
-            {forPatientsSubMenu.map((menuItem) => (
-              <MenuItem
-                {...menuItem}
-                key={`forPatientsSubMenu-${menuItem.id}`}
-              />
-            ))}
-          </div>
-        )}
-      </div>
+          {forPatientsSubMenu.map((menuItem) => (
+            <MenuItem {...menuItem} key={`forPatientsSubMenu-${menuItem.id}`} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
