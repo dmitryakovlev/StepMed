@@ -83,6 +83,10 @@ b {
   &.about--bttn {
     @apply px-8 pt-3 pb-4;
 
+    &:hover {
+      @apply opacity-100;
+    }
+
     &:disabled {
       @apply opacity-50 cursor-auto;
     }

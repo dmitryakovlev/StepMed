@@ -83,7 +83,7 @@ const About = () => {
           </Stepper>
         </div>
 
-        <div className="flex mb-4 sm:hidden">
+        <div className="flex items-center mb-4 sm:hidden">
           <button
             className="bttn about--bttn"
             disabled={state.activeTab == 0}
@@ -96,7 +96,9 @@ const About = () => {
             &#60;
           </button>
 
-          <span className="flex-grow">{state.activeTab + 1}</span>
+          <span className="about__divider"></span>
+          <span className="about__number-mobile">{state.activeTab + 1}</span>
+          <span className="about__divider"></span>
 
           <button
             className="bttn about--bttn"
@@ -113,8 +115,8 @@ const About = () => {
 
         <AboutStep {...homeAbout[state.activeTab]} />
         <img
-          src="/images/homeillustration.svg"
-          className="hidden w-full mt-32 sm:block"
+          src="/images/homeIllustration.png"
+          className="hidden w-full mt-16 sm:block"
         />
       </div>
     </>

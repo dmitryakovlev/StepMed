@@ -68,35 +68,48 @@ const Menu: FC = () => {
           hide: menuId === 1 || menuId === 3,
         })}
       >
-        {navBarMenu.map((menuItem) => (
-          <div
-            onClick={() => setMenuId(menuItem.id)}
-            key={`menu-${menuItem.id}`}
-          >
-            <MenuItem {...menuItem} />
-          </div>
-        ))}
+        <div className="nav__menu-links">
+          {navBarMenu.map((menuItem) => (
+            <div
+              onClick={() => setMenuId(menuItem.id)}
+              key={`menu-${menuItem.id}`}
+            >
+              <MenuItem {...menuItem} />
+            </div>
+          ))}
+        </div>
       </div>
 
       {menuId === 1 && (
         <div className="nav__menu-container submenu">
-          <div className="nav__menu-back" onClick={() => setMenuId(0)}>
-            Back
+          <div className="nav__menu-links">
+            {aboutSubMenu.map((menuItem) => (
+              <div className="mt-2">
+                <MenuItem {...menuItem} key={`aboutSubMenu-${menuItem.id}`} />
+              </div>
+            ))}
+            <div className="nav__menu-back" onClick={() => setMenuId(0)}>
+              Назад
+            </div>
           </div>
-          {aboutSubMenu.map((menuItem) => (
-            <MenuItem {...menuItem} key={`aboutSubMenu-${menuItem.id}`} />
-          ))}
         </div>
       )}
 
       {menuId === 3 && (
         <div className="nav__menu-container submenu">
-          <div className="nav__menu-back" onClick={() => setMenuId(0)}>
-            Back
+          <div className="nav__menu-links">
+            {forPatientsSubMenu.map((menuItem) => (
+              <div className="mt-2">
+                <MenuItem
+                  {...menuItem}
+                  key={`forPatientsSubMenu-${menuItem.id}`}
+                />
+              </div>
+            ))}
+            <div className="nav__menu-back" onClick={() => setMenuId(0)}>
+              Назад
+            </div>
           </div>
-          {forPatientsSubMenu.map((menuItem) => (
-            <MenuItem {...menuItem} key={`forPatientsSubMenu-${menuItem.id}`} />
-          ))}
         </div>
       )}
     </div>

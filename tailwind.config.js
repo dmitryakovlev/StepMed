@@ -25,6 +25,7 @@ module.exports = {
         secondary: '#ffaf50',
         footer: '#3a3a3a',
         'primary-10': '#f2f8fb',
+        'primary-link': '#a8e0ff',
         'secondary-10': '#fff7ed',
         'text-primary': '#1b1b1b',
         'text-secondary': '#353535',

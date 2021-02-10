@@ -6,7 +6,7 @@ import TravelingIcon from '@icons/Traveling';
 const Covid = () => (
   <div className="container mt-8 md:mt-16">
     <h1>COVID-19</h1>
-    <img src="/images/covid/covid_01.png" className="custom-img" />
+    {/* <img src="/images/covid/covid_01.png" className="custom-img" /> */}
 
     <p className="custom-text-important">
       Новая короновирусная инфекция – заболевание, влияющее на дыхательную
