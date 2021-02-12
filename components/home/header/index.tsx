@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const Header = () => (
   <>
     <div className="header">
@@ -30,7 +32,13 @@ const Header = () => (
           </p>
         </section>
         <section className="header__carousel">
-          <img src="./images/Slide_3.jpg" className="header__carousel-img" />
+          <Image
+            src="/images/home/slides/slide_01.webp"
+            alt=""
+            className="header__carousel-img"
+            layout="fill"
+          />
+          <img src="." />
         </section>
       </div>
     </div>
