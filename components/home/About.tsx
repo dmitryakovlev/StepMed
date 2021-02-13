@@ -115,7 +115,7 @@ const About = () => {
 
         <AboutStep {...homeAbout[state.activeTab]} />
         <img
-          src="/images/homeIllustration.png"
+          src="/images/home/homeIllustration.webp"
           className="hidden w-full mt-16 sm:block"
         />
       </div>
