@@ -36,6 +36,14 @@
       }
     }
   }
+
+  .custom-table-cell-empty {
+    display: none;
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
+  }
 }
 
 .zakonodatelnayakarta--custom-table {

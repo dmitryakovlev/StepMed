@@ -12,10 +12,22 @@ export interface IFooterContacts {
 }
 
 export const footerContacts: IFooterContacts[] = [
-  { id: 0, url: '/', icon: <WhatsappIcon /> },
-  { id: 1, url: '/', icon: <InstagramIcon /> },
-  { id: 2, url: '/', icon: <NapopravkuIcon /> },
-  { id: 3, url: '/', icon: <ProdoktorovIcon /> },
-  { id: 4, url: '/', icon: <TwogisIcon /> },
-  { id: 5, url: '/', icon: <YandexIcon /> },
+  // { id: 0, url: '/', icon: <WhatsappIcon /> },
+  {
+    id: 1,
+    url: 'https://www.instagram.com/stepmed_clinic/',
+    icon: <InstagramIcon />,
+  },
+  {
+    id: 2,
+    url: 'https://spb.napopravku.ru/clinics/stepmed-klinik-poliklinika/',
+    icon: <NapopravkuIcon />,
+  },
+  {
+    id: 3,
+    url: 'https://prodoctorov.ru/spb/lpu/72519-stepmed-klinik/',
+    icon: <ProdoktorovIcon />,
+  },
+  { id: 4, url: 'https://go.2gis.com/ys33dt', icon: <TwogisIcon /> },
+  // { id: 5, url: '/', icon: <YandexIcon /> },
 ];

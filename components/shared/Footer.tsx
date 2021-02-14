@@ -10,7 +10,9 @@ import { IFooterContacts, footerContacts } from '@data/footer';
 
 const FooterContactsSocial: FC<IFooterContacts> = ({ url, icon }) => (
   <Link href={url}>
-    <a className="footer__contacts-social">{icon}</a>
+    <a className="footer__contacts-social" target="_blank">
+      {icon}
+    </a>
   </Link>
 );
 
