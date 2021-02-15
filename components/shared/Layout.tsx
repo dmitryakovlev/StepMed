@@ -12,6 +12,7 @@ const Layout: FC<{
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta name="yandex-verification" content="de459bcbb344b785" />
     </Head>
     <NavBar />
 
