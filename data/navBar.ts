@@ -35,7 +35,7 @@ export const navBarMenu: INavBarMenu[] = [
   // },
 ];
 
-export const aboutSubMenu = [
+export const aboutSubMenu: INavBarMenu[] = [
   // {
   //   id: 0,
   //   url: '/',
@@ -73,7 +73,7 @@ export const aboutSubMenu = [
   // },
 ];
 
-export const forPatientsSubMenu = [
+export const forPatientsSubMenu: INavBarMenu[] = [
   {
     id: 0,
     url: '/priyom-onkologa',
