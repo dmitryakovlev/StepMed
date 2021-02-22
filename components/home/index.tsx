@@ -1,7 +1,7 @@
 import Header from './header';
 import Dashboard from './Dashboard';
 import About from './About';
-import Partners from './partners';
+import Partners from './Partners';
 
 export default function Home() {
   return (

@@ -1,5 +1,11 @@
-import ITworks from './ITworks';
-import TwoFiveSeven from './TwoFiveSeven';
+import { FC } from 'react';
+import { IPartnersLogo, partnersLogo } from '@data/partners';
+
+const DashboardBlock: FC<IPartnersLogo> = ({ url, image }) => (
+  <a href={url} className="partners__logo" target="_blank">
+    <img src={image} />
+  </a>
+);
 
 const Partners = () => (
   <>
@@ -10,8 +16,9 @@ const Partners = () => (
         диагностическими центрами, IT-разработчиками и другими компаниями.
       </p>
       <div className="partners__block">
-        <TwoFiveSeven />
-        <ITworks />
+        {partnersLogo.map((parameters) => (
+          <DashboardBlock {...parameters} key={parameters.id} />
+        ))}
       </div>
     </div>
   </>

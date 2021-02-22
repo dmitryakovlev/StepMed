@@ -1,7 +1,7 @@
 .partners__block {
-  @apply grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 mt-8;
+  @apply grid grid-cols-2 md:grid-cols-4 gap-y-4 gap-x-6 sm:gap-x-8 lg:gap-x-12 mt-8 select-none;
 }
 
 .partners__logo {
-  @apply w-full max-h-32;
+  @apply opacity-50 hover:opacity-100 w-full duration-200 ease-in-out;
 }

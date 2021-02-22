@@ -9,11 +9,9 @@ import { IFooterContacts, footerContacts } from '@data/footer';
 import { INavBarMenu, aboutSubMenu, forPatientsSubMenu } from '@data/navBar';
 
 const FooterContactsSocial: FC<IFooterContacts> = ({ url, icon }) => (
-  <Link href={url}>
-    <a className="footer__contacts-social" target="_blank">
-      {icon}
-    </a>
-  </Link>
+  <a href={url} className="footer__contacts-social" target="_blank">
+    {icon}
+  </a>
 );
 
 const FooterContactsBlock = () => (
@@ -59,9 +57,9 @@ const FooterContactsBlock = () => (
 
 const FooterLinksdBlock: FC<INavBarMenu> = ({ url, title }) => (
   <li className="mb-2">
-    <a className="footer__links-link" href={url}>
-      {title}
-    </a>
+    <Link href={url!}>
+      <a className="footer__links-link">{title}</a>
+    </Link>
   </li>
 );
 
@@ -101,9 +99,7 @@ const FooterBootom = () => (
     </div>
     <div className="footer__bottom-right">
       <div className="footer__bottom-container">
-        <span className="footer__bottom-developers">
-          Разработка и дизайн - twofiveseven
-        </span>
+        <span className="footer__bottom-developers">Разработка и дизайн</span>
         <span className="footer__bottom-logo">
           <TwoFiveSevenWhite />
         </span>
