@@ -11,8 +11,8 @@ import {
 } from '@data/navBar';
 
 import LogoWhite from '@components/logo/LogoWhite';
-// import PenIcon from '@icons/Pen';
 import LogoColor from '@components/logo/LogoColor';
+import PenIcon from '@icons/Pen';
 
 const Hamburger: FC<{
   open: boolean;
@@ -122,14 +122,14 @@ const Logo = ({ isOpened = false }) => (
   </Link>
 );
 
-// const CallButton = () => (
-//   <>
-//     <button className="bttn reg--bttn">
-//       <PenIcon className="reg--bttn-icon" />
-//       <span className="reg--bttn-text">Записаться на приём</span>
-//     </button>
-//   </>
-// );
+const CallButton = () => (
+  <>
+    <button className="bttn reg--bttn">
+      <PenIcon className="reg--bttn-icon" />
+      <span className="reg--bttn-text">Записаться на приём</span>
+    </button>
+  </>
+);
 
 const Nav = () => {
   const [isOpened, setOpened] = useState(false);
@@ -140,7 +140,7 @@ const Nav = () => {
         <Logo isOpened={isOpened} />
         <Hamburger open={isOpened} setOpen={setOpened} />
         <span className="flex-grow"></span>
-        {/* <CallButton /> */}
+        <CallButton />
       </div>
       {isOpened && <Menu />}
     </>

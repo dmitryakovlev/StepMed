@@ -6,6 +6,7 @@
 @import './_modal.css';
 @import './_table.css';
 @import './_block.css';
+@import './_registration.css';
 @import './_nav.css';
 @import './_footer.css';
 @import './home/home.css';
@@ -114,7 +115,7 @@ b {
 
   .custom-list-symbol::before {
     content: '●';
-    @apply mr-4 text-xl text-primary;
+    @apply mr-4 text-lg text-primary;
   }
 
   .custom-list-item {
@@ -122,12 +123,24 @@ b {
   }
 }
 
+.custom-main-title {
+  @apply mt-12;
+}
+
 .custom-title {
   @apply mt-12 text-base font-bold sm:text-xl md:text-2xl;
 }
 
+.custom-heading {
+  @apply mt-6 text-base font-bold text-text-secondary sm:text-lg md:text-xl;
+}
+
 .custom-text {
   @apply mt-6 text-base font-normal text-text-secondary sm:text-lg md:text-xl;
+
+  &.bold {
+    @apply font-bold;
+  }
 }
 
 .custom-text-link {

@@ -114,11 +114,11 @@ export const forPatientsSubMenu: INavBarMenu[] = [
     url: '/pravila-gospitalizacii',
     title: 'Правила госпитализации',
   },
-  // {
-  //   id: 8,
-  //   url: '/',
-  //   title: 'Подготовка к диагностическим исследованиям',
-  // },
+  {
+    id: 8,
+    url: '/podgotovka-k-issledovaniyam',
+    title: 'Подготовка к диагностическим исследованиям',
+  },
   // {
   //   id: 9,
   //   url: '/',
