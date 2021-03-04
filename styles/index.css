@@ -170,4 +170,17 @@ b {
   }
 }
 
+.custom-input {
+  @apply flex flex-col mb-4;
+
+  label {
+    @apply mb-1 text-text-secondary text-base cursor-pointer select-none;
+    margin-left: 2px;
+  }
+
+  input {
+    @apply px-4 py-2 w-full h-13 bg-white text-text-primary text-xl border-2 border-gray-200 rounded-md duration-200 ease-linear focus:border-primary focus:border-opacity-75;
+  }
+}
+
 @import 'tailwindcss/utilities';

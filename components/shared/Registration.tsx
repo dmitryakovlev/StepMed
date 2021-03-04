@@ -7,20 +7,20 @@ const Registration = () => {
   return (
     <aside>
       <div className="reg__nav">
-        <span className="reg__nav-close">X</span>
-        <h2>
+        <span className="reg__nav-close">&#10005;</span>
+        <h2 className="reg__nav-title">
           Оставьте свой номер телефона и мы перезвоним вам в рабочее время
           клиники.
         </h2>
-        <div className="">
+        <div className="custom-input">
           <label htmlFor="name">Имя</label>
           <input id="name" type="text"></input>
         </div>
-        <div>
+        <div className="custom-input">
           <label htmlFor="phone">Телефон</label>
           <input id="phone" type="text"></input>
         </div>
-        <button className="bttn">Записаться</button>
+        <button className="mt-4 bttn">Записаться</button>
       </div>
       <div className="reg__nav-bg"></div>
     </aside>

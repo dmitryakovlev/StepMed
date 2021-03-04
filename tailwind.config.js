@@ -18,6 +18,7 @@ module.exports = {
       },
       width: {
         38: '9.375rem',
+        152: '38rem',
         '45%': '45%',
       },
       colors: {
