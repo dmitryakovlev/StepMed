@@ -122,12 +122,16 @@ const Logo = ({ isOpened = false }) => (
   </Link>
 );
 
-const CallButton = () => (
+const CallButton = ({ isOpened = false }) => (
   <>
-    <button className="bttn reg--bttn">
-      <PenIcon className="reg--bttn-icon" />
-      <span className="reg--bttn-text">Записаться на приём</span>
-    </button>
+    {isOpened ? (
+      ''
+    ) : (
+      <button className="bttn reg--bttn">
+        <PenIcon className="reg--bttn-icon" />
+        <span className="reg--bttn-text">Записаться на приём</span>
+      </button>
+    )}
   </>
 );
 
@@ -140,7 +144,7 @@ const Nav = () => {
         <Logo isOpened={isOpened} />
         <Hamburger open={isOpened} setOpen={setOpened} />
         <span className="flex-grow"></span>
-        <CallButton />
+        <CallButton isOpened={isOpened} />
       </div>
       {isOpened && <Menu />}
     </>

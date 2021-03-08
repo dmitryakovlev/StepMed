@@ -21,3 +21,11 @@
     @apply mt-2;
   }
 }
+
+.license__block {
+  @apply flex flex-wrap;
+
+  .license__image {
+    @apply w-1/2;
+  }
+}

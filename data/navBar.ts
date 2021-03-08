@@ -41,11 +41,11 @@ export const aboutSubMenu: INavBarMenu[] = [
   //   url: '/',
   //   title: 'О нас',
   // },
-  // {
-  //   id: 1,
-  //   url: '/',
-  //   title: 'Документы и лицензии',
-  // },
+  {
+    id: 1,
+    url: '/dokumenti-i-licenzii',
+    title: 'Документы и лицензии',
+  },
   {
     id: 2,
     url: '/nadzornie-organi',
@@ -119,9 +119,9 @@ export const forPatientsSubMenu: INavBarMenu[] = [
     url: '/podgotovka-k-issledovaniyam',
     title: 'Подготовка к диагностическим исследованиям',
   },
-  // {
-  //   id: 9,
-  //   url: '/',
-  //   title: 'Анкета качества',
-  // },
+  {
+    id: 9,
+    url: '/anketa-kachestva',
+    title: 'Анкета качества',
+  },
 ];
