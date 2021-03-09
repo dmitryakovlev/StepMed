@@ -46,7 +46,9 @@ const FooterContactsBlock = () => (
       <span className="footer__contacts-icon">
         <EmailIcon />
       </span>
-      <span className="footer__contacts-title">clinic@step-med.com</span>
+      <a href="mailto:clinic@step-med.com" className="footer__contacts-title">
+        clinic@step-med.com
+      </a>
     </div>
 
     <div className="footer__contacts-socials">

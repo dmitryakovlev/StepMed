@@ -1,5 +1,5 @@
 import Layout from '@components/shared/Layout';
-import PravilaVnutrennegoRasporyadka from '@components/innerpages/PravilaVnutrennegoRasporyadka Ну  Эт  У каhttps://soyuzmicrophones.com/ru/023-series  Ч  ';
+import PravilaVnutrennegoRasporyadka from '@components/innerpages/PravilaVnutrennegoRasporyadka';
 
 export default function PravilaVnutrennegoRasporyadkaPage() {
   return (
