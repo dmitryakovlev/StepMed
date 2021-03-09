@@ -66,11 +66,11 @@ export const aboutSubMenu: INavBarMenu[] = [
     url: '/zakonodatelnaya-karta',
     title: 'Законодательная карта',
   },
-  // {
-  //   id: 6,
-  //   url: '/',
-  //   title: 'Правила внутреннего распорядка',
-  // },
+  {
+    id: 6,
+    url: '/pravila-vnutrennego-rasporyadka',
+    title: 'Правила внутреннего распорядка',
+  },
 ];
 
 export const forPatientsSubMenu: INavBarMenu[] = [

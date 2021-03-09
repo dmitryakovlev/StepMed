@@ -1,4 +1,4 @@
-import Header from './header';
+import Header from './Header';
 import Dashboard from './Dashboard';
 import About from './About';
 import Partners from './Partners';

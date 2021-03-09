@@ -21,7 +21,9 @@ const FooterContactsBlock = () => (
         <PhoneIcon />
       </span>
       <div className="flex flex-col">
-        <span className="footer__contacts-title big">+7 (812) 219 50 27</span>
+        <a href="tel:78122195027" className="footer__contacts-title big">
+          +7 (812) 219 50 27
+        </a>
         <span className="footer__contacts-text small">
           Ежедневно с 9:00 до 19:00
         </span>
