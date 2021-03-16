@@ -144,7 +144,7 @@ const Nav = () => {
         <Logo isOpened={isOpened} />
         <Hamburger open={isOpened} setOpen={setOpened} />
         <span className="flex-grow"></span>
-        <CallButton isOpened={isOpened} />
+        {/* <CallButton isOpened={isOpened} /> */}
       </div>
       {isOpened && <Menu />}
     </>
