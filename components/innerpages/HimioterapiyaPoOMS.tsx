@@ -1,12 +1,12 @@
 const HimioterapiyaPoOMS = () => (
-  <div className="container mt-8 md:mt-16">
+  <div className="container">
     <h1>Химиотерапия по ОМС</h1>
     <p className="custom-text">
       Под словом «химиотерапия» обычно понимают лекарственную противоопухолевую
       терапию, которая в себя включает непосредственно химиотерапию, таргетную
       терапию, гормонотерапию, иммунотерапию и сочетание их видов.
     </p>
-    <p className="custom-text-important">
+    <p className="custom-text-message">
       ОМС (обязательное медицинское страхование) – система оплаты медицинской
       помощи в РФ, которая включает в себя гарантированный набор медицинских
       услуг, которые могут быть оказаны пациенту без взимания с него денежных
@@ -14,11 +14,23 @@ const HimioterapiyaPoOMS = () => (
     </p>
     <p className="custom-text">
       Степмед Клиник участвует в реализации Программы ОМС в части лекарственной
-      противоопухолевой терапии{' '}
-      <a href="#" className="custom-text-link" target="_blank">
-        (реестровый номер – 780687)
+      противоопухолевой терапии ({''}
+      <a
+        href="http://nsi.ffoms.ru/#refbookList?refbookList:$active=1&refbookList:$selectedId=6226/refbookList.refbookList.view$124v6226?menu:filter:dictionaryId=6226&menu:filter:readOnly=true&menu:filter:searchInput=780687&menu:$active=1&menu:$selectedId=undefined&refbookSimple0:filter:searchInput=780687&refbookSimple0:$active=1&refbookSimple0:page=1&refbookSimple0:$selectedId=undefined"
+        className="custom-text-link"
+        target="_blank"
+      >
+        реестр
       </a>
-      . Поэтому в условиях нашей клиники возможно получение всех
+      {', '}
+      <a
+        href="/images/hpo/reestroviy_nomer.webp"
+        className="custom-text-link"
+        target="_blank"
+      >
+        реестровый номер – 780687
+      </a>
+      ). Поэтому в условиях нашей клиники возможно получение всех
       зарегистрированных высокоэффективных схем, включая иммунотерапию и
       таргетную терапию за счет средств ОМС.
     </p>
@@ -29,24 +41,22 @@ const HimioterapiyaPoOMS = () => (
       </p>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           Наличие показаний к проведению лекарственной противоопухолевой
           терапии.
         </p>
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
-          Отсутствие противопоказаний к ее проведению.
-        </p>
+        <p>Отсутствие противопоказаний к ее проведению.</p>
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">Наличие действующего полиса ОМС.</p>
+        <p>Наличие действующего полиса ОМС.</p>
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           Направление из медицинской организации, выбранной для оказания
           первичной помощи (поликлиники по месту жительства, а также направление
           может выдать онколог первичного онкологического кабинета, центра
@@ -58,7 +68,7 @@ const HimioterapiyaPoOMS = () => (
       Действующий полис ОМС выглядит следующим образом:
     </p>
     <p className="custom-text">Направление:</p>
-    <p className="custom-text-warning">
+    <p className="custom-text-message warning">
       Обращаем внимание, что направление должно быть выдано именно на
       госпитализацию и именно в ООО «Степмед Клиник». Направление, которое
       выдано в иную медицинскую организацию или в направлении отмечено

@@ -1,8 +1,8 @@
 const DokumentiILicenzii = () => (
-  <div className="container mt-8 md:mt-16">
+  <div className="container">
     <h1>Документы и лицензии</h1>
 
-    <h3 className="custom-title">Лицензия</h3>
+    <h2 className="custom-title">Лицензия</h2>
     <div className="license__block">
       <img className="license__image" src="/images/licenses/license_01.webp" />
       <img className="license__image" src="/images/licenses/license_02.webp" />
@@ -18,7 +18,7 @@ const DokumentiILicenzii = () => (
       </a>
     </div>
 
-    <h3 className="custom-title">Санитарно-эпидемиологическое заключение</h3>
+    <h2 className="custom-title">Санитарно-эпидемиологическое заключение</h2>
     <div className="license__block">
       <img className="license__image" src="/images/licenses/sez_01.webp" />
       <img className="license__image" src="/images/licenses/sez_02.webp" />

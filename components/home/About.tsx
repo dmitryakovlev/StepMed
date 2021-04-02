@@ -4,8 +4,8 @@ import { homeAbout, IHomeAbout } from '@data/homePage';
 
 const AboutStep: FC<IHomeAbout> = ({ title, description }) => (
   <div>
-    <h3>{title}</h3>
-    <p className="mt-4 sm:mt-5">{description}</p>
+    <h2>{title}</h2>
+    <p className="mt-2 md:mt-4">{description}</p>
   </div>
 );
 
@@ -14,7 +14,10 @@ const Stepper: FC<{
   onClick: () => void;
 }> = ({ isActive, onClick, children }) => (
   <span
-    className={classNames('about__number', { active: isActive })}
+    className={classNames(
+      'flex flex-shrink-0 items-center justify-center w-16 h-16 text-primary text-2xl font-bold border-primary border-4 rounded-full duration-200 ease-in-out cursor-pointer select-none hover:bg-primary hover:text-white',
+      { 'bg-primary text-white': isActive },
+    )}
     onClick={onClick}
   >
     {children}
@@ -26,10 +29,10 @@ const About = () => {
 
   return (
     <>
-      <div className="container mt-16 md:mt-32">
-        <h1 className="mb-8 sm:mb-10">Почему именно мы?</h1>
+      <div className="container mt-16 lg:mt-32">
+        <h1 className="mb-6 md:mb-10">Почему именно мы?</h1>
 
-        <div className="about__numbers">
+        <div className="items-center hidden mb-4 md:mb-8 md:flex">
           <Stepper
             isActive={state.activeTab == 0}
             onClick={() => setState({ activeTab: 0 })}
@@ -83,7 +86,7 @@ const About = () => {
           </Stepper>
         </div>
 
-        <div className="flex items-center mb-4 sm:hidden">
+        <div className="flex items-center mb-4 md:hidden">
           <button
             className="bttn about--bttn"
             disabled={state.activeTab == 0}
@@ -97,7 +100,9 @@ const About = () => {
           </button>
 
           <span className="about__divider"></span>
-          <span className="about__number-mobile">{state.activeTab + 1}</span>
+          <span className="flex items-center justify-center flex-shrink-0 pb-1 text-xl font-bold border-4 rounded-full w-14 h-14 text-primary border-primary">
+            {state.activeTab + 1}
+          </span>
           <span className="about__divider"></span>
 
           <button
@@ -116,7 +121,7 @@ const About = () => {
         <AboutStep {...homeAbout[state.activeTab]} />
         <img
           src="/images/home/homeIllustration.webp"
-          className="hidden w-full mt-16 sm:block"
+          className="w-full mt-8 md:mt-12"
         />
       </div>
     </>

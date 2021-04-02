@@ -8,10 +8,10 @@ const Registration = () => {
     <aside>
       <div className="reg__nav">
         <span className="reg__nav-close">&#10005;</span>
-        <h2 className="reg__nav-title">
+        <h1 className="reg__nav-title">
           Оставьте свой номер телефона и мы перезвоним вам в рабочее время
           клиники.
-        </h2>
+        </h1>
         <div className="custom-input">
           <label htmlFor="name">Имя</label>
           <input id="name" type="text"></input>

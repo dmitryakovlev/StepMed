@@ -14,32 +14,40 @@ const Block: FC<INadzornieOrgani> = ({
 
   if (email) {
     ifHasEmail = (
-      <div className="custom-block-item">
-        <span className="custom-block-item-heading">Электронная почта</span>
-        <span className="custom-block-item-text">{email}</span>
+      <div className="flex flex-col">
+        <span className="mb-2 text-sm text-gray-400 select-none">
+          Электронная почта
+        </span>
+        <span className="text-base text-text-primary">{email}</span>
       </div>
     );
   }
 
   return (
-    <div className="custom-block">
-      <img className="custom-block-img" src={img} />
-      <div className="custom-block-container">
-        <h1 className="custom-block-name">{name}</h1>
-        <div className="mb-5 custom-block-item">
-          <span className="custom-block-item-heading">Адрес</span>
-          <span className="custom-block-item-text">{address}</span>
+    <div className="flex flex-col items-center w-full py-6 border-b-2 border-gray-100 md:flex-row xl:py-12 last:border-none">
+      <img className="w-[9.375rem] h-[9.375rem]" src={img} />
+      <div className="w-full mt-4 md:mt-0 md:ml-8 xl:ml-12">
+        <p className="font-bold">{name}</p>
+        <div className="flex flex-col my-4 xl:my-6">
+          <span className="mb-2 text-sm text-gray-400 select-none">Адрес</span>
+          <span className="text-base text-text-primary">{address}</span>
         </div>
-        <div className="custom-clock-grid">
-          <div className="custom-block-item">
-            <span className="custom-block-item-heading">Сайт</span>
-            <a href={url} className="custom-block-item-link" target="_blank">
+        <div className="grid grid-cols-1 gap-4 xl:gap-6 xl:grid-cols-3">
+          <div className="flex flex-col">
+            <span className="mb-2 text-sm text-gray-400 select-none">Сайт</span>
+            <a
+              href={url}
+              className="text-base text-primary hover:underline"
+              target="_blank"
+            >
               {url}
             </a>
           </div>
-          <div className="custom-block-item">
-            <span className="custom-block-item-heading">Телефон</span>
-            <span className="custom-block-item-text">{phone}</span>
+          <div className="flex flex-col">
+            <span className="mb-2 text-sm text-gray-400 select-none">
+              Телефон
+            </span>
+            <span className="text-base text-text-primary">{phone}</span>
           </div>
           {ifHasEmail}
         </div>
@@ -57,8 +65,8 @@ const BlockList = () => (
 );
 
 const NadzornieOrgani = () => (
-  <div className="container mt-16 md:mt-32">
-    <h1 className="mb-10">Контрольно-надзорные органы</h1>
+  <div className="container">
+    <h1>Контрольно-надзорные органы</h1>
     <BlockList />
   </div>
 );

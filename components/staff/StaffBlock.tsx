@@ -20,7 +20,7 @@ const DialogContent: FC<{
 }) => (
   <div className="relative px-6 bg-white rounded-lg shadow-xl">
     <div className="mt-20 text-center">
-      <h3 className="text-4xl font-bold leading-normal">{fullName}</h3>
+      <h2 className="text-4xl font-bold leading-normal">{fullName}</h2>
       <div className="text-lg">{workPosition}</div>
       <div className="mt-2 text-body-font-color">
         {education.map((education) => (
@@ -114,15 +114,15 @@ const StaffProfile: FC<IStaff> = (staff) => {
         src={staff.photoUrl || ''}
         className="staff__img"
       />
-      <h2 className="staff__name">{staff.fullName}</h2>
-      <h4 className="staff__position">{staff.workPosition}</h4>
+      <h1 className="staff__name">{staff.fullName}</h1>
+      <h2 className="staff__position">{staff.workPosition}</h2>
       <div className="staff__info">
         <div className="staff__info-description">
-          <h3>Обо мне</h3>
+          <h2>Обо мне</h2>
           <p>{staff.description}</p>
         </div>
         <div className="staff__info-education">
-          <h3>Образование</h3>
+          <h2>Образование</h2>
           <div>
             {staff.education.map((education) => (
               <p>{education}</p>

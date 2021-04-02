@@ -1,9 +1,7 @@
 import { FC } from 'react';
 
 import {
-  IUslugiICeniHead,
   IUslugiICeni,
-  uslugiICeniHead,
   uslugiICeniFirst,
   uslugiICeniSecond,
   uslugiICeniThird,
@@ -16,152 +14,110 @@ import {
   uslugiICeniTenth,
 } from '@data/uslugiICeni';
 
-const TableHead: FC<IUslugiICeniHead> = ({ heading }) => (
-  <div className="custom-table-head-item">{heading}</div>
-);
-
-const TableContent: FC<IUslugiICeni> = ({ code, service, price }) => {
-  let ifHasCode;
-
-  if (code) {
-    ifHasCode = (
-      <div className="custom-table-cell-item">
-        <span className="custom-table-cell-heading">Код услуги</span>
-        <span className="custom-table-cell-text">{code}</span>
-      </div>
-    );
-  } else {
-    ifHasCode = <div className="custom-table-cell-empty"></div>;
-  }
-
-  return (
-    <div className="custom-table-cell">
-      {ifHasCode}
-      <div className="custom-table-cell-item">
-        <span className="custom-table-cell-heading">
-          Наименование медицинской услуги
-        </span>
-        <span className="custom-table-cell-text">{service}</span>
-      </div>
-      <div className="custom-table-cell-item">
-        <span className="custom-table-cell-heading">Стоимость услуги (₽)</span>
-        <span className="custom-table-cell-text custom-table-cell-bold">
-          {price}
-        </span>
-      </div>
-    </div>
-  );
-};
-
-const Table: FC = ({ children }) => (
-  <div className="custom-table uslugiiceni--custom-table">
-    <div className="custom-table-head">
-      {uslugiICeniHead.map((parameters) => (
-        <TableHead {...parameters} key={parameters.id} />
-      ))}
-    </div>
-    <div>{children}</div>
+const PriceContent: FC<IUslugiICeni> = ({ service, price }) => (
+  <div className="grid gap-2 p-3 sm:p-4 lg:py-6 lg:gap-6 grid-cols-priceSmall md:grid-cols-price odd:bg-gray-100">
+    <p className="text-text-primary">{service}</p>
+    <p className="text-right text-primary">{price}</p>
   </div>
 );
 
+const PriceBlock: FC<{ title: string }> = ({ children, title }) => (
+  <>
+    <h2 className="mb-3 sm:mb-4 lg:mb-6 custom-title">{title}</h2>
+    <div className="-mx-3 sm:-mx-4 xl:mx-0">
+      <div>{children}</div>
+    </div>
+  </>
+);
+
 const UslugiICeni = () => (
-  <div className="container mt-16 md:mt-32">
-    <h1 className="mb-10">Услуги и цены</h1>
+  <div className="container">
+    <h1>Услуги и цены</h1>
 
-    <h3 className="custom-title">01. Консультации</h3>
-    <Table>
+    <PriceBlock title={'01. Консультации'}>
       {uslugiICeniFirst.map((parameters) => (
-        <TableContent {...parameters} key={parameters.id} />
+        <PriceContent {...parameters} key={parameters.id} />
       ))}
-    </Table>
+    </PriceBlock>
 
-    <h3 className="custom-title">02. Манипуляции</h3>
-    <Table>
+    <PriceBlock title={'02. Манипуляции'}>
       {uslugiICeniSecond.map((parameters) => (
-        <TableContent {...parameters} key={parameters.id} />
+        <PriceContent {...parameters} key={parameters.id} />
       ))}
-    </Table>
+    </PriceBlock>
 
-    <h3 className="custom-title">03. Функциональная диагностика</h3>
-    <Table>
+    <PriceBlock title={'03. Функциональная диагностика'}>
       {uslugiICeniThird.map((parameters) => (
-        <TableContent {...parameters} key={parameters.id} />
+        <PriceContent {...parameters} key={parameters.id} />
       ))}
-    </Table>
+    </PriceBlock>
     <p className="custom-text-info">
       * - услуги оказываются партнерами ООО «Степмед клиник»
     </p>
 
-    <h3 className="custom-title">
-      04. Магнитно-резонансная томография (без стоимости контрастного вещества)*
-    </h3>
-    <Table>
+    <PriceBlock
+      title={
+        '04. Магнитно-резонансная томография (без стоимости контрастного вещества)*'
+      }
+    >
       {uslugiICeniFourth.map((parameters) => (
-        <TableContent {...parameters} key={parameters.id} />
+        <PriceContent {...parameters} key={parameters.id} />
       ))}
-    </Table>
+    </PriceBlock>
     <p className="custom-text-info">
       * - услуги оказываются партнерами ООО «Степмед клиник»
     </p>
 
-    <h3 className="custom-title">05. Компьютерная томография*</h3>
-    <Table>
+    <PriceBlock title={'05. Компьютерная томография*'}>
       {uslugiICeniFifth.map((parameters) => (
-        <TableContent {...parameters} key={parameters.id} />
+        <PriceContent {...parameters} key={parameters.id} />
       ))}
-    </Table>
+    </PriceBlock>
     <p className="custom-text-info">
       * - услуги оказываются партнерами ООО «Степмед клиник»
     </p>
 
-    <h3 className="custom-title">
-      06. Радиоизотопная позитронно-эмиссионная томография*
-    </h3>
-    <Table>
+    <PriceBlock title={'06. Радиоизотопная позитронно-эмиссионная томография*'}>
       {uslugiICeniSixth.map((parameters) => (
-        <TableContent {...parameters} key={parameters.id} />
+        <PriceContent {...parameters} key={parameters.id} />
       ))}
-    </Table>
+    </PriceBlock>
     <p className="custom-text-info">
       * - услуги оказываются партнерами ООО «Степмед клиник»
     </p>
 
-    <h3 className="custom-title">07. Рентгенодиагностика*</h3>
-    <Table>
+    <PriceBlock title={'07. Рентгенодиагностика*'}>
       {uslugiICeniSeventh.map((parameters) => (
-        <TableContent {...parameters} key={parameters.id} />
+        <PriceContent {...parameters} key={parameters.id} />
       ))}
-    </Table>
+    </PriceBlock>
     <p className="custom-text-info">
       * - услуги оказываются партнерами ООО «Степмед клиник»
     </p>
 
-    <h3 className="custom-title">08. Ультразвуковая диагностика*</h3>
-    <Table>
-      {uslugiICeniFifth.map((parameters) => (
-        <TableContent {...parameters} key={parameters.id} />
+    <PriceBlock title={'08. Ультразвуковая диагностика*'}>
+      {uslugiICeniEighth.map((parameters) => (
+        <PriceContent {...parameters} key={parameters.id} />
       ))}
-    </Table>
+    </PriceBlock>
     <p className="custom-text-info">
       * - услуги оказываются партнерами ООО «Степмед клиник»
     </p>
 
-    <h3 className="custom-title">09. Патологическая анатомия*</h3>
-    <Table>
+    <PriceBlock title={'09. Патологическая анатомия*'}>
       {uslugiICeniNinth.map((parameters) => (
-        <TableContent {...parameters} key={parameters.id} />
+        <PriceContent {...parameters} key={parameters.id} />
       ))}
-    </Table>
+    </PriceBlock>
     <p className="custom-text-info">
       * - услуги оказываются партнерами ООО «Степмед клиник»
     </p>
 
-    <h3 className="custom-title">10. Иммуногистохимия*</h3>
-    <Table>
+    <PriceBlock title={'10. Иммуногистохимия*'}>
       {uslugiICeniTenth.map((parameters) => (
-        <TableContent {...parameters} key={parameters.id} />
+        <PriceContent {...parameters} key={parameters.id} />
       ))}
-    </Table>
+    </PriceBlock>
     <p className="custom-text-info">
       * - услуги оказываются партнерами ООО «Степмед клиник»
     </p>

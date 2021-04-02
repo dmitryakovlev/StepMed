@@ -1,5 +1,5 @@
 const PodgotovkaKIssledovaniyam = () => (
-  <div className="container mt-8 md:mt-16">
+  <div className="container">
     <h1>Правила подготовки к диагностическим исследованиям</h1>
     <p className="custom-text">
       Большинство МР исследований не требует специальной подготовки, то есть Вы
@@ -11,8 +11,8 @@ const PodgotovkaKIssledovaniyam = () => (
     </p>
 
     {/* МАГНИТНО-РЕЗОНАНСНАЯ ТОМОГРАФИЯ */}
-    <h1 className="custom-main-title">Магнитно-резонансная томография (МРТ)</h1>
-    <p className="custom-text-warning">
+    <h1 className="mt-12">Магнитно-резонансная томография (МРТ)</h1>
+    <p className="custom-text-message warning">
       Противопоказания: кардиостимулятор, наличие металлических имплантатов,
       имплантаты среднего уха, ферромагнитные осколки, кровоостанавливающие
       клипсы сосудов головного мозга.
@@ -28,18 +28,18 @@ const PodgotovkaKIssledovaniyam = () => (
       положение, кава-фильтры.
     </p>
 
-    <h3 className="custom-title">МРТ всего тела без контраста</h3>
+    <h2 className="custom-title">МРТ всего тела без контраста</h2>
     <p className="custom-text">
       Подготовка не требуется. При себе иметь результаты предыдущих исследований
       (диски) и сменную обувь, а также простыню (пеленку).
     </p>
 
-    <h3 className="custom-title">МРТ органов малого таза у женщин</h3>
+    <h2 className="custom-title">МРТ органов малого таза у женщин</h2>
     <div className="custom-list">
       <p className="custom-list-heading">Подготовка:</p>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           Рекомендуется проведение обследования на 7-12 день менструального
           цикла, возможно проведение исследования во вторую фазу цикла при
           эндометриозе и оценке распространения уже выявленного ранее
@@ -50,7 +50,7 @@ const PodgotovkaKIssledovaniyam = () => (
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           За сутки перед исследованием нужно исключить из рациона грубую
           клетчатку и продукты, вызывающие излишнее газообразование (капуста,
           фрукты, газированные напитки, черный хлеб, кисломолочные продукты и
@@ -59,14 +59,14 @@ const PodgotovkaKIssledovaniyam = () => (
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           Прием препарата «Эспумизан» – для устранения повышенного
           газообразования.
         </p>
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           Подготовка кишечника: при нормальном пищеварении – естественное
           опорожнение кишечника в день исследования, при запорах – использование
           щадящих микроклизм (Микролакс).
@@ -74,32 +74,32 @@ const PodgotovkaKIssledovaniyam = () => (
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           Последний прием пищи – не позднее, чем за 4 часа до начала
           исследования.
         </p>
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           За 30-40 минут до начала исследования – прием 1-2 таблеток «Но-шпа».
         </p>
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           Не мочиться за 2 часа до проведения исследования. Дополнительный прием
           жидкости не нужен – мочевой пузырь должен быть умерено наполнен.
         </p>
       </div>
     </div>
 
-    <h3 className="custom-title">МРТ органов малого таза у мужчин</h3>
+    <h2 className="custom-title">МРТ органов малого таза у мужчин</h2>
     <div className="custom-list">
       <p className="custom-list-heading">Подготовка:</p>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           За сутки перед исследованием нужно исключить из рациона грубую
           клетчатку и продукты, вызывающие излишнее газообразование (капуста,
           фрукты, газированные напитки, черный хлеб, кисломолочные продукты и
@@ -108,7 +108,7 @@ const PodgotovkaKIssledovaniyam = () => (
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           Подготовка кишечника: при нормальном пищеварении – естественное
           опорожнение кишечника в день исследования, при запорах – использование
           щадящих микроклизм (Микролакс).
@@ -116,32 +116,32 @@ const PodgotovkaKIssledovaniyam = () => (
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           Последний прием пищи – не позднее, чем за 4 часа до начала
           исследования.
         </p>
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           За 30-40 минут до начала исследования – прием 1-2 таблеток «Но-шпа».
         </p>
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           Не мочиться за 2 часа до проведения исследования. Дополнительный прием
           жидкости не нужен – мочевой пузырь должен быть умеренно наполнен.
         </p>
       </div>
     </div>
 
-    <h3 className="custom-title">МРТ прямой кишки</h3>
+    <h2 className="custom-title">МРТ прямой кишки</h2>
     <div className="custom-list">
       <p className="custom-list-heading">Подготовка:</p>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           Подготовка кишечника: при нормальном пищеварении – естесственное
           опорожнение кишечника в день исследования, при запорах – использование
           щадящих микроклизм (Микролакс).
@@ -149,20 +149,18 @@ const PodgotovkaKIssledovaniyam = () => (
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           За час до исследования – опорожнение мочевого пузыря и дальнейшее
           исключение употребления жидкости.
         </p>
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
-          За 50 минут до обследования принять 2-3 таблетки «Но-шпа».
-        </p>
+        <p>За 50 минут до обследования принять 2-3 таблетки «Но-шпа».</p>
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           При себе иметь медицинскую документацию, относящуюся к зоне интереса:
           послеоперационные выписки, данные предыдущих исследований, таких как
           МРТ, УЗИ. СКТ. А также — сменную обувь и простыню (пеленку).
@@ -172,7 +170,7 @@ const PodgotovkaKIssledovaniyam = () => (
 
     {/* ПОЗИТРОННО-ЭМИССИОННАЯ ТОМОГРАФИЯ */}
     <h1 className="mt-12">Позитронно-эмиссионная томография (ПЭТ-КТ)</h1>
-    <p className="custom-text-warning">
+    <p className="custom-text-message warning">
       Противопоказания: беременность и лактация.
     </p>
 
@@ -192,20 +190,16 @@ const PodgotovkaKIssledovaniyam = () => (
         В процедурном кабинете пациенту вводят радиофармпрепарат:
       </p>
       <div className="custom-list-container">
-        <p className="custom-list-item">
+        <p>
           Накопление 18F-фтордезоксиглюкозы организмом занимает в среднем около
           60 минут.
         </p>
       </div>
       <div className="custom-list-container">
-        <p className="custom-list-item">
-          Накопление 11С-метионина организмом – около 10 минут.
-        </p>
+        <p>Накопление 11С-метионина организмом – около 10 минут.</p>
       </div>
       <div className="custom-list-container">
-        <p className="custom-list-item">
-          Накопление 18F-фторэтилтирозином - около 10 минут.
-        </p>
+        <p>Накопление 18F-фторэтилтирозином - около 10 минут.</p>
       </div>
     </div>
     <p className="custom-text">
@@ -219,19 +213,13 @@ const PodgotovkaKIssledovaniyam = () => (
         Затем медсестра провожает пациента на исследование:
       </p>
       <div className="custom-list-container">
-        <p className="custom-list-item">
-          Исследование ПЭТ-КТ с глюкозой длится от 8 до 15 минут.
-        </p>
+        <p>Исследование ПЭТ-КТ с глюкозой длится от 8 до 15 минут.</p>
       </div>
       <div className="custom-list-container">
-        <p className="custom-list-item">
-          Исследование ПЭТ-КТ с метионином – 15 минут.
-        </p>
+        <p>Исследование ПЭТ-КТ с метионином – 15 минут.</p>
       </div>
       <div className="custom-list-container">
-        <p className="custom-list-item">
-          Исследование ПЭТ-КТ с 18F-фторэтилтирозином - от 20 до 40 минут.
-        </p>
+        <p>Исследование ПЭТ-КТ с 18F-фторэтилтирозином - от 20 до 40 минут.</p>
       </div>
     </div>
     <p className="custom-text">
@@ -240,12 +228,12 @@ const PodgotovkaKIssledovaniyam = () => (
       необходимо пить много воды для ускорения выведения препарата из организма.
     </p>
 
-    <h3 className="custom-title">ПЭТ-КТ с 18F-фтордезоксиглюкозой</h3>
+    <h2 className="custom-title">ПЭТ-КТ с 18F-фтордезоксиглюкозой</h2>
     <div className="custom-list">
       <p className="custom-list-heading">Подготовка:</p>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           Необходимо сообщить врачу о наличии у Вас хронических заболеваний (в
           особенности сахарного диабета) и о том, используете ли Вы постоянно
           какие-либо лекарства: это может повлиять на результаты исследования.
@@ -253,7 +241,7 @@ const PodgotovkaKIssledovaniyam = () => (
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           В течение 24 часов до исследования запрещается заниматься физическими
           упражнениями и иметь какие-либо физические нагрузки: для пациентов
           активно занимающихся спортом ограничить физические нагрузки в течении
@@ -263,14 +251,14 @@ const PodgotovkaKIssledovaniyam = () => (
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           Накануне позитронно - эмиссионной томографии рекомендуется легкий ужин
           (желательно творожные или кисломолочные продукты).
         </p>
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           Перед проведением исследования нельзя употреблять пищу по крайней мере
           за 6-7 часов, в том числе жевательные резинки, различные конфеты. Пить
           в день исследования можно и нужно, необходимо выпить не менее 0,5
@@ -279,7 +267,7 @@ const PodgotovkaKIssledovaniyam = () => (
         </p>
       </div>
     </div>
-    <p className="custom-text-important">
+    <p className="custom-text-message">
       Только для исследования ПЭТ-КТ тела: за 6 часов до времени прибытия
       необходимо выпить 0,5 ампулы контрастного вещества (10 мл развести в
       стакане воды), за 2 часа – оставшиеся 10 мл. Один препарат на выбор:
@@ -289,7 +277,7 @@ const PodgotovkaKIssledovaniyam = () => (
       При наличии непереносимости препарата или наличии заболеваний щитовидной
       железы – контрастные препараты не принимать.
     </p>
-    <p className="custom-text-warning">
+    <p className="custom-text-message warning">
       При использовании в качестве РФП меченой глюкозы (18 ФДГ) относительным
       противопоказанием является высокий уровень сахара крови (больше 8,5
       ммоль/л, крайняя граница 9 ммоль/л ), необходима консультация
@@ -322,19 +310,19 @@ const PodgotovkaKIssledovaniyam = () => (
       нельзя.
     </p>
 
-    <h3 className="custom-title">ПЭТ-КТ головного мозга с 11С-метионином</h3>
+    <h2 className="custom-title">ПЭТ-КТ головного мозга с 11С-метионином</h2>
     <p className="custom-text">
       В день исследования рекомендуется питье несладкой негазированной воды в
       любом количестве. Можно выпить несладкий чай и/или несладкий кофе.
       Дополнительной подготовки не требует.
     </p>
 
-    <h3 className="custom-title">ПЭТ-КТ с 18F-фторэтилтирозином</h3>
+    <h2 className="custom-title">ПЭТ-КТ с 18F-фторэтилтирозином</h2>
     <div className="custom-list">
       <p className="custom-list-heading">Подготовка:</p>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           За двое суток до исследования необходимо исключить из рациона продукты
           богатые тирозином: сыры, яйца, орехи, бобовые, все соевые продукты,
           пряности, все виды мяса, икру.
@@ -342,14 +330,14 @@ const PodgotovkaKIssledovaniyam = () => (
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           Исследование проводится натощак (исключается прием пищи за 4-6 ч до
           исследования).
         </p>
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           Употребление негазированных напитков перед исследованием допускается
           без ограничений.
         </p>
@@ -358,7 +346,9 @@ const PodgotovkaKIssledovaniyam = () => (
 
     {/* ОСТЕОСЦИНТИГРАФИЯ */}
     <h1 className="mt-12">Остеосцинтиграфия</h1>
-    <p className="custom-text-warning">Противопоказания: беременность.</p>
+    <p className="custom-text-message warning">
+      Противопоказания: беременность.
+    </p>
     <p className="custom-text">
       Продолжительность процедуры — 3 часа. Специальная подготовка не требуется.
       При себе иметь сменную обувь и 1 литр негазированной питьевой воды. Данная
@@ -368,8 +358,8 @@ const PodgotovkaKIssledovaniyam = () => (
     {/* КОМПЬЮТЕРНАЯ ТОМОГРАФИЯ */}
     <h1 className="mt-12">Компьютерная томография</h1>
 
-    <h3 className="custom-title">КТ брюшной полости</h3>
-    <p className="custom-text-warning">
+    <h2 className="custom-title">КТ брюшной полости</h2>
+    <p className="custom-text-message warning">
       Противопоказания: беременность (кормящие матери после исследования должны
       сделать перерыв в грудном вскармливании в течение 24 часов),
       непереносимость препаратов содержащих йод (для исследований с контрастным
@@ -398,51 +388,49 @@ const PodgotovkaKIssledovaniyam = () => (
       кишечнике бариевой взвеси.
     </p>
 
-    <h3 className="custom-title">КТ легких (низкодозная, профилактическая)</h3>
+    <h2 className="custom-title">КТ легких (низкодозная, профилактическая)</h2>
     <p className="custom-text">
       Правил подготовки нет. Противопоказания отсутствуют.
     </p>
 
-    <h3 className="custom-title">КТ малого таза</h3>
+    <h2 className="custom-title">КТ малого таза</h2>
     <div className="custom-list">
       <p className="custom-list-heading">Подготовка:</p>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           Купить одну ампулу «Урографин» 20 мл («Вирографин») любой процентности
           (60-76%).
         </p>
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           ½ ампулы «Урографин» растворить в стакане воды и выпить за 8 часов до
           исследования.
         </p>
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           ½ ампулы «Урографин» растворить в стакане воды и выпить за 4 часа до
           исследования.
         </p>
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
+        <p>
           за 1-1,5 часа пить воду, в зависимости от наполненности мочевого
           пузыря, за час не мочиться.
         </p>
       </div>
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
-        <p className="custom-list-item">
-          Прекратить прием пищи за 4 часа до обследования.
-        </p>
+        <p>Прекратить прием пищи за 4 часа до обследования.</p>
       </div>
     </div>
 
-    <h3 className="custom-title">КТ почек и мочеточников</h3>
+    <h2 className="custom-title">КТ почек и мочеточников</h2>
     <p className="custom-text">
       6 часов голода до исследования. Выпить 0,5 л воды за час до исследования и
       не мочиться. <b>Пить урографин не надо</b>.

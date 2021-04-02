@@ -1,8 +1,13 @@
 import * as React from 'react';
 
-function TwoFiveSevenWhite() {
+function TwoFiveSevenFooter() {
   return (
-    <svg width={1200} height={380} viewBox="0 0 1200 380">
+    <svg
+      width={1200}
+      height={380}
+      viewBox="0 0 1200 380"
+      className="w-auto h-8"
+    >
       <defs>
         <linearGradient
           x1="50%"
@@ -27,4 +32,4 @@ function TwoFiveSevenWhite() {
   );
 }
 
-export default TwoFiveSevenWhite;
+export default TwoFiveSevenFooter;

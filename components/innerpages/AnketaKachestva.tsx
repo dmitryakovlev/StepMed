@@ -1,11 +1,11 @@
 const AnketaKachestva = () => (
-  <div className="container mt-8 md:mt-16">
+  <div className="container">
     <h1>Анкета качества</h1>
 
-    <h3 className="custom-title">
+    <h2 className="custom-title">
       Анкета анализа удовлетворенности качеством предоставления медицинских
       услуг в амбулаторных условиях
-    </h3>
+    </h2>
     <p className="custom-text">
       Руководство Общества с ограниченной ответственностью «Степмед Клиник»
       проводит опрос пациентов для изучения удовлетворённости качеством

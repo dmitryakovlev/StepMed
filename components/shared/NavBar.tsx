@@ -84,9 +84,7 @@ const Menu: FC = () => {
         <div className="nav__menu-container submenu">
           <div className="nav__menu-links">
             {aboutSubMenu.map((menuItem) => (
-              <div className="mt-2">
-                <MenuItem {...menuItem} key={`aboutSubMenu-${menuItem.id}`} />
-              </div>
+              <MenuItem {...menuItem} key={`aboutSubMenu-${menuItem.id}`} />
             ))}
             <div className="nav__menu-back" onClick={() => setMenuId(0)}>
               Назад
@@ -99,12 +97,10 @@ const Menu: FC = () => {
         <div className="nav__menu-container submenu">
           <div className="nav__menu-links">
             {forPatientsSubMenu.map((menuItem) => (
-              <div className="mt-2">
-                <MenuItem
-                  {...menuItem}
-                  key={`forPatientsSubMenu-${menuItem.id}`}
-                />
-              </div>
+              <MenuItem
+                {...menuItem}
+                key={`forPatientsSubMenu-${menuItem.id}`}
+              />
             ))}
             <div className="nav__menu-back" onClick={() => setMenuId(0)}>
               Назад
@@ -127,9 +123,11 @@ const CallButton = ({ isOpened = false }) => (
     {isOpened ? (
       ''
     ) : (
-      <button className="bttn reg--bttn">
-        <PenIcon className="reg--bttn-icon" />
-        <span className="reg--bttn-text">Записаться на приём</span>
+      <button className="flex items-center p-2 px-4 text-lg h-14 sm:h-16 2xl:h-20 sm:px-12 2xl:px-7 bttn">
+        <PenIcon className="w-6 h-6 mr-0 sm:mr-3 2xl:mr-0" />
+        <span className="hidden text-lg font-bold sm:inline-block 2xl:hidden">
+          Записаться на приём
+        </span>
       </button>
     )}
   </>

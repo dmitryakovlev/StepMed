@@ -61,7 +61,7 @@ const Table = () => (
 );
 
 const ZakonodatelnayaKarta = () => (
-  <div className="container mt-16 md:mt-32">
+  <div className="container">
     <h1>Законодательная карта</h1>
     <p className="custom-text">
       При осуществлении медицинской деятельности ООО «Степмед Клиник»

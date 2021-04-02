@@ -1,9 +1,6 @@
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-  },
-  experimental: 'all',
-  purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
+  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       screens: {
@@ -11,55 +8,37 @@ module.exports = {
         md: '768px',
         lg: '1024px',
         xl: '1200px',
-      },
-      height: {
-        38: '9.375rem',
-        60: '15rem',
-      },
-      width: {
-        38: '9.375rem',
-        152: '38rem',
-        '45%': '45%',
+        '2xl': '1500px',
       },
       colors: {
         primary: '#489ecd',
         secondary: '#ffaf50',
-        footer: '#3a3a3a',
-        'primary-10': '#f2f8fb',
-        'primary-link': '#a8e0ff',
-        'secondary-10': '#fff7ed',
         'text-primary': '#1b1b1b',
-        'text-secondary': '#353535',
-        'blue-gradient-top': '#65bee1',
-        'blue-gradient-bottom': '#3589c0',
+        'text-secondary': '#3a3a3a',
       },
       textColor: (theme) => theme('colors'),
       gradientColorStops: (theme) => ({
         ...theme('colors'),
       }),
       fontSize: {
+        xs: '.75rem',
+        sm: '.875rem',
+        base: '1rem',
+        lg: '1.125rem',
+        xl: '1.25rem',
+        '2xl': '1.5rem',
+        '3xl': '1.875rem',
         '4xl': '2.5rem',
+        '5xl': '3rem',
       },
-      transitionTimingFunction: {
-        ease: 'ease',
-      },
-      opacity: {
-        60: '60%',
-      },
-      backgroundOpacity: {
-        15: '0.15',
-        90: '0.90',
-      },
-      spacing: {
-        7: '1.75rem',
-        18: '4.5rem',
-      },
-      rotate: {
-        '-135': '-135deg',
-        135: '135deg',
+      gridTemplateColumns: {
+        price: '1fr 120px',
+        priceSmall: '1fr 84px',
       },
     },
   },
-  variants: {},
+  variants: {
+    extend: {},
+  },
   plugins: [],
 };

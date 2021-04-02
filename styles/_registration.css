@@ -1,5 +1,5 @@
 .reg__nav {
-  @apply z-50 fixed top-0 flex flex-col p-8 w-full md:w-152 h-full bg-white overflow-y-auto;
+  @apply z-50 fixed top-0 flex flex-col p-8 w-full md:w-[38rem] h-full bg-white overflow-y-auto;
 
   .reg__nav-close {
     @apply px-2 text-2xl text-text-secondary self-end cursor-pointer hover:text-opacity-60;
