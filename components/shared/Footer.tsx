@@ -74,7 +74,7 @@ const FooterContactsBlock = () => (
 const FooterLinksdBlock: FC<INavBarMenu> = ({ url, title }) => (
   <li className="mb-2">
     <Link href={url!}>
-      <a className="text-sm font-bold text-white opacity-50 lg:hover:underline">
+      <a className="text-sm font-bold text-white transition duration-200 ease-in-out opacity-50 lg:hover:opacity-100">
         {title}
       </a>
     </Link>
@@ -108,7 +108,7 @@ const FooterLinks = () => (
 );
 
 const FooterBootom = () => (
-  <div className="flex flex-col lg:flex-row">
+  <div className="flex flex-col 2xl:flex-row">
     <div className="flex flex-col flex-grow mr-10">
       <span className="mb-2 text-base text-white lg:mb-4">
         Степмед Клиник © 2021
@@ -125,7 +125,7 @@ const FooterBootom = () => (
         </span>
       </div>
     </div>
-    <div className="flex-shrink-0 mt-8 lg:self-end lg:mt-0">
+    <div className="flex-shrink-0 mt-8 2xl:self-end 2xl:mt-0">
       <div className="flex flex-col lg:flex-row lg:items-center">
         <span className="flex-shrink-0 mb-2 text-xs text-white opacity-50 lg:mb-0 lg:mr-3">
           Разработка и дизайн

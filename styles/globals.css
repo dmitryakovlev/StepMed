@@ -36,6 +36,17 @@
 
 /* GENERAL STYLES */
 /* ------------------------------------------------------------------------------------- */
+
+::-moz-selection {
+  color: white;
+  background: var(--color-primary);
+}
+
+::selection {
+  color: white;
+  background: var(--color-primary);
+}
+
 *,
 body {
   margin: 0px;
@@ -70,12 +81,85 @@ body,
   flex-grow: 1;
 }
 
+.main-back {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+
+.main-back-icon::before {
+  content: '';
+  position: absolute;
+  top: 0.6rem;
+  left: 0;
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-color: var(--color-primary);
+  border-style: solid;
+  border-width: 0px 3px 3px 0px;
+  transform: rotate(135deg);
+}
+
+.main-back-text {
+  margin-left: 1.25rem;
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+@media (min-width: theme('screens.lg')) {
+  .main-back:hover {
+    opacity: 0.6;
+  }
+
+  .main-back::before:hover {
+    opacity: 0.6;
+  }
+}
+
+.main-scroll {
+  z-index: 10;
+  opacity: 100%;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--color-primary);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 250ms linear;
+}
+
+.main-scroll::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 0.2rem);
+  left: calc(50% - 0.25rem);
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-color: white;
+  border-style: solid;
+  border-width: 0px 3px 3px 0px;
+  transform: rotate(-135deg);
+}
+
+.main-scroll.disable {
+  opacity: 0;
+  bottom: -1rem;
+  cursor: auto;
+  pointer-events: none;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   max-width: 1200px;
@@ -85,12 +169,6 @@ body,
   .container {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-  }
-}
-
-@media (min-width: theme('screens.md')) {
-  .container {
-    margin-top: 4rem;
   }
 }
 
