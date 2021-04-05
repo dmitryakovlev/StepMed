@@ -1,6 +1,7 @@
 import { useState, useEffect, FC } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Link from 'next/link';
 import NavBar from '@components/shared/NavBar';
 import Registration from '@components/shared/Registration';
 import Footer from '@components/shared/Footer';
@@ -64,20 +65,20 @@ const Layout: FC<{
         ></meta>
         <link rel="shortcut icon" href="/images/favicon.webp"></link>
       </Head>
+      <Scroll />
       <div className="main-layout">
-        {/* <Registration /> */}
+        <Registration />
         <NavBar />
         <main className="main-block">
           {isHasBack && (
-            <>
-              <div className="container flex-row mt-8 md:mt-10 lg:mt-12 2xl:mt-16">
-                <a href="/" className="main-back">
+            <div className="container flex-row mt-8 md:mt-10 lg:mt-12 2xl:mt-16">
+              <Link href="/">
+                <a className="main-back">
                   <span className="main-back-icon"></span>
                   <span className="main-back-text">На главную</span>
                 </a>
-              </div>
-              <Scroll />
-            </>
+              </Link>
+            </div>
           )}
           {children}
         </main>

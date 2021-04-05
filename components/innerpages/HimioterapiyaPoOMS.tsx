@@ -22,7 +22,7 @@ const HimioterapiyaPoOMS = () => (
       >
         реестр
       </a>
-      {', '}
+      {' и '}
       <a
         href="/images/hpo/reestroviy_nomer.webp"
         className="custom-text-link"

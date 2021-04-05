@@ -118,20 +118,28 @@ const Logo = ({ isOpened = false }) => (
   </Link>
 );
 
-const CallButton = ({ isOpened = false }) => (
-  <>
-    {isOpened ? (
-      ''
-    ) : (
-      <button className="flex items-center p-2 px-4 text-lg h-14 sm:h-16 2xl:h-20 sm:px-12 2xl:px-7 bttn">
-        <PenIcon className="w-6 h-6 mr-0 sm:mr-3 2xl:mr-0" />
-        <span className="hidden text-lg font-bold sm:inline-block 2xl:hidden">
-          Записаться на приём
-        </span>
-      </button>
-    )}
-  </>
-);
+const CallButton: FC<{
+  isOpened: boolean;
+  isOpenedReg: boolean;
+}> = ({ isOpened = false, isOpenedReg }) => {
+  return (
+    <>
+      {isOpened ? (
+        ''
+      ) : (
+        <button
+          className="flex items-center p-2 px-4 text-lg h-14 sm:h-16 2xl:h-20 sm:px-12 2xl:px-7 bttn"
+          onClick={() => !isOpenedReg}
+        >
+          <PenIcon className="w-6 h-6 mr-0 sm:mr-3 2xl:mr-0" />
+          <span className="hidden text-lg font-bold sm:inline-block 2xl:hidden">
+            Записаться на приём
+          </span>
+        </button>
+      )}
+    </>
+  );
+};
 
 const Nav = () => {
   const [isOpened, setOpened] = useState(false);
@@ -142,7 +150,7 @@ const Nav = () => {
         <Logo isOpened={isOpened} />
         <Hamburger open={isOpened} setOpen={setOpened} />
         <span className="flex-grow"></span>
-        {/* <CallButton isOpened={isOpened} /> */}
+        <CallButton isOpened={isOpened} isOpenedReg={true} />
       </div>
       {isOpened && <Menu />}
     </>

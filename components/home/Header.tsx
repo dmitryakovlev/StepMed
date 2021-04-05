@@ -13,7 +13,7 @@ const Header = () => (
           работы команды StepMed Clinic. Мы стремимся к лучшему, чтобы
           продвинуться еще на один шаг в борьбе с онкологическими заболеваниями.
         </p>
-        {/* <button className="mb-2 md:mb-3 lg:mb-4 bttn">
+        <button className="mb-2 md:mb-3 lg:mb-4 bttn">
           Записаться на приём
         </button>
         <p className="text-center">
@@ -24,8 +24,8 @@ const Header = () => (
           >
             +7 (812) 219 50 27
           </a>
-        </p> */}
-        <p>
+        </p>
+        {/* <p>
           Мы доступны по номеру:{' '}
           <a
             href="tel:+78122195027"
@@ -33,7 +33,7 @@ const Header = () => (
           >
             +7 (812) 219 50 27
           </a>
-        </p>
+        </p> */}
       </section>
       <section className="static xl:absolute xl:top-0 xl:right-0 mt-8 md:mt-14 lg:mt-20 xl:mt-0 w-full xl:w-[45%] min-h-full xl:min-h-screen max-h-full xl:max-h-screen select-none">
         <img

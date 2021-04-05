@@ -360,6 +360,41 @@ b {
   font-size: 0.75rem;
 }
 
+.custom-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.custom-input label {
+  @apply cursor-pointer select-none;
+  margin-bottom: 0.25rem;
+  margin-left: 0.125rempx;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.custom-input input {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  height: 3rem;
+  background-color: white;
+  color: var(--color-text-primary);
+  font-size: 1.25rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.375rem;
+  transition: all 200ms linear;
+}
+
+.custom-input input:focus {
+  border-color: #79b7d9;
+}
+
 .custom-list {
   margin-top: 1.5rem;
 }
@@ -1100,18 +1135,5 @@ b {
   }
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-
-/* .custom-input {
-  @apply flex flex-col mb-4;
-
-  label {
-    @apply mb-1 text-text-secondary text-base cursor-pointer select-none;
-    margin-left: 2px;
-  }
-
-  input {
-    @apply px-4 py-2 w-full h-13 bg-white text-text-primary text-xl border-2 border-gray-200 rounded-md duration-200 ease-linear focus:border-primary focus:border-opacity-75;
-  }
-} */
 
 @tailwind utilities;
