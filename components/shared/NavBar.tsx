@@ -2,6 +2,7 @@ import { useState, FC } from 'react';
 import Link from 'next/link';
 import classNames from 'classnames';
 import { useRouter } from 'next/router';
+import { useStoreActions } from 'easy-peasy';
 
 import {
   INavBarMenu,
@@ -120,16 +121,14 @@ const Logo = ({ isOpened = false }) => (
 
 const CallButton: FC<{
   isOpened: boolean;
-  isOpenedReg: boolean;
-}> = ({ isOpened = false, isOpenedReg }) => {
+  onClick: () => void;
+}> = ({ isOpened = false, onClick }) => {
   return (
     <>
-      {isOpened ? (
-        ''
-      ) : (
+      {!isOpened && (
         <button
           className="flex items-center p-2 px-4 text-lg h-14 sm:h-16 2xl:h-20 sm:px-12 2xl:px-7 bttn"
-          onClick={() => !isOpenedReg}
+          onClick={onClick}
         >
           <PenIcon className="w-6 h-6 mr-0 sm:mr-3 2xl:mr-0" />
           <span className="hidden text-lg font-bold sm:inline-block 2xl:hidden">
@@ -143,6 +142,9 @@ const CallButton: FC<{
 
 const Nav = () => {
   const [isOpened, setOpened] = useState(false);
+  const toogleRegBarVisibility = useStoreActions(
+    (actions) => actions.regBar.toogleRegBarVisibility,
+  );
 
   return (
     <>
@@ -150,7 +152,7 @@ const Nav = () => {
         <Logo isOpened={isOpened} />
         <Hamburger open={isOpened} setOpen={setOpened} />
         <span className="flex-grow"></span>
-        <CallButton isOpened={isOpened} isOpenedReg={true} />
+        <CallButton isOpened={isOpened} onClick={toogleRegBarVisibility} />
       </div>
       {isOpened && <Menu />}
     </>

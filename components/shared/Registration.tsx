@@ -1,16 +1,29 @@
-import { useState, FC } from 'react';
+import { useState, FC, useContext } from 'react';
 import classNames from 'classnames';
+import { useStoreState, useStoreActions } from 'easy-peasy';
+
+import { StoreModel } from '@components/shared/Layout';
 
 const Registration = () => {
-  const [isOpenedReg, setOpenedReg] = useState(true);
+  const regBarVisibility = useStoreState<StoreModel>(
+    (state) => state.regBar.regBarVisibility,
+  );
+  const toogleRegBarVisibility = useStoreActions<StoreModel>(
+    (actions) => actions.regBar.toogleRegBarVisibility,
+  );
+
+  console.log({ regBarVisibility });
+  console.log({ toogleRegBarVisibility });
 
   function closeReg() {
-    setOpenedReg((isOpenedReg) => (isOpenedReg = false));
+    toogleRegBarVisibility();
   }
 
   return (
     <>
-      {isOpenedReg && (
+      <button onClick={toogleRegBarVisibility}>HELLLOOOOO</button>
+
+      {regBarVisibility && (
         <aside>
           <div className="z-50 fixed top-0 flex flex-col p-8 w-full md:w-[38rem] h-full bg-white overflow-y-auto">
             <span

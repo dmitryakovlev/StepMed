@@ -2,9 +2,28 @@ import { useState, useEffect, FC } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
+import { createStore, action, StoreProvider, Action } from 'easy-peasy';
+
 import NavBar from '@components/shared/NavBar';
 import Registration from '@components/shared/Registration';
 import Footer from '@components/shared/Footer';
+
+export interface StoreModel {
+  regBar: {
+    regBarVisibility: boolean;
+    toogleRegBarVisibility: Action<StoreModel, boolean>;
+  };
+}
+
+const store = createStore<StoreModel>({
+  regBar: {
+    regBarVisibility: false,
+    toogleRegBarVisibility: action(
+      // @ts-ignore
+      (state, payload) => !state.regBar,
+    ),
+  },
+});
 
 const backlessLayoutPages = ['/', '/another-page'];
 
@@ -67,8 +86,10 @@ const Layout: FC<{
       </Head>
       <Scroll />
       <div className="main-layout">
-        <Registration />
-        <NavBar />
+        <StoreProvider store={store}>
+          <Registration />
+          <NavBar />
+        </StoreProvider>
         <main className="main-block">
           {isHasBack && (
             <div className="container flex-row mt-8 md:mt-10 lg:mt-12 2xl:mt-16">
