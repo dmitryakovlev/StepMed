@@ -1,6 +1,6 @@
 import { createTypedHooks } from 'easy-peasy';
 
-import { StoreModel } from '@components/shared/Layout';
+import { StoreModel } from 'store/models';
 
 const typedHooks = createTypedHooks<StoreModel>();
 
