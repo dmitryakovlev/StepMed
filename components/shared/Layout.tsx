@@ -8,21 +8,24 @@ import NavBar from '@components/shared/NavBar';
 import Registration from '@components/shared/Registration';
 import Footer from '@components/shared/Footer';
 
-export interface StoreModel {
-  regBar: {
-    regBarVisibility: boolean;
-    toogleRegBarVisibility: Action<StoreModel, boolean>;
-  };
+export interface RegBarModel {
+  regBarVisibility: boolean;
+  setRegBarVisibility: Action<RegBarModel, boolean>;
 }
 
-const store = createStore<StoreModel>({
-  regBar: {
-    regBarVisibility: false,
-    toogleRegBarVisibility: action(
-      // @ts-ignore
-      (state, payload) => !state.regBar,
-    ),
-  },
+export interface StoreModel {
+  regBar: RegBarModel;
+}
+
+const regBar: RegBarModel = {
+  regBarVisibility: false,
+  setRegBarVisibility: action((state, payload) => {
+    state.regBarVisibility = payload;
+  }),
+};
+
+export const store = createStore({
+  regBar,
 });
 
 const backlessLayoutPages = ['/', '/another-page'];

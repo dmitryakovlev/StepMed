@@ -1,8 +1,7 @@
-import { useState, FC } from 'react';
+import { useState, FC, useCallback } from 'react';
 import Link from 'next/link';
 import classNames from 'classnames';
 import { useRouter } from 'next/router';
-import { useStoreActions } from 'easy-peasy';
 
 import {
   INavBarMenu,
@@ -14,6 +13,7 @@ import {
 import LogoWhite from '@components/logo/LogoWhite';
 import LogoColor from '@components/logo/LogoColor';
 import PenIcon from '@icons/Pen';
+import { useStoreActions } from 'hooks';
 
 const Hamburger: FC<{
   open: boolean;
@@ -131,7 +131,7 @@ const CallButton: FC<{
           onClick={onClick}
         >
           <PenIcon className="w-6 h-6 mr-0 sm:mr-3 2xl:mr-0" />
-          <span className="hidden text-lg font-bold sm:inline-block 2xl:hidden">
+          <span className="text-lg font-bold hisdden sm:inline-block 2xl:hidden">
             Записаться на приём
           </span>
         </button>
@@ -142,9 +142,14 @@ const CallButton: FC<{
 
 const Nav = () => {
   const [isOpened, setOpened] = useState(false);
-  const toogleRegBarVisibility = useStoreActions(
-    (actions) => actions.regBar.toogleRegBarVisibility,
+
+  const setRegBarVisibility = useStoreActions(
+    (actions) => actions.regBar.setRegBarVisibility,
   );
+
+  const callButtonOnClick = useCallback(() => {
+    setRegBarVisibility(true);
+  }, [setRegBarVisibility]);
 
   return (
     <>
@@ -152,7 +157,7 @@ const Nav = () => {
         <Logo isOpened={isOpened} />
         <Hamburger open={isOpened} setOpen={setOpened} />
         <span className="flex-grow"></span>
-        <CallButton isOpened={isOpened} onClick={toogleRegBarVisibility} />
+        <CallButton isOpened={isOpened} onClick={callButtonOnClick} />
       </div>
       {isOpened && <Menu />}
     </>
