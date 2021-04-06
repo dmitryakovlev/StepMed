@@ -1,6 +1,10 @@
+import { StoreProvider } from 'easy-peasy';
 import { AppPropsType } from 'next/dist/next-server/lib/utils';
 import { useEffect } from 'react';
 import mailgo from 'mailgo';
+
+import store from 'store';
+
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppPropsType) {
@@ -8,7 +12,11 @@ function MyApp({ Component, pageProps }: AppPropsType) {
     mailgo();
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <StoreProvider store={store}>
+      <Component {...pageProps} />
+    </StoreProvider>
+  );
 }
 
 export default MyApp;
