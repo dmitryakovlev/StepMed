@@ -11,7 +11,6 @@ import {
   uslugiICeniSeventh,
   uslugiICeniEighth,
   uslugiICeniNinth,
-  uslugiICeniTenth,
 } from '@data/uslugiICeni';
 
 const PriceContent: FC<IUslugiICeni> = ({ service, price }) => (
@@ -104,17 +103,10 @@ const UslugiICeni = () => (
       * - услуги оказываются партнерами ООО «Степмед клиник»
     </p>
 
-    <PriceBlock title={'09. Патологическая анатомия*'}>
+    <PriceBlock
+      title={'09. Морфологические и молекулярно-генетические исследования*'}
+    >
       {uslugiICeniNinth.map((parameters) => (
-        <PriceContent {...parameters} key={parameters.id} />
-      ))}
-    </PriceBlock>
-    <p className="custom-text-info">
-      * - услуги оказываются партнерами ООО «Степмед клиник»
-    </p>
-
-    <PriceBlock title={'10. Иммуногистохимия*'}>
-      {uslugiICeniTenth.map((parameters) => (
         <PriceContent {...parameters} key={parameters.id} />
       ))}
     </PriceBlock>

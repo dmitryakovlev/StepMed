@@ -21,7 +21,7 @@ const AnketaKachestva = () => (
         className="custom-text-link"
         target="_blank"
       >
-        Приступить к выполнению анкеты
+        Приступить к заполнению анкеты
       </a>
     </div>
   </div>

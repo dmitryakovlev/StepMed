@@ -13,6 +13,7 @@ import {
 import LogoWhite from '@components/logo/LogoWhite';
 import LogoColor from '@components/logo/LogoColor';
 import PenIcon from '@icons/Pen';
+import SmoothFade from '@components/shared/SmoothFade';
 import { useStoreActions } from 'hooks';
 
 const Hamburger: FC<{
@@ -131,7 +132,7 @@ const CallButton: FC<{
           onClick={onClick}
         >
           <PenIcon className="w-6 h-6 mr-0 sm:mr-3 2xl:mr-0" />
-          <span className="text-lg font-bold hisdden sm:inline-block 2xl:hidden">
+          <span className="hidden text-lg font-bold sm:inline-block 2xl:hidden">
             Записаться на приём
           </span>
         </button>
@@ -159,7 +160,10 @@ const Nav = () => {
         <span className="flex-grow"></span>
         <CallButton isOpened={isOpened} onClick={callButtonOnClick} />
       </div>
-      {isOpened && <Menu />}
+      {/* {isOpened && <Menu />} */}
+      <SmoothFade show={isOpened}>
+        <Menu />
+      </SmoothFade>
     </>
   );
 };

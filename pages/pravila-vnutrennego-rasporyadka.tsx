@@ -4,7 +4,7 @@ import PravilaVnutrennegoRasporyadka from '@components/innerpages/PravilaVnutren
 export default function PravilaVnutrennegoRasporyadkaPage() {
   return (
     <>
-      <Layout title="COVID-19">
+      <Layout title="Правила внутреннего распорядка">
         <PravilaVnutrennegoRasporyadka />
       </Layout>
     </>

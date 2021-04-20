@@ -16,14 +16,6 @@ const HimioterapiyaPoOMS = () => (
       Степмед Клиник участвует в реализации Программы ОМС в части лекарственной
       противоопухолевой терапии ({''}
       <a
-        href="http://nsi.ffoms.ru/#refbookList?refbookList:$active=1&refbookList:$selectedId=6226/refbookList.refbookList.view$124v6226?menu:filter:dictionaryId=6226&menu:filter:readOnly=true&menu:filter:searchInput=780687&menu:$active=1&menu:$selectedId=undefined&refbookSimple0:filter:searchInput=780687&refbookSimple0:$active=1&refbookSimple0:page=1&refbookSimple0:$selectedId=undefined"
-        className="custom-text-link"
-        target="_blank"
-      >
-        реестр
-      </a>
-      {' и '}
-      <a
         href="/images/hpo/reestroviy_nomer.webp"
         className="custom-text-link"
         target="_blank"
@@ -89,11 +81,11 @@ const HimioterapiyaPoOMS = () => (
       Вашего региона{' '}
       <a
         href="https://www.ttfoms.tomsk.ru/page/spisok_territorialnyh_fondov_oms_subektov_rf"
-        className="mr-1 custom-text-link"
+        className="custom-text-link"
         target="_blank"
       >
         (список всех территориальных фондов)
-      </a>
+      </a>{' '}
       или позвонив в свою страховую компанию, название и номер телефона которой
       указаны в полисе.
     </p>

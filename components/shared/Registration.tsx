@@ -39,10 +39,30 @@ const Registration = () => {
               <label htmlFor="phone">Телефон</label>
               <input id="phone" type="text"></input>
             </div>
+            <label className="custom-checkbox" id="data-processing">
+              <input
+                className="custom-checkbox-disable"
+                type="checkbox"
+                name="data-processing"
+                defaultChecked
+              />
+              <span className="custom-checkbox-button"></span>
+              <p className="mt-0 ml-2 custom-text">
+                Я соглашаюсь на{' '}
+                <a
+                  href="/obrabotka-dannih"
+                  className="custom-text-link"
+                  target="_blank"
+                >
+                  обработку персональных данных
+                </a>
+              </p>
+            </label>
             <button className="mt-4 bttn">Записаться</button>
+            <p className="mt-8 text-center">или напишите нам в</p>
           </div>
           <div
-            className="fixed top-0 bottom-0 left-0 right-0 z-40 visible w-screen h-screen bg-black opacity-50"
+            className="fixed top-0 bottom-0 left-0 right-0 z-40 visible w-screen h-screen bg-black opacity-50 cursor-pointer"
             onClick={closeReg}
           ></div>
         </aside>

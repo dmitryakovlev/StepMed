@@ -4,7 +4,7 @@ import AnketaKachestva from '@components/innerpages/AnketaKachestva';
 export default function AnketaKachestvaPage() {
   return (
     <>
-      <Layout title="COVID-19">
+      <Layout title="Анкета качества">
         <AnketaKachestva />
       </Layout>
     </>

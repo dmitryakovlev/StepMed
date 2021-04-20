@@ -4,7 +4,7 @@ import DokumentiILicenzii from '@components/innerpages/DokumentiILicenzii';
 export default function DokumentiILicenziiPage() {
   return (
     <>
-      <Layout title="COVID-19">
+      <Layout title="Документы и лицензии">
         <DokumentiILicenzii />
       </Layout>
     </>
