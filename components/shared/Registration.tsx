@@ -12,9 +12,23 @@ const Registration = () => {
     (actions) => actions.regBar.setRegBarVisibility,
   );
 
+  const regFormFullName = useStoreState((state) => state.regForm.fullName);
+
+  const setRegFormFullName = useStoreActions(
+    (actions) => actions.regForm.setFullName,
+  );
+
+  // const sendTelegramMessage = useStoreActions(
+  //   (actions) => actions.regForm.sendMessage,
+  // );
+
   const closeReg = useCallback(() => {
     setRegBarVisibility(false);
   }, [setRegBarVisibility]);
+
+  // const sendMessage = useCallback(() => {
+  //   sendTelegramMessage();
+  // }, [sendTelegramMessage]);
 
   return (
     <>
@@ -33,7 +47,12 @@ const Registration = () => {
             </h1>
             <div className="custom-input">
               <label htmlFor="name">Имя</label>
-              <input id="name" type="text"></input>
+              <input
+                id="name"
+                type="text"
+                // defaultValue={regFormFullName}
+                onChange={(i) => setRegFormFullName(i.target.value)}
+              ></input>
             </div>
             <div className="custom-input">
               <label htmlFor="phone">Телефон</label>
@@ -58,7 +77,12 @@ const Registration = () => {
                 </a>
               </p>
             </label>
-            <button className="mt-4 bttn">Записаться</button>
+            <button
+              className="mt-4 bttn"
+              // onClick={sendMessage}
+            >
+              Записаться
+            </button>
             <p className="mt-8 text-center">или напишите нам в</p>
           </div>
           <div
