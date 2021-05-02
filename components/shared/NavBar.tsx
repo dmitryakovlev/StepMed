@@ -2,6 +2,8 @@ import { useState, FC, useCallback } from 'react';
 import Link from 'next/link';
 import classNames from 'classnames';
 import { useRouter } from 'next/router';
+import { useStoreActions } from 'hooks';
+import { Transition } from '@headlessui/react';
 
 import {
   INavBarMenu,
@@ -13,8 +15,6 @@ import {
 import LogoWhite from '@components/logo/LogoWhite';
 import LogoColor from '@components/logo/LogoColor';
 import PenIcon from '@icons/Pen';
-import SmoothFade from '@components/shared/SmoothFade';
-import { useStoreActions } from 'hooks';
 
 const Hamburger: FC<{
   open: boolean;
@@ -116,7 +116,9 @@ const Menu: FC = () => {
 
 const Logo = ({ isOpened = false }) => (
   <Link href="/">
-    <a className="custom-link">{isOpened ? <LogoWhite /> : <LogoColor />}</a>
+    <a className="z-20 custom-link">
+      {isOpened ? <LogoWhite /> : <LogoColor />}
+    </a>
   </Link>
 );
 
@@ -153,18 +155,26 @@ const Nav = () => {
   }, [setRegBarVisibility]);
 
   return (
-    <>
+    <div className="sticky top-0 z-10 2xl:h-full 2xl:fixed 2xl:left-0">
       <div className={classNames('nav', { 'nav-close': !isOpened })}>
         <Logo isOpened={isOpened} />
         <Hamburger open={isOpened} setOpen={setOpened} />
         <span className="flex-grow"></span>
         <CallButton isOpened={isOpened} onClick={callButtonOnClick} />
       </div>
-      {/* {isOpened && <Menu />} */}
-      <SmoothFade show={isOpened}>
+      <Transition
+        show={isOpened}
+        className="z-10"
+        enter="transition-opacity duration-150"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        leave="transition-opacity duration-150"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0"
+      >
         <Menu />
-      </SmoothFade>
-    </>
+      </Transition>
+    </div>
   );
 };
 
