@@ -109,7 +109,7 @@ const Registration = () => {
             <button className="mt-4 bttn" onClick={sendTelegramMessage}>
               Записаться
             </button>
-            <p className="mt-8 text-center">или напишите нам</p>
+            <p className="mt-8 text-center">или напишите нам в</p>
             <div className="flex">
               <button className="w-full mr-4 bttn">Telegram</button>
               <button className="w-full bttn">Whatsup</button>
