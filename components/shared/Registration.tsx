@@ -65,7 +65,7 @@ const Registration = () => {
     <>
       {regBarVisibility && (
         <aside>
-          <div className="z-50 fixed top-0 flex flex-col p-8 w-full md:w-[38rem] h-full bg-white overflow-y-auto">
+          <div className="z-30 fixed top-0 flex flex-col p-8 w-full md:w-[38rem] h-full bg-white overflow-y-auto">
             <span
               className="self-end px-2 text-2xl cursor-pointer select-none text-text-secondary hover:text-opacity-60"
               onClick={closeReg}
@@ -93,7 +93,6 @@ const Registration = () => {
                 className="custom-checkbox-disable"
                 type="checkbox"
                 name="data-processing"
-                defaultChecked
               />
               <span className="custom-checkbox-button"></span>
               <p className="mt-0 ml-2 custom-text">
@@ -110,10 +109,14 @@ const Registration = () => {
             <button className="mt-4 bttn" onClick={sendTelegramMessage}>
               Записаться
             </button>
-            <p className="mt-8 text-center">или напишите нам в</p>
+            <p className="mt-8 text-center">или напишите нам</p>
+            <div className="flex">
+              <button className="w-full mr-4 bttn">Telegram</button>
+              <button className="w-full bttn">Whatsup</button>
+            </div>
           </div>
           <div
-            className="fixed top-0 bottom-0 left-0 right-0 z-40 visible w-screen h-screen bg-black opacity-50 cursor-pointer"
+            className="fixed top-0 bottom-0 left-0 right-0 z-20 visible w-screen h-screen bg-black opacity-50 cursor-pointer"
             onClick={closeReg}
           ></div>
         </aside>

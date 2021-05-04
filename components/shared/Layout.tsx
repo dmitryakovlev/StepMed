@@ -2,6 +2,8 @@ import { useState, useEffect, FC } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
+import { Transition } from '@headlessui/react';
+import { useStoreState } from 'hooks';
 
 import NavBar from '@components/shared/NavBar';
 import Registration from '@components/shared/Registration';
@@ -53,6 +55,10 @@ const Layout: FC<{
   const router = useRouter();
   const isHasBack = !backlessLayoutPages.includes(router.pathname);
 
+  const regBarVisibility = useStoreState(
+    (state) => state.regBar.regBarVisibility,
+  );
+
   return (
     <>
       <Head>
@@ -68,7 +74,18 @@ const Layout: FC<{
       </Head>
       <Scroll />
       <div className="main-layout">
-        <Registration />
+        <Transition
+          show={regBarVisibility}
+          className="z-20"
+          enter="transition-opacity duration-150"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition-opacity duration-150"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <Registration />
+        </Transition>
         <NavBar />
         <main className="main-block">
           {isHasBack && (
