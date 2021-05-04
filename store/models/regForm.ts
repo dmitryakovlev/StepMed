@@ -1,19 +1,27 @@
-import { action, Action, thunk } from 'easy-peasy';
+import { action, Action } from 'easy-peasy';
+
+export enum MessageStatusENUM {
+  INITIAL = 'INITIAL',
+  SUCCESS = 'SUCCESS',
+  FAILED = 'FAILED',
+}
 
 export interface RegFormModel {
   fullName: string;
   phoneNumber: string;
   isDataProcessingAgreed: boolean;
+  messageStatus: MessageStatusENUM;
   setFullName: Action<RegFormModel, string>;
   setPhoneNumber: Action<RegFormModel, string>;
   setIsDataProcessingAgreed: Action<RegFormModel, boolean>;
-  // sendMessage: Action<RegFormModel>;
+  setMessageStatus: Action<RegFormModel, MessageStatusENUM>;
 }
 
 const regBarModel: RegFormModel = {
   fullName: '',
   phoneNumber: '',
   isDataProcessingAgreed: false,
+  messageStatus: MessageStatusENUM.INITIAL,
   setFullName: action((state, payload) => {
     state.fullName = payload;
   }),
@@ -23,13 +31,9 @@ const regBarModel: RegFormModel = {
   setIsDataProcessingAgreed: action((state, payload) => {
     state.isDataProcessingAgreed = payload;
   }),
-  // sendMessage: thunk(async (actions, payload) => {
-  //   const adasda = await fetch('/api/sendTelegramMessage', {
-  //     body: JSON.stringify({
-  //       messageText: `${state.fullName}: ${state.phoneNumber}`,
-  //     }),
-  //   });
-  // }),
+  setMessageStatus: action((state, payload) => {
+    state.messageStatus = payload;
+  }),
 };
 
 export default regBarModel;

@@ -1,34 +1,65 @@
 import { useCallback } from 'react';
-import classNames from 'classnames';
 
 import { useStoreActions, useStoreState } from 'hooks';
+import { MessageStatusENUM } from 'store/models/regForm';
 
 const Registration = () => {
   const regBarVisibility = useStoreState(
     (state) => state.regBar.regBarVisibility,
   );
-
+  const regFormFullName = useStoreState((state) => state.regForm.fullName);
+  const regFormPhoneNumber = useStoreState(
+    (state) => state.regForm.phoneNumber,
+  );
+  const regFormMessageStatus = useStoreState(
+    (state) => state.regForm.messageStatus,
+  );
   const setRegBarVisibility = useStoreActions(
     (actions) => actions.regBar.setRegBarVisibility,
   );
-
-  const regFormFullName = useStoreState((state) => state.regForm.fullName);
-
   const setRegFormFullName = useStoreActions(
     (actions) => actions.regForm.setFullName,
   );
-
-  // const sendTelegramMessage = useStoreActions(
-  //   (actions) => actions.regForm.sendMessage,
-  // );
+  const setRegFormPhoneNumber = useStoreActions(
+    (actions) => actions.regForm.setPhoneNumber,
+  );
+  const setRegFormMessageStatus = useStoreActions((actions) => actions.regForm)
+    .setMessageStatus;
 
   const closeReg = useCallback(() => {
     setRegBarVisibility(false);
   }, [setRegBarVisibility]);
 
-  // const sendMessage = useCallback(() => {
-  //   sendTelegramMessage();
-  // }, [sendTelegramMessage]);
+  const changeFullName = useCallback((i) => {
+    const value = i.target.value;
+    setRegFormFullName(value);
+  }, []);
+
+  const changePhoneNumber = useCallback((i) => {
+    const value = i.target.value;
+    setRegFormPhoneNumber(value);
+  }, []);
+
+  const sendTelegramMessage = useCallback(async () => {
+    const messageText = `${regFormFullName}: ${regFormPhoneNumber}`;
+
+    let request = await fetch('/api/sendTelegramMessage', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        messageText,
+      }),
+    });
+
+    if (request.status === 200) {
+      setRegFormMessageStatus(MessageStatusENUM.SUCCESS);
+      return;
+    }
+
+    setRegFormMessageStatus(MessageStatusENUM.FAILED);
+  }, [regFormFullName, regFormPhoneNumber]);
 
   return (
     <>
@@ -47,16 +78,15 @@ const Registration = () => {
             </h1>
             <div className="custom-input">
               <label htmlFor="name">Имя</label>
-              <input
-                id="name"
-                type="text"
-                // defaultValue={regFormFullName}
-                onChange={(i) => setRegFormFullName(i.target.value)}
-              ></input>
+              <input id="name" type="text" onChange={changeFullName}></input>
             </div>
             <div className="custom-input">
               <label htmlFor="phone">Телефон</label>
-              <input id="phone" type="text"></input>
+              <input
+                id="phone"
+                type="text"
+                onChange={changePhoneNumber}
+              ></input>
             </div>
             <label className="custom-checkbox" id="data-processing">
               <input
@@ -77,10 +107,7 @@ const Registration = () => {
                 </a>
               </p>
             </label>
-            <button
-              className="mt-4 bttn"
-              // onClick={sendMessage}
-            >
+            <button className="mt-4 bttn" onClick={sendTelegramMessage}>
               Записаться
             </button>
             <p className="mt-8 text-center">или напишите нам в</p>
