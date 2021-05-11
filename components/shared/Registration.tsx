@@ -65,14 +65,14 @@ const Registration = () => {
     <>
       {regBarVisibility && (
         <aside>
-          <div className="z-30 fixed top-0 flex flex-col p-8 w-full md:w-[38rem] h-full bg-white overflow-y-auto">
+          <div className="z-30 fixed top-0 flex flex-col p-4 md:p-8 w-full md:w-[38rem] h-full bg-white overflow-y-auto">
             <span
               className="self-end px-2 text-2xl cursor-pointer select-none text-text-secondary hover:text-opacity-60"
               onClick={closeReg}
             >
               &#10005;
             </span>
-            <h1 className="my-10 text-xl sm:text-2xl md:text-3xl">
+            <h1 className="my-6 text-xl md:my-10 sm:text-2xl md:text-3xl">
               Оставьте свой номер телефона и мы перезвоним вам в рабочее время
               клиники.
             </h1>
@@ -88,7 +88,7 @@ const Registration = () => {
                 onChange={changePhoneNumber}
               ></input>
             </div>
-            <label className="custom-checkbox" id="data-processing">
+            <label className="md:mt-2 custom-checkbox" id="data-processing">
               <input
                 className="custom-checkbox-disable"
                 type="checkbox"
@@ -106,13 +106,19 @@ const Registration = () => {
                 </a>
               </p>
             </label>
-            <button className="mt-4 bttn" onClick={sendTelegramMessage}>
+            <button className="mt-6 md:mt-8 bttn" onClick={sendTelegramMessage}>
               Записаться
             </button>
-            <p className="mt-8 text-center">или напишите нам</p>
+            <p className="mt-4 mb-2 text-center md:mt-8 md:mb-4">
+              или напишите нам
+            </p>
             <div className="flex">
-              <button className="w-full mr-4 bttn">Telegram</button>
-              <button className="w-full bttn">Whatsup</button>
+              <button className="w-full bg-gradient-to-b from-[#00BDE8] to-[#0088CC] mr-4 bttn">
+                Telegram
+              </button>
+              <button className="w-full bg-gradient-to-b from-[#4CEB9F] to-[#25D366] bttn">
+                WhatsApp
+              </button>
             </div>
           </div>
           <div
