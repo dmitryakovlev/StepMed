@@ -99,11 +99,11 @@ export const forPatientsSubMenu: INavBarMenu[] = [
     url: '/covid',
     title: 'COVID-19',
   },
-  // {
-  //   id: 5,
-  //   url: '/',
-  //   title: 'Заочная консультация',
-  // },
+  {
+    id: 5,
+    url: '/zaochnaya-konsultaciya',
+    title: 'Заочная консультация',
+  },
   // {
   //   id: 6,
   //   url: '/',
