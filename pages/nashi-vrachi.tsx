@@ -1,11 +1,11 @@
 import Layout from '@components/shared/Layout';
-import Staff from '@components/staff';
+import NashiVrachi from '@components/innerpages/NashiVrachi';
 
-export default function StaffPage() {
+export default function nashiVrachiPage() {
   return (
     <>
       <Layout title="Наши врачи">
-        <Staff />
+        <NashiVrachi />
       </Layout>
     </>
   );

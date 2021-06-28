@@ -1,6 +1,6 @@
+import { IStaff, staffDoctors } from '@data/nashiVrachi';
 import { FC, useState } from 'react';
 import { Dialog } from '@reach/dialog';
-import { IStaff } from '@data/staff';
 
 const DialogContent: FC<{
   staff: IStaff;
@@ -108,30 +108,18 @@ const StaffProfile: FC<IStaff> = (staff) => {
   const close = () => setShowDialog(false);
 
   return (
-    <div className="staff__container">
+    <div className="flex flex-col mt-8">
       <img
         alt={staff.fullName}
         src={staff.photoUrl || ''}
-        className="staff__img"
+        className="rounded-2xl"
       />
-      <h1 className="staff__name">{staff.fullName}</h1>
-      <h2 className="staff__position">{staff.workPosition}</h2>
-      <div className="staff__info">
-        <div className="staff__info-description">
-          <h2>Обо мне</h2>
-          <p>{staff.description}</p>
-        </div>
-        <div className="staff__info-education">
-          <h2>Образование</h2>
-          <div>
-            {staff.education.map((education) => (
-              <p>{education}</p>
-            ))}
-          </div>
-        </div>
-      </div>
+      <h1 className="mt-6 font-normal">{staff.fullName}</h1>
+      <h2 className="font-normal text-primary">{staff.workPosition}</h2>
+      <h2 className="custom-title">Обо мне</h2>
+      <p className="custom-text">{staff.description}</p>
 
-      <button className="bttn" onClick={open}>
+      <button className="self-end mt-6 bttn" onClick={open}>
         Подробнее
       </button>
 
@@ -144,4 +132,13 @@ const StaffProfile: FC<IStaff> = (staff) => {
   );
 };
 
-export default StaffProfile;
+export default function NashiVrachi() {
+  return (
+    <div className="container">
+      <h1>Наши сотрудники</h1>
+      {staffDoctors.map((staff) => (
+        <StaffProfile {...staff} key={staff.id} />
+      ))}
+    </div>
+  );
+}

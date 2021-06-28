@@ -3,6 +3,9 @@ import { useCallback } from 'react';
 import { useStoreActions, useStoreState } from 'hooks';
 import { MessageStatusENUM } from 'store/models/regForm';
 
+import WhatsAppIcon from '@icons/Whatsapp';
+import TelegramIcon from '@icons/Telegram';
+
 const Registration = () => {
   const regBarVisibility = useStoreState(
     (state) => state.regBar.regBarVisibility,
@@ -23,8 +26,9 @@ const Registration = () => {
   const setRegFormPhoneNumber = useStoreActions(
     (actions) => actions.regForm.setPhoneNumber,
   );
-  const setRegFormMessageStatus = useStoreActions((actions) => actions.regForm)
-    .setMessageStatus;
+  const setRegFormMessageStatus = useStoreActions(
+    (actions) => actions.regForm,
+  ).setMessageStatus;
 
   const closeReg = useCallback(() => {
     setRegBarVisibility(false);
@@ -112,13 +116,23 @@ const Registration = () => {
             <p className="mt-4 mb-2 text-center md:mt-8 md:mb-4">
               или напишите нам
             </p>
-            <div className="flex">
-              <button className="w-full bg-gradient-to-b from-[#00BDE8] to-[#0088CC] mr-4 bttn">
-                Telegram
-              </button>
-              <button className="w-full bg-gradient-to-b from-[#4CEB9F] to-[#25D366] bttn">
-                WhatsApp
-              </button>
+            <div className="flex flex-col sm:flex-row">
+              <a
+                target="_blank"
+                href=""
+                className="items-center w-full sm:mr-4 bttn"
+              >
+                <TelegramIcon className="w-8 h-8 mr-3" />
+                <span className="bttn-text">Telegram</span>
+              </a>
+              <a
+                target="_blank"
+                href="https://api.whatsapp.com/send?phone=79214149058"
+                className="items-center w-full mt-4 sm:mt-0 bttn"
+              >
+                <WhatsAppIcon className="w-8 h-8 mr-3" />
+                <span className="bttn-text">WhatsApp</span>
+              </a>
             </div>
           </div>
           <div
