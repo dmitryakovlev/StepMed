@@ -27,7 +27,16 @@ const Header = () => {
             продвинуться еще на один шаг в борьбе с онкологическими
             заболеваниями.
           </p>
-          <button
+          <p>
+            Мы доступны по номеру:{' '}
+            <a
+              href="tel:+78122195027"
+              className="text-base font-bold custom-link md:text-lg lg:text-xl"
+            >
+              +7 (812) 219 50 27
+            </a>
+          </p>
+          {/* <button
             className="mb-2 md:mb-3 lg:mb-4 bttn"
             onClick={callButtonOnClick}
           >
@@ -41,7 +50,7 @@ const Header = () => {
             >
               +7 (812) 219 50 27
             </a>
-          </p>
+          </p> */}
         </section>
         <section className="static xl:absolute xl:top-0 xl:right-0 mt-8 md:mt-14 lg:mt-20 xl:mt-0 w-full xl:w-[45%] min-h-full xl:min-h-screen max-h-full xl:max-h-screen select-none">
           <img

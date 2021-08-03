@@ -8,6 +8,7 @@ import { useStoreState } from 'hooks';
 import NavBar from '@components/shared/NavBar';
 import Registration from '@components/shared/Registration';
 import Footer from '@components/shared/Footer';
+import Script from 'next/script';
 
 const backlessLayoutPages = ['/', '/another-page'];
 
@@ -102,6 +103,7 @@ const Layout: FC<{
         </main>
         <Footer />
       </div>
+      <Script src="/js/twogis.js" />
     </>
   );
 };
