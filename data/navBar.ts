@@ -28,11 +28,11 @@ export const navBarMenu: INavBarMenu[] = [
   //   url: '/news',
   //   title: 'Новости',
   // },
-  // {
-  //   id: 5,
-  //   url: '/contacts',
-  //   title: 'Контакты',
-  // },
+  {
+    id: 5,
+    url: '/contacts',
+    title: 'Контакты',
+  },
 ];
 
 export const aboutSubMenu: INavBarMenu[] = [

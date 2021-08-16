@@ -8,56 +8,60 @@ import TwoFiveSevenFooter from '@icons/TwoFiveSevenFooter';
 import { IFooterContacts, footerContacts } from '@data/footer';
 import { INavBarMenu, aboutSubMenu, forPatientsSubMenu } from '@data/navBar';
 
-const FooterContactsSocial: FC<IFooterContacts> = ({ url, icon }) => (
+const FooterContactsSocial: FC<IFooterContacts> = ({ url, icon, color }) => (
   <a
     href={url}
-    className="mr-6 text-white transition duration-200 ease-in-out fill-current last:mr-0 lg:hover:opacity-60"
+    className={`mr-6 transition duration-200 ease-in-out fill-current last:mr-0 lg:hover:opacity-60 ${color}`}
     target="_blank"
   >
     {icon}
   </a>
 );
 
-const FooterContactsBlock = () => (
+export const FooterContactsBlock: FC<{
+  color: string;
+}> = ({ color }) => (
   <div className="flex flex-col flex-shrink-0 lg:mr-16">
     <div className="flex items-center mb-4 lg:mb-6">
-      <span className="mr-4 text-white fill-current lg:mr-6">
+      <span className={`mr-4 fill-current lg:mr-6 ${color}`}>
         <PhoneIcon />
       </span>
       <div className="flex flex-col">
         <a
           href="tel:+78122195027"
-          className="mb-1 text-2xl font-bold text-white custom-link md:text-3xl"
+          className={`mb-1 text-2xl font-bold custom-link md:text-3xl ${color}`}
         >
           +7 (812) 219 50 27
         </a>
-        <span className="text-base text-white opacity-50 md:text-lg lg:text-xl">
+        <span className={`text-base opacity-50 md:text-lg lg:text-xl ${color}`}>
           Ежедневно с 9:00 до 19:00
         </span>
       </div>
     </div>
 
     <div className="flex items-center mb-4 lg:mb-6">
-      <span className="mr-4 text-white fill-current lg:mr-6">
+      <span className={`mr-4 fill-current lg:mr-6 ${color}`}>
         <AddressIcon />
       </span>
       <div className="flex flex-col">
-        <span className="mb-1 text-base font-bold text-white md:text-lg lg:text-xl">
+        <span
+          className={`mb-1 text-base font-bold md:text-lg lg:text-xl ${color}`}
+        >
           Большеохтинский проспект, 16 к.1
         </span>
-        <span className="text-base text-white opacity-50 md:text-lg lg:text-xl">
+        <span className={`text-base opacity-50 md:text-lg lg:text-xl ${color}`}>
           Санкт-Петербург
         </span>
       </div>
     </div>
 
     <div className="flex items-center mb-4 lg:mb-6">
-      <span className="mr-4 text-white fill-current lg:mr-6">
+      <span className={`mr-4 fill-current lg:mr-6 ${color}`}>
         <EmailIcon />
       </span>
       <a
         href="mailto:clinic@step-med.com"
-        className="mb-1 text-base font-bold text-white custom-link md:text-lg lg:text-xl"
+        className={`mb-1 text-base font-bold  custom-link md:text-lg lg:text-xl ${color}`}
       >
         clinic@step-med.com
       </a>
@@ -65,7 +69,7 @@ const FooterContactsBlock = () => (
 
     <div className="flex mt-4">
       {footerContacts.map((contact) => (
-        <FooterContactsSocial {...contact} key={contact.id} />
+        <FooterContactsSocial {...contact} key={contact.id} color={color} />
       ))}
     </div>
   </div>
@@ -138,11 +142,11 @@ const FooterBootom = () => (
   </div>
 );
 
-const Footer = () => (
+export const Footer = () => (
   <div className="mt-8 md:mt-12 lg:mt-16 bg-text-secondary">
     <div className="flex py-10 border-b-2 border-gray-100 border-opacity-25 md:py-12">
       <div className="container flex flex-col mt-0 lg:flex-row">
-        <FooterContactsBlock />
+        <FooterContactsBlock color="text-white" />
         <span className="md:flex-grow"></span>
         <FooterLinks />
       </div>
@@ -154,5 +158,3 @@ const Footer = () => (
     </div>
   </div>
 );
-
-export default Footer;
