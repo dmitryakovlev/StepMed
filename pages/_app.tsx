@@ -1,5 +1,5 @@
 import { StoreProvider } from 'easy-peasy';
-import { AppPropsType } from 'next/dist/next-server/lib/utils';
+import { AppPropsType } from 'next/dist/shared/lib/utils';
 import { useEffect } from 'react';
 import mailgo from 'mailgo';
 

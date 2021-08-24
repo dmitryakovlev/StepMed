@@ -79,7 +79,7 @@ export const uslugiICeniSecond: IUslugiICeni[] = [
   {
     id: 9,
     service: 'Уход за порт-системой для химиотерапии (промывка)',
-    price: '2 600 ₽',
+    price: '1 000 ₽',
   },
   {
     id: 10,
