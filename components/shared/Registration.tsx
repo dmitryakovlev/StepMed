@@ -2,9 +2,17 @@ import { useCallback } from 'react';
 
 import { useStoreActions, useStoreState } from 'hooks';
 import { MessageStatusENUM } from 'store/models/regForm';
+import InputMask from 'react-input-mask';
+import { useForm, SubmitHandler } from 'react-hook-form';
 
 import WhatsAppIcon from '@icons/Whatsapp';
 import TelegramIcon from '@icons/Telegram';
+
+interface IFormInputs {
+  fullName: string;
+  phoneNumber: string;
+  dataProcessing: boolean;
+}
 
 const Registration = () => {
   const regBarVisibility = useStoreState(
@@ -44,6 +52,16 @@ const Registration = () => {
     setRegFormPhoneNumber(value);
   }, []);
 
+  const onSubmit: SubmitHandler<IFormInputs> = (data) => {
+    setRegFormFullName(data.fullName);
+    setRegFormPhoneNumber(data.phoneNumber);
+    console.log(regFormFullName);
+    console.log(regFormPhoneNumber);
+    console.log('start');
+    sendTelegramMessage;
+    console.log('end');
+  };
+
   const sendTelegramMessage = useCallback(async () => {
     const messageText = `${regFormFullName}: ${regFormPhoneNumber}`;
 
@@ -65,6 +83,12 @@ const Registration = () => {
     setRegFormMessageStatus(MessageStatusENUM.FAILED);
   }, [regFormFullName, regFormPhoneNumber]);
 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<IFormInputs>();
+
   return (
     <>
       {regBarVisibility && (
@@ -80,39 +104,82 @@ const Registration = () => {
               Оставьте свой номер телефона и мы перезвоним вам в рабочее время
               клиники.
             </h1>
-            <div className="custom-input">
-              <label htmlFor="name">Имя</label>
-              <input id="name" type="text" onChange={changeFullName}></input>
-            </div>
-            <div className="custom-input">
-              <label htmlFor="phone">Телефон</label>
-              <input
-                id="phone"
-                type="text"
-                onChange={changePhoneNumber}
-              ></input>
-            </div>
-            <label className="md:mt-2 custom-checkbox" id="data-processing">
-              <input
-                className="custom-checkbox-disable"
-                type="checkbox"
-                name="data-processing"
-              />
-              <span className="custom-checkbox-button"></span>
-              <p className="mt-0 ml-2 custom-text">
-                Я соглашаюсь на{' '}
-                <a
-                  href="/obrabotka-dannih"
-                  className="custom-text-link"
-                  target="_blank"
-                >
-                  обработку персональных данных
-                </a>
-              </p>
-            </label>
-            <button className="mt-6 md:mt-8 bttn" onClick={sendTelegramMessage}>
-              Записаться
-            </button>
+
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="custom-input">
+                <label htmlFor="fullName">Имя</label>
+                <input
+                  id="fullName"
+                  type="text"
+                  placeholder="Например, Соколов Александр"
+                  // onChange={changeFullName}
+                  maxLength={40}
+                  {...register('fullName', { required: true })}
+                ></input>
+                {errors.fullName && (
+                  <p className="custom-input-error">
+                    Поле "Имя" обязательно для заполнения
+                  </p>
+                )}
+              </div>
+
+              <div className="custom-input">
+                <label htmlFor="phoneNumber">Телефон</label>
+                <InputMask
+                  id="phoneNumber"
+                  type="text"
+                  placeholder="Например, +7 (812) 123-45-67"
+                  // onChange={changePhoneNumber}
+                  mask="+7 \(999) 999-99-99"
+                  {...register('phoneNumber', { required: true })}
+                />
+                {errors.phoneNumber && (
+                  <p className="custom-input-error">
+                    Поле "Телефон" обязательно для заполнения
+                  </p>
+                )}
+
+                {/* <input
+                  id="phone"
+                  type="text"
+                  name="phone"
+                  required
+                  placeholder="Например, +7 (812) 123 45 67"
+                  onChange={changePhoneNumber}
+                ></input> */}
+              </div>
+
+              <div className="custom-input md:mt-6">
+                <label className="custom-checkbox" id="dataProcessing">
+                  <input
+                    className="custom-checkbox-disable"
+                    type="checkbox"
+                    {...register('dataProcessing', { required: true })}
+                  />
+                  <span className="custom-checkbox-button"></span>
+                  <p className="mt-0 ml-2 custom-text">
+                    Я соглашаюсь на{' '}
+                    <a
+                      href="/obrabotka-dannih"
+                      className="custom-text-link"
+                      target="_blank"
+                    >
+                      обработку персональных данных
+                    </a>
+                  </p>
+                </label>
+                {errors.dataProcessing && (
+                  <p className="custom-input-error">
+                    Необходимо согласие на обработку персональных данных
+                  </p>
+                )}
+              </div>
+
+              <button type="submit" className="w-full mt-6 md:mt-8 bttn">
+                Записаться
+              </button>
+            </form>
+
             <p className="mt-4 mb-2 text-center md:mt-8 md:mb-4">
               или напишите нам
             </p>

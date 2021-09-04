@@ -160,7 +160,7 @@ const Nav = () => {
         <Logo isOpened={isOpened} />
         <Hamburger open={isOpened} setOpen={setOpened} />
         <span className="flex-grow"></span>
-        {/* <CallButton isOpened={isOpened} onClick={callButtonOnClick} /> */}
+        <CallButton isOpened={isOpened} onClick={callButtonOnClick} />
       </div>
       <Transition
         show={isOpened}

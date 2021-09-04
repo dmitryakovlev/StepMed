@@ -8,6 +8,7 @@
   --color-secondary: #ffaf50;
   --color-text-primary: #1b1b1b;
   --color-text-secondary: #3a3a3a;
+  --color-text-error: #f87171;
   --color-primary-link: #a8e0ff;
   --reach-dialog: 1;
 }
@@ -403,6 +404,12 @@ b {
 
 .custom-input input:focus {
   border-color: #79b7d9;
+}
+
+.custom-input .custom-input-error {
+  color: var(--color-text-error);
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .custom-list {
