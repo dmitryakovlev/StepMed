@@ -15,7 +15,7 @@ export default async (req: NextApiRequest, res: NextApiResponse<ResData>) => {
         : '';
 
       const sentMessage = await fetch(
-        `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}}${messageText}`,
+        `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}${messageText}`,
       );
 
       if (sentMessage.status >= 400) {

@@ -412,6 +412,11 @@ b {
   font-weight: 700;
 }
 
+.custom-form-info {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
 .custom-list {
   margin-top: 1.5rem;
 }

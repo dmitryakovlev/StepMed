@@ -72,7 +72,7 @@ const Layout: FC<{
           content="step-med, step-med clinic, stepmed, stepmed clinic, степ-мед, степ-мед клиник, степмед, степмед клиник, степмед клиника, лечение онкологии, исследования онкология, исследования онкологических заболеваний, онкология, онкологи, онколог, доктор-онколог, доктор онколог"
         ></meta>
         <link rel="shortcut icon" href="/images/favicon.webp"></link>
-        <script async src="https://cdn.splitbee.io/sb.js"></script>
+        <script async data-api="/_hive" src="/bee.js"></script>
       </Head>
       <Scroll />
       <div className="main-layout">

@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
-    "@reach/dialog": "^0.16.0",
     "classnames": "^2.3.1",
     "easy-peasy": "^5.0.3",
     "mailgo": "^0.12.2",
@@ -24,6 +23,7 @@
     "@types/classnames": "^2.3.1",
     "@types/node": "^16.7.10",
     "@types/react": "^17.0.19",
+    "@types/react-input-mask": "^3.0.1",
     "autoprefixer": "^10.3.4",
     "postcss": "^8.3.6",
     "tailwindcss": "^2.2.9",

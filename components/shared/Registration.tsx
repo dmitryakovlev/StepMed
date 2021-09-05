@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 
 import { useStoreActions, useStoreState } from 'hooks';
 import { MessageStatusENUM } from 'store/models/regForm';
@@ -18,21 +18,11 @@ const Registration = () => {
   const regBarVisibility = useStoreState(
     (state) => state.regBar.regBarVisibility,
   );
-  const regFormFullName = useStoreState((state) => state.regForm.fullName);
-  const regFormPhoneNumber = useStoreState(
-    (state) => state.regForm.phoneNumber,
-  );
   const regFormMessageStatus = useStoreState(
     (state) => state.regForm.messageStatus,
   );
   const setRegBarVisibility = useStoreActions(
     (actions) => actions.regBar.setRegBarVisibility,
-  );
-  const setRegFormFullName = useStoreActions(
-    (actions) => actions.regForm.setFullName,
-  );
-  const setRegFormPhoneNumber = useStoreActions(
-    (actions) => actions.regForm.setPhoneNumber,
   );
   const setRegFormMessageStatus = useStoreActions(
     (actions) => actions.regForm,
@@ -42,36 +32,27 @@ const Registration = () => {
     setRegBarVisibility(false);
   }, [setRegBarVisibility]);
 
-  const changeFullName = useCallback((i) => {
-    const value = i.target.value;
-    setRegFormFullName(value);
-  }, []);
+  const { register, handleSubmit, reset, formState } = useForm<IFormInputs>({
+    defaultValues: { fullName: '', phoneNumber: '', dataProcessing: false },
+  });
 
-  const changePhoneNumber = useCallback((i) => {
-    const value = i.target.value;
-    setRegFormPhoneNumber(value);
-  }, []);
+  useEffect(() => {
+    if (
+      formState.isSubmitSuccessful &&
+      regFormMessageStatus === MessageStatusENUM.SUCCESS
+    ) {
+      reset({ fullName: '', phoneNumber: '', dataProcessing: false });
+    }
+  }, [formState, reset]);
 
-  const onSubmit: SubmitHandler<IFormInputs> = (data) => {
-    setRegFormFullName(data.fullName);
-    setRegFormPhoneNumber(data.phoneNumber);
-    console.log(regFormFullName);
-    console.log(regFormPhoneNumber);
-    console.log('start');
-    sendTelegramMessage;
-    console.log('end');
-  };
-
-  const sendTelegramMessage = useCallback(async () => {
-    const messageText = `${regFormFullName}: ${regFormPhoneNumber}`;
-
-    let request = await fetch('/api/sendTelegramMessage', {
+  const onSubmit: SubmitHandler<IFormInputs> = async (data) => {
+    const request = await fetch('/api/sendTelegramMessage', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        messageText,
+        messageText: `👤 : ${data.fullName}\n📱 : ${data.phoneNumber}`,
       }),
     });
 
@@ -80,14 +61,8 @@ const Registration = () => {
       return;
     }
 
-    setRegFormMessageStatus(MessageStatusENUM.FAILED);
-  }, [regFormFullName, regFormPhoneNumber]);
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<IFormInputs>();
+    return setRegFormMessageStatus(MessageStatusENUM.FAILED);
+  };
 
   return (
     <>
@@ -105,6 +80,18 @@ const Registration = () => {
               клиники.
             </h1>
 
+            {regFormMessageStatus === MessageStatusENUM.FAILED && (
+              <p className="text-red-400 custom-form-info">
+                Произошла ошибка во время отравки сообщения! Повторите ещё раз.
+              </p>
+            )}
+
+            {regFormMessageStatus === MessageStatusENUM.SUCCESS && (
+              <p className="text-green-400 custom-form-info">
+                Ваше сообщение было успешно отправлено. Спасибо!
+              </p>
+            )}
+
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="custom-input">
                 <label htmlFor="fullName">Имя</label>
@@ -112,11 +99,10 @@ const Registration = () => {
                   id="fullName"
                   type="text"
                   placeholder="Например, Соколов Александр"
-                  // onChange={changeFullName}
                   maxLength={40}
                   {...register('fullName', { required: true })}
                 ></input>
-                {errors.fullName && (
+                {formState.errors.fullName && (
                   <p className="custom-input-error">
                     Поле "Имя" обязательно для заполнения
                   </p>
@@ -129,11 +115,10 @@ const Registration = () => {
                   id="phoneNumber"
                   type="text"
                   placeholder="Например, +7 (812) 123-45-67"
-                  // onChange={changePhoneNumber}
                   mask="+7 \(999) 999-99-99"
                   {...register('phoneNumber', { required: true })}
                 />
-                {errors.phoneNumber && (
+                {formState.errors.phoneNumber && (
                   <p className="custom-input-error">
                     Поле "Телефон" обязательно для заполнения
                   </p>
@@ -168,7 +153,7 @@ const Registration = () => {
                     </a>
                   </p>
                 </label>
-                {errors.dataProcessing && (
+                {formState.errors.dataProcessing && (
                   <p className="custom-input-error">
                     Необходимо согласие на обработку персональных данных
                   </p>
@@ -186,7 +171,7 @@ const Registration = () => {
             <div className="flex flex-col sm:flex-row">
               <a
                 target="_blank"
-                href=""
+                href="https://t.me/Stepmed_Clinic"
                 className="items-center w-full sm:mr-4 bttn"
               >
                 <TelegramIcon className="w-8 h-8 mr-3" />
