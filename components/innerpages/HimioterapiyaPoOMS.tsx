@@ -58,8 +58,9 @@ const HimioterapiyaPoOMS = () => (
     </div>
     <p className="custom-text">
       Действующий полис ОМС выглядит следующим образом:
+      <img className="mt-4" src="/images/hpo/polis.webp" />
     </p>
-    <p className="custom-text">Направление:</p>
+    {/* <p className="custom-text">Направление:</p> */}
     <p className="custom-text-message warning">
       Обращаем внимание, что направление должно быть выдано именно на
       госпитализацию и именно в ООО «Степмед Клиник». Направление, которое

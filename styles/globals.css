@@ -303,6 +303,27 @@ b {
 
 /* HOME PAGE (ABOUT) */
 /* ------------------------------------------------------------------------------------- */
+.header__container {
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: theme('screens.xl')) {
+  .header__container,
+  .header__container section,
+  .header__container section img {
+    min-height: calc(100vh - 106px);
+  }
+}
+
+@media (min-width: theme('screens.2xl')) {
+  .header__container,
+  .header__container section,
+  .header__container section img {
+    min-height: 100vh;
+  }
+}
+
 .about__divider {
   opacity: 75%;
   flex-grow: 1;
@@ -795,6 +816,7 @@ b {
 .nav__btn {
   z-index: 20;
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   margin-left: 0.75rem;

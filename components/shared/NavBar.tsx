@@ -15,6 +15,7 @@ import {
 import LogoWhite from '@components/logo/LogoWhite';
 import LogoColor from '@components/logo/LogoColor';
 import PenIcon from '@icons/Pen';
+import AccountIcon from '@icons/Account';
 
 const Hamburger: FC<{
   open: boolean;
@@ -32,8 +33,20 @@ const Hamburger: FC<{
   );
 };
 
-const MenuItem: FC<INavBarMenu> = ({ url, title }) => {
+const MenuItem: FC<INavBarMenu> = ({ url, title, external }) => {
   const router = useRouter();
+
+  if (external) {
+    return (
+      <a
+        href={url}
+        target="_blank"
+        className="pt-4 mt-4 lg:pt-6 lg:mt-6 border-t-2 lg:border-t-4 border-[#a8e0ff] nav__menu-link"
+      >
+        {title}
+      </a>
+    );
+  }
 
   if (url) {
     return (
@@ -130,11 +143,12 @@ const CallButton: FC<{
     <>
       {!isOpened && (
         <button
-          className="flex items-center p-2 px-4 text-lg h-14 sm:h-16 2xl:h-20 sm:px-12 2xl:px-7 bttn"
+          className="flex items-center p-2 px-4 text-lg h-14 sm:h-16 2xl:h-20 sm:px-6 lg:px-12 2xl:px-7 bttn"
           onClick={onClick}
+          title="Записаться на приём"
         >
-          <PenIcon className="w-6 h-6 mr-0 sm:mr-3 2xl:mr-0" />
-          <span className="hidden text-lg font-bold sm:inline-block 2xl:hidden">
+          <PenIcon className="w-6 h-6 mr-0 md:mr-3 2xl:mr-0" />
+          <span className="hidden text-lg font-bold md:inline-block 2xl:hidden">
             Записаться на приём
           </span>
         </button>
@@ -161,6 +175,19 @@ const Nav = () => {
         <Hamburger open={isOpened} setOpen={setOpened} />
         <span className="flex-grow"></span>
         <CallButton isOpened={isOpened} onClick={callButtonOnClick} />
+        {!isOpened && (
+          <a
+            href="https://lk.step-med.com/"
+            target="_blank"
+            className="flex items-center p-2 px-4 ml-2 text-lg 2xl:mt-4 2xl:ml-0 h-14 sm:h-16 2xl:h-20 sm:px-6 lg:px-12 2xl:px-7 bttn"
+            title="Личный кабинет"
+          >
+            <AccountIcon className="w-6 h-6 mr-0 md:mr-3 2xl:mr-0" />
+            <span className="hidden text-lg font-bold md:inline-block 2xl:hidden">
+              Личный кабинет
+            </span>
+          </a>
+        )}
       </div>
       <Transition
         show={isOpened}

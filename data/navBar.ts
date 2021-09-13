@@ -2,6 +2,7 @@ export interface INavBarMenu {
   id: number;
   url?: string;
   title: string;
+  external?: boolean;
 }
 
 export const navBarMenu: INavBarMenu[] = [
@@ -32,6 +33,12 @@ export const navBarMenu: INavBarMenu[] = [
     id: 5,
     url: '/contacts',
     title: 'Контакты',
+  },
+  {
+    id: 6,
+    url: 'https://lk.step-med.com/',
+    title: 'Личный кабинет',
+    external: true,
   },
 ];
 

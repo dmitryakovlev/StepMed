@@ -12,7 +12,7 @@ const Header = () => {
   }, [setRegBarVisibility]);
 
   return (
-    <div className="relative w-full min-h-0 xl:min-h-screen">
+    <div className="header__container">
       <div className="container mt-0">
         <section className="flex flex-col xl:justify-center mt-8 md:mt-16 xl:mt-0 mx-auto xl:mx-0 w-full xl:w-[45%] max-w-full md:max-w-xl min-h-0 xl:min-h-screen">
           <p className="mb-1 lg:mb-2">StepMed Clinic</p>
