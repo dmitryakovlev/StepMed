@@ -3,6 +3,7 @@ import Link from 'next/link';
 const ZaochnayaKonsultaciya = () => (
   <div className="container">
     <h1>Заочная консультация</h1>
+    <img src="/images/illustrations/online.webp" />
 
     <p className="custom-text-message warning">
       Дистанционная консультация не предназначена для оказания медицинской

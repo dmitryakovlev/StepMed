@@ -24,18 +24,13 @@ export const navBarMenu: INavBarMenu[] = [
     id: 3,
     title: 'Пациентам',
   },
-  // {
-  //   id: 4,
-  //   url: '/news',
-  //   title: 'Новости',
-  // },
   {
-    id: 5,
+    id: 4,
     url: '/contacts',
     title: 'Контакты',
   },
   {
-    id: 6,
+    id: 5,
     url: 'https://lk.step-med.com/',
     title: 'Личный кабинет',
     external: true,

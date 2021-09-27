@@ -1,6 +1,7 @@
 const HimioterapiyaPoOMS = () => (
   <div className="container">
     <h1>Химиотерапия по ОМС</h1>
+    <img src="/images/illustrations/oms.webp" />
     <p className="custom-text">
       Под словом «химиотерапия» обычно понимают лекарственную противоопухолевую
       терапию, которая в себя включает непосредственно химиотерапию, таргетную

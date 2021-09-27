@@ -2085,6 +2085,11 @@ react-hook-form@^7.14.2:
   resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.14.2.tgz#e5615ba883588a6dd73bbbbbd7d3bb71b73440e3"
   integrity sha512-32uvgKkaE/0vOncfnJdwQhfahhocPpcb5c7F4j9Eq7dOnqS2Hg8h70Bmt6KXb6veLSWJultc1+ik9QSfqXFmLA==
 
+react-ig-feed@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-ig-feed/-/react-ig-feed-1.0.4.tgz#a08dc99f311b37f31de9d33299d2604323d12526"
+  integrity sha512-XgPV3AAcZp9aZAr5w+EjWLsMdtrVHxyB0A7DPm5NeCkm5JocLvHQ0wKlafS6eg1mfo+2S6Dxj6YbwSgikpsrbw==
+
 react-input-mask@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/react-input-mask/-/react-input-mask-2.0.4.tgz#9ade5cf8196f4a856dbf010820fe75a795f3eb14"

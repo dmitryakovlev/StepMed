@@ -1,6 +1,7 @@
 const PriyomOnkologa = () => (
   <div className="container">
     <h1>Прием онколога</h1>
+    <img src="/images/illustrations/oncologistsAppointment.webp" />
     <p className="custom-text">
       Задача онколога на первичном приеме – сформировать представление не только
       о заболевании, но и о самом пациенте. Для того, чтобы прием прошел

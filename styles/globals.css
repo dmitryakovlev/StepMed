@@ -10,7 +10,6 @@
   --color-text-secondary: #3a3a3a;
   --color-text-error: #f87171;
   --color-primary-link: #a8e0ff;
-  --reach-dialog: 1;
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -1323,36 +1322,20 @@ b {
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-/* MODAL WINDOW */
+/* REACT IG FEED */
 /* ------------------------------------------------------------------------------------- */
-[data-reach-dialog-overlay] {
-  z-index: 90;
-  background: hsla(0, 0%, 0%, 0.5);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: auto;
+._wPDyp {
+  flex: 0 0 calc(100% / 2 - 10px) !important;
 }
 
-[data-reach-dialog-content] {
-  z-index: 100;
-  width: 90vw;
-  margin: 15vh auto;
-  outline: none;
-}
-
-@media (min-width: 1024px) {
-  [data-reach-dialog-content] {
-    width: 80vw;
+@media (min-width: theme('screens.sm')) {
+  ._wPDyp {
+    flex: 0 0 calc(100% / 4 - 10px) !important;
   }
 }
 
-@media (min-width: 1280px) {
-  [data-reach-dialog-content] {
-    width: 60vw;
-  }
+._3xnQP {
+  z-index: 1 !important;
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 

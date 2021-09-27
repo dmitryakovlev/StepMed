@@ -120,7 +120,7 @@ const About = () => {
 
         <AboutStep {...homeAbout[state.activeTab]} />
         <img
-          src="/images/home/homeIllustration.webp"
+          src="/images/illustrations/home.webp"
           className="w-full mt-8 md:mt-12"
         />
       </div>

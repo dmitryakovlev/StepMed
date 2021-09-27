@@ -4,6 +4,7 @@ import UnavailableIcon from '@components/icons/Unavailable';
 const PravilaVnutrennegoRasporyadka = () => (
   <div className="container">
     <h1>Правила внутреннего распорядка</h1>
+    <img src="/images/illustrations/rules.webp" />
     <p className="custom-text">
       Пребывание в клинике и проведение лечения должны быть максимально
       комфортными как для пациентов и сопровождающих их лиц, так и для персонала

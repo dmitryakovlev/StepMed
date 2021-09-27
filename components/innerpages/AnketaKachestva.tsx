@@ -1,6 +1,7 @@
 const AnketaKachestva = () => (
   <div className="container">
     <h1>Анкета качества</h1>
+    <img src="/images/illustrations/questionnaire.webp" />
 
     <h2 className="custom-title">
       Анкета анализа удовлетворенности качеством предоставления медицинских
