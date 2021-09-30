@@ -38,11 +38,11 @@ export const navBarMenu: INavBarMenu[] = [
 ];
 
 export const aboutSubMenu: INavBarMenu[] = [
-  // {
-  //   id: 0,
-  //   url: '/',
-  //   title: 'О нас',
-  // },
+  {
+    id: 0,
+    url: '/o-nas',
+    title: 'О нас',
+  },
   {
     id: 1,
     url: '/dokumenti-i-licenzii',

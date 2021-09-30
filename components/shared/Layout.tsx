@@ -10,7 +10,7 @@ import Registration from '@components/shared/Registration';
 import { Footer } from '@components/shared/Footer';
 import Script from 'next/script';
 
-const backlessLayoutPages = ['/', '/another-page'];
+const backlessLayoutPages = ['/'];
 
 const Scroll = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
