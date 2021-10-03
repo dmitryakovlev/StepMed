@@ -16,4 +16,8 @@ module.exports = {
   env: {
     INSTAGRAM_TOKEN: process.env.INSTAGRAM_TOKEN,
   },
+  i18n: {
+    locales: ['ru'],
+    defaultLocale: 'ru',
+  },
 };

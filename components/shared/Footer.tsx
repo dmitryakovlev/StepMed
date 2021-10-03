@@ -61,7 +61,7 @@ export const FooterContactsBlock: FC<{
       </span>
       <a
         href="mailto:clinic@step-med.com"
-        className={`mb-1 text-base font-bold  custom-link md:text-lg lg:text-xl ${color}`}
+        className={`mb-1 text-base font-bold custom-link md:text-lg lg:text-xl ${color}`}
       >
         clinic@step-med.com
       </a>

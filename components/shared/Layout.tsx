@@ -105,6 +105,7 @@ const Layout: FC<{
         <Footer />
       </div>
       <Script src="/js/twogis.js" />
+      <Script src="/js/mailgo.js" />
     </>
   );
 };

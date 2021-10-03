@@ -1339,4 +1339,27 @@ b {
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+/* MAILGO */
+/* ------------------------------------------------------------------------------------- */
+.m-modal .m-by,
+.m-modal .m-skype,
+.m-modal .m-wa,
+.m-modal .m-outlook,
+.m-modal .m-yahoo {
+  display: none;
+}
+
+.m-modal .m-modal-content a.m-yandex {
+  color: #e1b91b;
+}
+
+.m-modal .m-modal-content a.m-yandex:hover,
+.m-modal .m-modal-content a.m-yandex:focus,
+.m-modal .m-modal-content a.m-yandex:active {
+  background-color: rgba(207, 171, 29, 0.15);
+  color: #e1b91b;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
 @tailwind utilities;

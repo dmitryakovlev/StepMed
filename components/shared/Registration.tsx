@@ -123,15 +123,6 @@ const Registration = () => {
                     Поле "Телефон" обязательно для заполнения
                   </p>
                 )}
-
-                {/* <input
-                  id="phone"
-                  type="text"
-                  name="phone"
-                  required
-                  placeholder="Например, +7 (812) 123 45 67"
-                  onChange={changePhoneNumber}
-                ></input> */}
               </div>
 
               <div className="custom-input md:mt-6">
