@@ -10,8 +10,8 @@ export const homeCarousel: IHomeCarousel[] = [
   {
     id: 0,
     url: '/images/Slide_1.jpg',
-    alt: 'Мы ценим ваше доверие',
-    text: 'Мы ценим ваше доверие',
+    alt: 'Мы ценим Ваше доверие',
+    text: 'Мы ценим Ваше доверие',
   },
   {
     id: 1,

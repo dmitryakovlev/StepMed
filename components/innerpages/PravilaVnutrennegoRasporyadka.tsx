@@ -53,7 +53,7 @@ const PravilaVnutrennegoRasporyadka = () => (
       <div className="custom-list-container">
         <span className="custom-list-symbol"></span>
         <p>
-          Если вы опаздываете на прием или не можете прибыть на него -
+          Если Вы опаздываете на прием или не можете прибыть на него -
           пожалуйста сообщите об этом сотрудникам клиники.
         </p>
       </div>
@@ -153,7 +153,7 @@ const PravilaVnutrennegoRasporyadka = () => (
     </div>
 
     <p className="custom-text">
-      С полным текстом правил внутреннего распорядка вы можете{' '}
+      С полным текстом правил внутреннего распорядка Вы можете{' '}
       <a
         href="/pdfs/Pravila-vnutrennego-rasporyadka.pdf"
         className="custom-text-link"

@@ -79,7 +79,7 @@ const HimioterapiyaPoOMS = () => (
     </p>
 
     <p className="custom-text">
-      Узнать информацию о своем полисе вы можете на сайте территориального фонда
+      Узнать информацию о своем полисе Вы можете на сайте территориального фонда
       Вашего региона{' '}
       <a
         href="https://www.ttfoms.tomsk.ru/page/spisok_territorialnyh_fondov_oms_subektov_rf"
