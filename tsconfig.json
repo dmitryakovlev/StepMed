@@ -19,7 +19,8 @@
       "@icons/*": ["components/icons/*"],
       "@data/*": ["data/*"],
       "@pdfs/*": ["public/pdfs/*"]
-    }
+    },
+    "incremental": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

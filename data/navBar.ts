@@ -29,12 +29,6 @@ export const navBarMenu: INavBarMenu[] = [
     url: '/contacts',
     title: 'Контакты',
   },
-  {
-    id: 5,
-    url: 'https://lk.step-med.com/',
-    title: 'Личный кабинет',
-    external: true,
-  },
 ];
 
 export const aboutSubMenu: INavBarMenu[] = [

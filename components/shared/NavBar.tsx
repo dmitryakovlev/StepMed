@@ -15,7 +15,6 @@ import {
 import LogoWhite from '@components/logo/LogoWhite';
 import LogoColor from '@components/logo/LogoColor';
 import PenIcon from '@icons/Pen';
-import AccountIcon from '@icons/Account';
 
 const Hamburger: FC<{
   open: boolean;
@@ -175,19 +174,6 @@ const Nav = () => {
         <Hamburger open={isOpened} setOpen={setOpened} />
         <span className="flex-grow"></span>
         <CallButton isOpened={isOpened} onClick={callButtonOnClick} />
-        {!isOpened && (
-          <a
-            href="https://lk.step-med.com/"
-            target="_blank"
-            className="flex items-center p-2 px-4 ml-2 text-lg 2xl:mt-4 2xl:ml-0 h-14 sm:h-16 2xl:h-20 sm:px-6 lg:px-12 2xl:px-7 bttn"
-            title="Личный кабинет"
-          >
-            <AccountIcon className="w-6 h-6 mr-0 md:mr-3 2xl:mr-0" />
-            <span className="hidden text-lg font-bold md:inline-block 2xl:hidden">
-              Личный кабинет
-            </span>
-          </a>
-        )}
       </div>
       <Transition
         show={isOpened}

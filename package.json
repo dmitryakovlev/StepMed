@@ -10,25 +10,25 @@
   "dependencies": {
     "@headlessui/react": "^1.4.1",
     "classnames": "^2.3.1",
-    "easy-peasy": "^5.0.3",
+    "easy-peasy": "^5.0.4",
     "mailgo": "^0.12.2",
-    "next": "^11.1.2",
+    "next": "^12.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-hook-form": "^7.17.0",
+    "react-hook-form": "^7.18.0",
     "react-ig-feed": "^1.0.4",
     "react-input-mask": "^2.0.4",
     "react-yandex-maps": "^4.6.0"
   },
   "devDependencies": {
     "@types/classnames": "^2.3.1",
-    "@types/node": "^16.10.2",
-    "@types/react": "^17.0.27",
+    "@types/node": "^16.11.6",
+    "@types/react": "^17.0.33",
     "@types/react-input-mask": "^3.0.1",
-    "autoprefixer": "^10.3.6",
-    "postcss": "^8.3.8",
-    "tailwindcss": "^2.2.16",
-    "typescript": "^4.4.3"
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19",
+    "typescript": "^4.4.4"
   },
   "license": "MIT"
 }
