@@ -172,7 +172,7 @@ const Nav = () => {
       <div className={classNames('nav', { 'nav-close': !isOpened })}>
         <Logo isOpened={isOpened} />
         <Hamburger open={isOpened} setOpen={setOpened} />
-        <span className="flex-grow"></span>
+        <span className="flex-grow mt-0 2xl:mt-8 2xl:flex-grow-0"></span>
         <CallButton isOpened={isOpened} onClick={callButtonOnClick} />
       </div>
       <Transition

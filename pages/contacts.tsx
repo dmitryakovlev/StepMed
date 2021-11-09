@@ -1,7 +1,7 @@
 import Layout from '@components/shared/Layout';
 import Contacts from '@components/innerpages/Contacts';
 
-export default function ContactsYePage() {
+export default function ContactsPage() {
   return (
     <>
       <Layout title="Контакты">
